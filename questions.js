@@ -4,26 +4,26 @@ const questionDatabase = [
   {
     "id": 1,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Które z poniższych zagadnień NIE należało do trzech głównych problemów fizyki klasycznej pod koniec XIX wieku omawianych na wykładzie?",
+    "text": "Które z poniższych zagadnień należały do głównych problemów fizyki klasycznej pod koniec XIX wieku?",
     "options": [
       {
         "text": "Poszukiwanie hipotetycznego eteru jako ośrodka rozchodzenia się fal świetlnych.",
-        "isCorrect": false
-      },
-      {
-        "text": "Niezgodność równań Maxwella z klasycznymi transformacjami układu Galileusza.",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "text": "Katastrofa w nadfiolecie w opisie widma promieniowania ciała doskonale czarnego.",
+        "isCorrect": true
+      },
+      {
+        "text": "Brak możliwości opisania ruchu planet przez klasyczne prawa dynamiki Newtona.",
         "isCorrect": false
       },
       {
         "text": "Niezgodność drugiej zasady termodynamiki z wynikami kinetycznej teorii gazów.",
-        "isCorrect": true
+        "isCorrect": false
       }
     ],
-    "explanation": "Pod koniec XIX wieku kryzys fizyki klasycznej dotyczył trzech zagadnień: problemu eteru (rozwiązanego przez doświadczenie Michelsona-Morleya i STW), braku niezmienniczości równań Maxwella względem transformacji Galileusza (rozwiązanego przez transformację Lorentza) oraz katastrofy w nadfiolecie (rozwiązanej przez hipotezę kwantową Plancka). Termodynamika i kinetyczna teoria gazów święciły wówczas triumfy i nie stanowiły tego kryzysu."
+    "explanation": "Pod koniec XIX wieku kryzys fizyki klasycznej dotyczył problemu eteru, niezgodności równań Maxwella z transformacją Galileusza oraz katastrofy w nadfiolecie. Mechanika Newtona (ruch planet) oraz termodynamika święciły wówczas triumfy i nie były źródłem tego kryzysu."
   },
   {
     "id": 2,
@@ -52,26 +52,26 @@ const questionDatabase = [
   {
     "id": 3,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "W jaki sposób powstaje ciągłe widmo promieniowania rentgenowskiego (Bremsstrahlung) w lampie rentgenowskiej?",
+    "text": "Które z poniższych stwierdzeń poprawnie opisują powstawanie promieniowania rentgenowskiego (X) w lampie RTG?",
     "options": [
       {
-        "text": "Przez gwałtowne hamowanie rozpędzonych elektronów w polu elektrostatycznym jąder anody.",
+        "text": "Widmo ciągłe (Bremsstrahlung) powstaje przy hamowaniu elektronów w polu jąder anody.",
         "isCorrect": true
       },
       {
-        "text": "Przez przeskoki elektronów z wyższych powłok na luki w wewnętrznych powłokach atomów.",
+        "text": "Widmo charakterystyczne powstaje przy przeskokach elektronów między powłokami anody.",
+        "isCorrect": true
+      },
+      {
+        "text": "Minimalna długość fali widma ciągłego rośnie liniowo wraz ze wzrostem napięcia $U$.",
         "isCorrect": false
       },
       {
-        "text": "Przez zderzenia swobodnych jonów dodatnich z rozgrzanym żarnikiem metalowej katody.",
-        "isCorrect": false
-      },
-      {
-        "text": "Przez samorzutny rozpad promieniotwórczy ciężkich jąder izotopów umieszczonych w anodzie.",
+        "text": "Promieniowanie X powstaje wskutek rozpadu alfa ciężkich jąder na powierzchni katody.",
         "isCorrect": false
       }
     ],
-    "explanation": "W lampie rentgenowskiej elektrony wyemitowane z katody przyspieszane są wysokim napięciem $U$ w stronę anody (antykatody). Gdy gwałtownie hamują w polu elektrycznym jąder atomowych anody, tracą dowolną część energii kinetycznej, emitując fotony o ciągłym rozkładzie długości fal — jest to promieniowanie hamowania (Bremsstrahlung). Przeskoki między powłokami dają natomiast widmo charakterystyczne (liniowe)."
+    "explanation": "W lampie RTG elektrony hamujące na anodzie dają widmo ciągłe (Bremsstrahlung), a przeskoki między powłokami atomów anody dają widmo charakterystyczne. Minimalna długość fali $\\lambda_{\\min} = hc/(eU)$ MALEJE odwrotnie proporcjonalnie do napięcia $U$, a rozpad $\\alpha$ tu nie zachodzi."
   },
   {
     "id": 4,
@@ -148,98 +148,98 @@ const questionDatabase = [
   {
     "id": 7,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "W doświadczeniu J.J. Thomsona (1897), które doprowadziło do odkrycia elektronu, skrzyżowane pola elektryczne $E$ i magnetyczne $B$ służyły przede wszystkim do:",
+    "text": "Które ze stwierdzeń na temat doświadczenia J.J. Thomsona (1897) z promieniami katodowymi są prawdziwe?",
     "options": [
       {
-        "text": "Wyznaczenia prędkości elektronów w wiązce ze zrównoważenia sił $v_0 = E/B$.",
+        "text": "Skrzyżowane pola $E$ i $B$ działały jako selektor prędkości spełniający warunek $v_0 = E/B$.",
         "isCorrect": true
       },
       {
-        "text": "Bezpośredniego pomiaru masy pojedynczego elektronu bez znajomości ładunku.",
-        "isCorrect": false
+        "text": "Pomiar odchylenia wiązki pozwolił wyznaczyć stosunek ładunku elektronu do jego masy ($q/m$).",
+        "isCorrect": true
       },
       {
-        "text": "Rozszczepienia wiązki elektronów na dwie składowe w zależności od ich spinu.",
-        "isCorrect": false
+        "text": "Wykazano, że promienie katodowe to ujemne cząstki o masie dużo mniejszej niż atom wodoru.",
+        "isCorrect": true
       },
       {
-        "text": "Zatrzymania promieni katodowych na anodzie w celu emisji promieniowania X.",
+        "text": "W eksperymencie tym odkryto istnienie dodatniego jądra atomowego za pomocą cząstek alfa.",
         "isCorrect": false
       }
     ],
-    "explanation": "J.J. Thomson użył skrzyżowanych (prostopadłych) pól $E$ i $B$ jako selektora prędkości: gdy siła elektryczna $qE$ równoważy siłę Lorentza $qv_0 B$, wiązka leci prosto, co daje $v_0 = E/B$. Następnie po wyłączeniu pola $B$ mierzył kąt odchylenia $\\theta$ w samym polu $E$, wyznaczając stosunek ładunku do masy $q/m = \\frac{E\\tan\\theta}{B^2 l}$."
+    "explanation": "J.J. Thomson użył skrzyżowanych pól $E$ i $B$ do wyznaczenia prędkości $v_0 = E/B$, a po wyłączeniu pola $B$ zmierzył kąt odchylenia i wyznaczył $q/m$, dowodząc istnienia elektronu. Odkrycie jądra atomowego za pomocą cząstek $\\alpha$ na złotej folii było znacznie późniejszym doświadczeniem Rutherforda (1909–1911)."
   },
   {
     "id": 8,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Które stwierdzenie poprawnie opisuje widmo liniowe w porównaniu z widmem ciągłym?",
+    "text": "Które z poniższych stwierdzeń poprawnie opisują widmo liniowe oraz widmo ciągłe?",
     "options": [
       {
-        "text": "Widmo liniowe emitują rozrzedzone gazy atomowe, a ciągłe rozgrzane ciała stałe.",
+        "text": "Widmo liniowe składa się z oddzielnych prążków i jest typowe dla rozrzedzonych gazów.",
         "isCorrect": true
       },
       {
-        "text": "Widmo liniowe emitują gęste ciała stałe, a ciągłe pojedyncze atomy w gazie.",
+        "text": "Widmo ciągłe obejmuje nieprzerwane pasmo fal i emitują je rozgrzane ciała stałe i ciecze.",
+        "isCorrect": true
+      },
+      {
+        "text": "Widmo liniowe emitują wyłącznie gęste ciała stałe ogrzane powyżej temperatury topnienia.",
         "isCorrect": false
       },
       {
-        "text": "Widmo liniowe zależy wyłącznie od temperatury, a ciągłe od liczby atomowej.",
-        "isCorrect": false
-      },
-      {
-        "text": "Widmo liniowe obejmuje wszystkie długości fal, a ciągłe pojedyncze prążki.",
+        "text": "Widmo ciągłe powstaje wyłącznie w zimnych gazach jednoatomowych pod niskim ciśnieniem.",
         "isCorrect": false
       }
     ],
-    "explanation": "Widmo liniowe składa się z dyskretnych, oddzielnych linii i jest charakterystyczne dla rozrzedzonych gazów atomowych, w których atomy praktycznie ze sobą nie oddziałują. Widmo ciągłe obejmuje nieprzerwane pasmo długości fal i emitowane jest przez rozgrzane ciała stałe, ciecze, gęste gazy oraz podczas hamowania elektronów (Bremsstrahlung)."
+    "explanation": "Rozrzedzone gazy atomowe (nieoddziałujące atomy) dają widmo liniowe złożone z ostrych, dyskretnych prążków. Natomiast rozgrzane ciała stałe, ciecze, gęste gazy oraz promieniowanie hamowania elektronów dają widmo ciągłe obejmujące szeroki, nieprzerwany zakres długości fal."
   },
   {
     "id": 9,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Jak definiuje się w fizyce ciało doskonale czarne (CDC)?",
+    "text": "Które stwierdzenia dotyczące promieniowania termicznego i ciała doskonale czarnego (CDC) są prawdziwe?",
     "options": [
       {
-        "text": "Obiekt pochłaniający całe padające promieniowanie niezależnie od długości fali.",
+        "text": "Ciało doskonale czarne pochłania $100\\%$ padającego promieniowania każdej długości fali.",
         "isCorrect": true
       },
       {
-        "text": "Obiekt odbijający całe padające promieniowanie w zakresie światła widzialnego.",
+        "text": "Wraz ze wzrostem temperatury rośnie moc emisji, a maksimum przesuwa się ku krótszym falom.",
+        "isCorrect": true
+      },
+      {
+        "text": "W temperaturze pokojowej ciało doskonale czarne nie emituje żadnego promieniowania.",
         "isCorrect": false
       },
       {
-        "text": "Obiekt nieemitujący żadnego promieniowania termicznego w dowolnej temperaturze.",
-        "isCorrect": false
-      },
-      {
-        "text": "Obiekt pochłaniający wyłącznie promieniowanie o długości fali poniżej $400\\text{ nm}$.",
+        "text": "Rozkład widmowy promieniowania CDC zależy głównie od składu chemicznego, a nie temperatury.",
         "isCorrect": false
       }
     ],
-    "explanation": "Ciało doskonale czarne to wyidealizowany obiekt pochłaniający $100\\%$ padającego na nie promieniowania elektromagnetycznego niezależnie od długości fali i kąta padania. W temperaturze $T > 0\\text{ K}$ emituje ono promieniowanie termiczne o uniwersalnym widmie zależnym wyłącznie od temperatury (dobrym przybliżeniem jest mały otwór w nagrzanej wnęce)."
+    "explanation": "CDC pochłania $100\\%$ padającego promieniowania, a ze wzrostem temperatury rośnie jego moc ($\\propto T^4$) i maleje $\\lambda_{\\max}$ ($\\propto 1/T$). Każde ciało o $T > 0\\text{ K}$ (także w temp. pokojowej — w podczerwieni) emituje promieniowanie termiczne, a widmo CDC zależy wyłącznie od temperatury."
   },
   {
     "id": 10,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Na czym polegała tzw. katastrofa w nadfiolecie wynikająca z klasycznego wzoru Rayleigha-Jeansa?",
+    "text": "Które ze stwierdzeń poprawnie opisują prawo Rayleigha-Jeansa oraz hipotezę kwantową Plancka (1900)?",
     "options": [
       {
-        "text": "Wzór przewidywał nieskończony wzrost mocy promieniowania dla bardzo krótkich fal.",
+        "text": "Klasyczny wzór Rayleigha-Jeansa rozbiegał się do nieskończoności dla krótkich fal ($\\lambda \\to 0$).",
         "isCorrect": true
       },
       {
-        "text": "Wzór przewidywał zerową emisję promieniowania termicznego dla bardzo długich fal.",
-        "isCorrect": false
+        "text": "Planck założył, że oscylator harmoniczny ma skwantowaną energię $E = nh\\nu$ ($n = 0,1,2,\\dots$).",
+        "isCorrect": true
       },
       {
-        "text": "Wzór przewidywał spadek całkowitej mocy promieniowania wraz ze wzrostem temperatury.",
-        "isCorrect": false
+        "text": "Wzór Plancka przechodzi w prawo Rayleigha-Jeansa dla dużych długości fal (podczerwień).",
+        "isCorrect": true
       },
       {
-        "text": "Wzór przewidywał dyskretne linie widmowe zamiast gładkiego rozkładu ciągłego.",
+        "text": "Hipoteza Plancka przewidywała nieskończoną moc promieniowania w zakresie nadfioletu.",
         "isCorrect": false
       }
     ],
-    "explanation": "Klasyczne prawo Rayleigha-Jeansa $S(\\lambda) = \\frac{2\\pi c k_B T}{\\lambda^4}$ dobrze zgadzało się z doświadczeniem dla dużych długości fal, ale przy $\\lambda \\to 0$ (nadfiolet i krótsze fale) rozbiegało się do nieskończoności, co oznaczało nieskończoną energię promieniowania. Problem ten rozwiązał Max Planck w 1900 roku, wprowadzając kwantowanie energii oscylatorów."
+    "explanation": "To klasyczny wzór Rayleigha-Jeansa ($\\propto T/\\lambda^4$) prowadził do katastrofy w nadfiolecie przy $\\lambda \\to 0$. Hipoteza kwantowa Plancka ($E = nh\\nu$) usunęła tę rozbieżność dzięki czynnikowi wykładniczemu w mianowniku, zachowując zgodność ze wzorem klasycznym dla dużych $\\lambda$."
   },
   {
     "id": 11,
@@ -316,26 +316,26 @@ const questionDatabase = [
   {
     "id": 14,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Dlaczego Słońce traktuje się jako ciało tylko w przybliżeniu („prawie”) doskonale czarne o temperaturze powierzchni ok. $5500\\text{ K}$?",
+    "text": "Które z poniższych informacji poprawnie opisują Słońce jako ciało w przybliżeniu doskonale czarne?",
     "options": [
       {
-        "text": "Atmosfera słoneczna zawiera atomy i jony, które modyfikują gładki rozkład widma.",
+        "text": "Fotony $\\gamma$ z syntezy we wnętrzu tracą energię przez rozpraszanie Comptona na elektronach.",
         "isCorrect": true
       },
       {
-        "text": "We wnętrzu Słońca nie zachodzą zderzenia Comptona spowalniające fotony gamma.",
+        "text": "Atmosfera słoneczna zawiera atomy i jony modyfikujące widmo (stąd ciało „prawie” czarne).",
+        "isCorrect": true
+      },
+      {
+        "text": "Temperatura powierzchni Słońca wynosi zaledwie ok. $2{,}73\\text{ K}$ w zakresie mikrofalowym.",
         "isCorrect": false
       },
       {
-        "text": "Powierzchnia Słońca odbija ponad połowę padającego promieniowania kosmicznego.",
-        "isCorrect": false
-      },
-      {
-        "text": "Słońce emituje wyłącznie wąskie widmo liniowe wodoru bez żadnego tła ciągłego.",
+        "text": "Wnętrze Słońca nie produkuje żadnych fotonów gamma, lecz wyłącznie światło widzialne.",
         "isCorrect": false
       }
     ],
-    "explanation": "Wysokoenergetyczne fotony $\\gamma$ z syntezy termojądrowej we wnętrzu Słońca tracą energię przez wielokrotne rozpraszanie Comptona, dając przy powierzchni ($T \\approx 5500\\text{ K}$) gładkie widmo zbliżone do CDC. Powyżej znajduje się jednak atmosfera słoneczna z atomami, jonami i cząsteczkami, która absorbuje wybrane długości fal (linie Fraunhofera), modyfikując idealny rozkład CDC."
+    "explanation": "Fotony $\\gamma$ z fuzji w jądrze Słońca tracą energię w zderzeniach Comptona, dając przy powierzchni ($T \\approx 5500\\text{ K}$) widmo CDC, które następnie modyfikuje atmosfera słoneczna. Temperatura $2{,}73\\text{ K}$ dotyczy mikrofalowego promieniowania tła (CMB)."
   },
   {
     "id": 15,
@@ -388,26 +388,26 @@ const questionDatabase = [
   {
     "id": 17,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Jak brzmi hipoteza Louisa de Broglie'a dotycząca długości fali materii towarzyszącej cząstce o pędzie $p$?",
+    "text": "Które ze stwierdzeń na temat fal materii Louisa de Broglie'a są prawdziwe?",
     "options": [
       {
-        "text": "Długość fali materii wyraża się wzorem $\\lambda = h/p$ (odwrotnie proporcjonalna do pędu).",
+        "text": "Każdej cząstce materialnej o pędzie $p$ towarzyszy fala o długości $\\lambda = h/p$.",
         "isCorrect": true
       },
       {
-        "text": "Długość fali materii wyraża się wzorem $\\lambda = h \\cdot p$ (proporcjonalna do pędu cząstki).",
+        "text": "Do obserwacji dyfrakcji potrzeba przeszkody o rozmiarze rzędu długości fali $\\lambda$.",
+        "isCorrect": true
+      },
+      {
+        "text": "Fale materii dotyczą tylko fotonów, a cząstki o masie spoczynkowej ich nie mają.",
         "isCorrect": false
       },
       {
-        "text": "Długość fali materii wyraża się wzorem $\\lambda = p/h$ (rośnie wraz ze wzrostem masy).",
-        "isCorrect": false
-      },
-      {
-        "text": "Długość fali materii wyraża się wzorem $\\lambda = hc/E_k$ niezależnie od masy spoczynkowej.",
+        "text": "Im większa masa oraz pęd cząstki, tym dłuższa jest jej fala de Broglie'a.",
         "isCorrect": false
       }
     ],
-    "explanation": "Przez analogię do fotonów ($E=h\\nu=hc/\\lambda$ oraz $p=E/c=h/\\lambda$), Louis de Broglie (1924) zaproponował, że każdej cząstce materialnej o pędzie $p = mv$ towarzyszy fala materii o długości $\\lambda = h/p$. Im większy pęd (masa lub prędkość) cząstki, tym krótsza jest odpowiadająca jej fala de Broglie'a."
+    "explanation": "Hipoteza de Broglie'a dotyczy cząstek materialnych: $\\lambda = h/p = h/(mv)$. Długość fali maleje ze wzrostem masy i pędu, a obserwacja efektów falowych wymaga przeszkody o rozmiarach porównywalnych z $\\lambda$."
   },
   {
     "id": 18,
@@ -436,26 +436,26 @@ const questionDatabase = [
   {
     "id": 19,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Która para zjawisk dowodzi, że fala elektromagnetyczna (światło) zachowuje się jak strumień cząstek (fotonów)?",
+    "text": "Które z poniższych zjawisk dowodzą KORPUSKULARNEJ (cząstkowej) natury promieniowania elektromagnetycznego?",
     "options": [
       {
-        "text": "Zjawisko fotoelektryczne zewnętrzne oraz rozpraszanie fotonów Comptona.",
+        "text": "Zjawisko fotoelektryczne zewnętrzne (wybijanie elektronów z metalu).",
         "isCorrect": true
       },
       {
-        "text": "Dyfrakcja elektronów na krysztale niklu oraz interferencja na szczelinach.",
-        "isCorrect": false
+        "text": "Rozpraszanie Comptona fotonów na swobodnych elektronach.",
+        "isCorrect": true
       },
       {
-        "text": "Polaryzacja liniowa światła w pryzmacie oraz dyfrakcja na siatce optycznej.",
-        "isCorrect": false
+        "text": "Kreacja par elektron–pozyton z wysokoenergetycznego fotonu gamma.",
+        "isCorrect": true
       },
       {
-        "text": "Doświadczenie Davissona-Germera oraz rozpraszanie cząstek alfa na folii.",
+        "text": "Dyfrakcja wiązki elektronów na krysztale niklu (Davisson-Germer).",
         "isCorrect": false
       }
     ],
-    "explanation": "Dualizm korpuskularno-falowy oznacza, że światło przejawia cechy cząstkowe (zjawisko fotoelektryczne, efekt Comptona, kreacja par), natomiast materia (cząstki materialne) przejawia cechy falowe (dyfrakcja elektronów w doświadczeniu Davissona-Germera, interferencja elektronów na podwójnej szczelinie). Dyfrakcja i polaryzacja światła to klasyczne zjawiska falowe."
+    "explanation": "Zjawisko fotoelektryczne, efekt Comptona oraz kreacja par dowodzą korpuskularnej natury światła (foton ma energię $h\\nu$ i pęd $h/\\lambda$). Natomiast doświadczenie Davissona-Germera dowodzi odwrotnego aspektu dualizmu — falowej natury cząstek materialnych (elektronów)."
   },
   {
     "id": 20,
@@ -508,26 +508,26 @@ const questionDatabase = [
   {
     "id": 22,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Jak kwantowa teoria Einsteina zjawiska fotoelektrycznego tłumaczy brak emisji elektronów dla częstotliwości niższych od granicznej $\\nu_0$?",
+    "text": "Które fakty doświadczalne zjawiska fotoelektrycznego wyjaśniła kwantowa teoria Einsteina, a z którymi nie radziła sobie fizyka klasyczna?",
     "options": [
       {
-        "text": "Energia pojedynczego fotonu $h\\nu$ jest mniejsza od pracy wyjścia $W$, a fotony się nie sumują.",
+        "text": "Maksymalna energia $E_{k,\\max}$ fotoelektronów nie zależy od natężenia światła, lecz od $\\nu$.",
         "isCorrect": true
       },
       {
-        "text": "Fale o niskiej częstotliwości ulegają całkowitemu odbiciu od atomów na powierzchni metalu.",
-        "isCorrect": false
+        "text": "Istnieje częstotliwość graniczna $\\nu_0 = W/h$, poniżej której zjawisko w ogóle nie zachodzi.",
+        "isCorrect": true
       },
       {
-        "text": "Czas potrzebny na zakumulowanie energii z wielu słabych fotonów przekracza czas pomiaru.",
-        "isCorrect": false
+        "text": "Emisja fotoelektronów następuje natychmiastowo (brak opóźnienia nawet dla słabego światła).",
+        "isCorrect": true
       },
       {
-        "text": "Przy niskiej częstotliwości praca wyjścia $W$ metalu gwałtownie rośnie do nieskończoności.",
+        "text": "Wraz ze wzrostem natężenia światła liniowo rośnie energia kinetyczna pojedynczego fotonu.",
         "isCorrect": false
       }
     ],
-    "explanation": "W akcie elementarnym jeden elektron pochłania w całości energię tylko jednego fotonu ($E = h\\nu$). Aby elektron opuścił metal, musi pokonać pracę wyjścia $W$, czyli $h\\nu \\ge W$ (stąd $\\nu_0 = W/h$). Gdy $\\nu < \\nu_0$, żaden pojedynczy foton nie ma dość energii, a elektrony nie potrafią „kumulować” energii z wielu słabych fotonów, więc zwiększanie natężenia światła nic nie zmienia."
+    "explanation": "Teoria Einsteina ($E_{k,\\max} = h\\nu - W$) wyjaśniła wszystkie trzy klasyczne paradoksy: brak zależności $E_{k,\\max}$ od natężenia, istnienie progu $\\nu_0 = W/h$ oraz brak opóźnienia czasowego. Natężenie światła określa liczbę fotonów (strumień), a NIE energię pojedynczego fotonu."
   },
   {
     "id": 23,
@@ -580,26 +580,26 @@ const questionDatabase = [
   {
     "id": 25,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Które stwierdzenie poprawnie opisuje przesunięcie długości fali fotonu $\\Delta\\lambda = \\lambda' - \\lambda$ w efekcie Comptona?",
+    "text": "Które ze stwierdzeń na temat rozpraszania (efektu) Comptona są prawdziwe?",
     "options": [
       {
-        "text": "Zależy wyłącznie od kąta rozproszenia $\\theta$, a nie od początkowej długości fali $\\lambda$.",
+        "text": "Przesunięcie $\\Delta\\lambda = \\lambda_C(1 - \\cos\\theta)$ nie zależy od początkowej długości fali.",
         "isCorrect": true
       },
       {
-        "text": "Jest zawsze ujemne, ponieważ foton po zderzeniu z elektronem zyskuje dodatkową energię.",
+        "text": "Foton zachowuje się jak cząstka o $m_0 = 0$ oraz pędzie $p = h/\\lambda$.",
+        "isCorrect": true
+      },
+      {
+        "text": "Po zderzeniu z elektronem długość fali fotonu zawsze maleje ($\\lambda' < \\lambda$).",
         "isCorrect": false
       },
       {
-        "text": "Rośnie proporcjonalnie do kwadratu początkowej długości fali padającego promieniowania.",
-        "isCorrect": false
-      },
-      {
-        "text": "Zależy przede wszystkim od liczby atomowej $Z$ pierwiastka tarczy, na której zachodzi.",
+        "text": "Efekt ten można w pełni wyjaśnić w ramach klasycznej teorii falowej.",
         "isCorrect": false
       }
     ],
-    "explanation": "Wzór Comptona ma postać $\\Delta\\lambda = \\lambda' - \\lambda = \\lambda_C (1 - \\cos\\theta)$, gdzie stała $\\lambda_C = \\frac{h}{m_e c} \\approx 0{,}0243\\text{ \\AA}$ to comptonowska długość fali elektronu. Przesunięcie $\\Delta\\lambda$ jest zawsze nieujemne (foton traci energię, więc $\\lambda' \\ge \\lambda$) i zależy wyłącznie od kąta rozproszenia $\\theta$, a nie od początkowej $\\lambda$."
+    "explanation": "W efekcie Comptona foton oddaje energię elektronowi, więc jego długość fali rośnie ($\\lambda' \\ge \\lambda$, $\\Delta\\lambda = \\lambda_C(1 - \\cos\\theta)$ niezależnie od $\\lambda$). Zjawisko dowodzi cząstkowej natury fotonu ($m_0 = 0, p = h/\\lambda$) i nie wynika z klasycznej teorii falowej."
   },
   {
     "id": 26,
@@ -652,26 +652,26 @@ const questionDatabase = [
   {
     "id": 28,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Dlaczego kreacja pary elektron–pozyton ($\\gamma \\to e^- + e^+$) może zajść wyłącznie w pobliżu jądra atomowego, a nigdy w idealnej próżni?",
+    "text": "Które stwierdzenia na temat kreacji par elektron–pozyton ($\\gamma \\to e^- + e^+$) są prawdziwe?",
     "options": [
       {
-        "text": "Ciężkie jądro musi przejąć nadmiar pędu, aby zachować jednocześnie energię i pęd.",
+        "text": "Zachodzi wyłącznie w polu jądra atomowego, które przejmuje nadmiar pędu fotonu.",
         "isCorrect": true
       },
       {
-        "text": "Jądro dostarcza elektronowi i pozytonowi ładunków elektrycznych o przeciwnych znakach.",
+        "text": "Minimalna (progowa) energia fotonu dla pary $e^- e^+$ wynosi $2m_e c^2 = 1{,}022\\text{ MeV}$.",
+        "isCorrect": true
+      },
+      {
+        "text": "Pozyton ma dokładnie dwukrotnie większą masę spoczynkową niż zwykły elektron.",
         "isCorrect": false
       },
       {
-        "text": "W próżni energia spoczynkowa pary elektron-pozyton wzrasta do nieskończonej wartości.",
-        "isCorrect": false
-      },
-      {
-        "text": "Jądro musi wyemitować dodatkowe neutrino, aby spełnić zasadę zachowania liczby barionowej.",
+        "text": "Proces ten zachodzi swobodnie w idealnej próżni już dla fotonów widzialnych.",
         "isCorrect": false
       }
     ],
-    "explanation": "Pojedynczy foton w próżni nie może zamienić się w parę $e^- e^+$, ponieważ niemożliwe byłoby jednoczesne spełnienie zasad zachowania energii i pędu (pęd fotonu $p = E/c$ jest zbyt duży). Obecność ciężkiego jądra atomowego pozwala przejąć nadwyżkę pędu przy znikomym poborze energii kinetycznej. Ładunek całkowity pary wynosi $(-e)+(+e)=0$, więc ładunek jest zachowany automatycznie."
+    "explanation": "Kreacja pary $e^- e^+$ wymaga fotonu o energii co najmniej $2m_e c^2 = 1{,}022\\text{ MeV}$ oraz obecności jądra atomowego (zachowanie energii i pędu). Pozyton ma IDENTYCZNĄ masę co elektron (a przeciwny ładunek i moment magnetyczny)."
   },
   {
     "id": 29,
@@ -700,50 +700,50 @@ const questionDatabase = [
   {
     "id": 30,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Na jakim zjawisku fizycznym opiera się działanie medycznej pozytonowej tomografii emisyjnej (PET)?",
+    "text": "Które ze stwierdzeń na temat anihilacji pary elektron–pozyton oraz jej zastosowań są prawdziwe?",
     "options": [
       {
-        "text": "Na anihilacji par elektron–pozyton z emisją kwantów promieniowania gamma.",
+        "text": "W wyniku zderzenia elektronu z pozytonem cząstki znikają, tworząc $2$ (lub $3$) fotony $\\gamma$.",
         "isCorrect": true
       },
       {
-        "text": "Na dyfrakcji wiązki pozytonów na krystalicznej strukturze kości pacjenta.",
+        "text": "Zjawisko to stanowi fizyczną podstawę medycznego obrazowania PET (tomografii pozytonowej).",
+        "isCorrect": true
+      },
+      {
+        "text": "W procesie anihilacji powstaje zawsze pojedynczy proton i ciężkie jądro helu-4 ($^4\\text{He}$).",
         "isCorrect": false
       },
       {
-        "text": "Na emisji ciągłego widma hamowania pozytonów w polu magnetycznym skanera.",
-        "isCorrect": false
-      },
-      {
-        "text": "Na zjawisku fotoelektrycznym wywołanym przez światło lasera podczerwonego.",
+        "text": "Anihilacja zachodzi wyłącznie wtedy, gdy pozyton zderza się ze swobodnym neutronem.",
         "isCorrect": false
       }
     ],
-    "explanation": "W badaniu PET podaje się radioznacznik emitujący pozytony (rozpad $\\beta^+$). Pozyton szybko napotyka elektron w tkance i ulega anihilacji ($e^+ + e^- \\to 2\\gamma$), w której powstają zazwyczaj dwa fotony $\\gamma$ po $511\\text{ keV}$ lecące w przeciwnych kierunkach, rejestrowane koincydencyjnie przez detektory."
+    "explanation": "Cząstka w kontakcie ze swoją antycząstką (tu $e^-$ i $e^+$) ulega anihilacji, zamieniając całą masę w energię zazwyczaj $2$ (lub $3$) fotonów $\\gamma$ (po $511\\text{ keV}$). Wykorzystuje się to bezpośrednio w pozytonowej tomografii emisyjnej PET."
   },
   {
     "id": 31,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Dlaczego klasyczny planetarny model atomu Rutherforda był sprzeczny z elektrodynamiką klasyczną?",
+    "text": "Które ze stwierdzeń poprawnie opisują wczesne modele budowy atomu Thomsona i Rutherforda?",
     "options": [
       {
-        "text": "Elektron w ruchu po okręgu ma przyspieszenie, więc powinien promieniować i spaść na jądro.",
+        "text": "Model Thomsona zakładał ciągły ładunek dodatni z elektronami jak rodzynki w cieście.",
         "isCorrect": true
       },
       {
-        "text": "Siła przyciągania Coulomba między protonem a elektronem jest za słaba dla orbity kołowej.",
+        "text": "Doświadczenie Rutherforda (cząstki $\\alpha$ na folii Au) dowiodło istnienia małego jądra.",
+        "isCorrect": true
+      },
+      {
+        "text": "Model planetarny Rutherforda gwarantował pełną stabilność atomu bez promieniowania.",
         "isCorrect": false
       },
       {
-        "text": "Model zakładał równomierne rozłożenie ładunku dodatniego w całej objętości atomu.",
-        "isCorrect": false
-      },
-      {
-        "text": "Model przewidywał istnienie wyłącznie jednego poziomu energetycznego w każdym atomie.",
+        "text": "Model Rutherforda poprawnie wyjaśnił serie widmowe wodoru bez postulatów kwantowych.",
         "isCorrect": false
       }
     ],
-    "explanation": "Według elektrodynamiki Maxwella każdy ładunek poruszający się z przyspieszeniem (a ruch po okręgu ma przyspieszenie dośrodkowe) emituje fale elektromagnetyczne i traci energię. Elektron powinien więc w ułamku sekundy spaść spiralnie na jądro, emitując widmo ciągłe — tymczasem atomy są stabilne i dają widma liniowe. Rozłożenie ładunku w całej objętości dotyczyło wcześniejszego modelu Thomsona („ciasta z rodzynkami”)."
+    "explanation": "Model Thomsona („ciasta z rodzynkami”) został obalony przez doświadczenie Rutherforda z cząstkami $\\alpha$ na złotej folii. Model planetarny Rutherforda był jednak klasycznie niestabilny (przyspieszający elektron promieniowałby i spadł na jądro) i nie wyjaśniał widm liniowych."
   },
   {
     "id": 32,
@@ -844,26 +844,26 @@ const questionDatabase = [
   {
     "id": 36,
     "category": "1. Mechanika kwantowa I — podstawy i model Bohra",
-    "text": "Która seria widmowa atomu wodoru odpowiada przejściom elektronu na poziom $n = 2$ i leży w zakresie światła widzialnego?",
+    "text": "Które z poniższych przyporządkowań serii widmowych atomu wodoru do zakresu widma i poziomu końcowego są poprawne?",
     "options": [
       {
-        "text": "Seria Balmera (przejścia ze stanów $n \\ge 3$ na stan $n = 2$).",
+        "text": "Seria Lymana odpowiada przejściom na poziom $n = 1$ i leży w nadfiolecie (UV).",
         "isCorrect": true
       },
       {
-        "text": "Seria Lymana (przejścia ze stanów $n \\ge 2$ na stan $n = 1$).",
+        "text": "Seria Balmera odpowiada przejściom na poziom $n = 2$ i leży w świetle widzialnym.",
+        "isCorrect": true
+      },
+      {
+        "text": "Seria Paschena odpowiada przejściom na poziom $n = 1$ i leży w promieniach gamma.",
         "isCorrect": false
       },
       {
-        "text": "Seria Paschena (przejścia ze stanów $n \\ge 4$ na stan $n = 3$).",
-        "isCorrect": false
-      },
-      {
-        "text": "Seria Comptona (przejścia swobodne elektronów w polu jądra).",
+        "text": "Seria Balmera odpowiada przejściom na poziom $n = 1$ i leży w zakresie promieni X.",
         "isCorrect": false
       }
     ],
-    "explanation": "W widmie emisyjnym wodoru wyróżniamy główne serie: Lymana (przejścia na $n=1$, zakres nadfioletu UV), Balmera (przejścia na $n=2$, zakres światła widzialnego, m.in. linia czerwona $656\\text{ nm}$) oraz Paschena (przejścia na $n=3$, podczerwień IR)."
+    "explanation": "W widmie wodoru seria Lymana to przejścia na $n = 1$ (UV), seria Balmera to przejścia na $n = 2$ (zakres widzialny), natomiast seria Paschena to przejścia na $n = 3$ i leży w podczerwieni (IR), a nie w promieniowaniu gamma."
   },
   {
     "id": 37,
@@ -988,26 +988,26 @@ const questionDatabase = [
   {
     "id": 42,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Co oznacza symbol $\\hbar$ występujący w równaniu Schrödingera oraz w zasadzie nieoznaczoności Heisenberga?",
+    "text": "Które opisy symboli występujących w zależnym od czasu równaniu Schrödingera są poprawne?",
     "options": [
       {
-        "text": "Zredukowaną stałą Plancka (stałą Diraca) równą $\\hbar = h / (2\\pi)$.",
+        "text": "$\\hbar = h/(2\\pi)$ oznacza zredukowaną stałą Plancka (stałą Diraca).",
         "isCorrect": true
       },
       {
-        "text": "Zwykłą stałą Plancka pomnożoną przez prędkość światła ($\\hbar = h \\cdot c$).",
+        "text": "$\\Psi(x,t)$ oznacza zespoloną funkcję falową cząstki w chwili $t$.",
+        "isCorrect": true
+      },
+      {
+        "text": "$V(x,t)$ oznacza prędkość grupową pakietu falowego cząstki.",
         "isCorrect": false
       },
       {
-        "text": "Stałą Plancka podzieloną przez ładunek elementarny ($\\hbar = h / e$).",
-        "isCorrect": false
-      },
-      {
-        "text": "Kwadrat stałej Plancka podzielony przez masę elektronu ($\\hbar = h^2 / m_e$).",
+        "text": "$i$ oznacza natężenie prądu elektrycznego w układzie kwantowym.",
         "isCorrect": false
       }
     ],
-    "explanation": "Symbol $\\hbar$ (czyt. „h kreślone”) oznacza zredukowaną stałą Plancka, czyli $\\hbar = \\frac{h}{2\\pi} \\approx 1{,}055 \\times 10^{-34}\\text{ J}\\cdot\\text{s}$. Jest to podstawowa stała kwantowa pojawiająca się w równaniu Schrödingera, kwantowaniu momentu pędu ($L = n\\hbar$) i zasadzie nieoznaczoności ($\\Delta x \\Delta p_x \\ge \\hbar/2$)."
+    "explanation": "W zależnym od czasu równaniu Schrödingera $\\hbar = h/(2\\pi)$ to zredukowana stała Plancka, $\\Psi(x,t)$ to zespolona funkcja falowa, $V(x,t)$ to energia potencjalna (nie prędkość!), a $i$ to jednostka urojona ($i^2 = -1$)."
   },
   {
     "id": 43,
@@ -1036,26 +1036,26 @@ const questionDatabase = [
   {
     "id": 44,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Jakie znaczenie fizyczne według statystycznej interpretacji Maxa Borna ma wielkość $|\\Psi(x,t)|^2 = \\Psi^*(x,t)\\Psi(x,t)$?",
+    "text": "Które ze stwierdzeń poprawnie opisują funkcję falową $\\Psi(x,t)$ i interpretację Maxa Borna?",
     "options": [
       {
-        "text": "Gęstość prawdopodobieństwa znalezienia cząstki w punkcie $x$ w chwili $t$.",
+        "text": "Kwadrat modułu $|\\Psi(x,t)|^2 = \\Psi^*\\Psi$ jest gęstością prawdopodobieństwa cząstki.",
         "isCorrect": true
       },
       {
-        "text": "Dokładną wartość chwilowej prędkości cząstki w punkcie $x$ w chwili $t$.",
-        "isCorrect": false
+        "text": "Całka $\\int_{-\\infty}^{+\\infty}|\\Psi|^2 dx = 1$ wyraża warunek normalizacji funkcji falowej.",
+        "isCorrect": true
       },
       {
-        "text": "Gęstość ładunku elektrycznego rozmytego równomiernie w całej przestrzeni.",
-        "isCorrect": false
+        "text": "Sama funkcja falowa $\\Psi(x,t)$ jest zespolona i nie jest bezpośrednio mierzalna.",
+        "isCorrect": true
       },
       {
-        "text": "Całkowitą energię kinetyczną cząstki uwięzionej w studni potencjału.",
+        "text": "Wielkość $|\\Psi(x,t)|^2$ wyznacza dokładny klasyczny tor ruchu cząstki w czasie.",
         "isCorrect": false
       }
     ],
-    "explanation": "Sama funkcja falowa $\\Psi(x,t)$ jest wielkością zespoloną i nie jest bezpośrednio mierzalna. Według interpretacji Borna dopiero kwadrat jej modułu $\\rho(x,t) = |\\Psi(x,t)|^2 = \\Psi^*\\Psi$ jest gęstością prawdopodobieństwa: prawdopodobieństwo znalezienia cząstki w przedziale $[x, x+dx]$ wynosi $|\\Psi(x,t)|^2 dx$."
+    "explanation": "Według interpretacji statystycznej Borna funkcja falowa $\\Psi$ jest zespolona i niemierzalna bezpośrednio, natomiast $\\rho = |\\Psi|^2 = \\Psi^*\\Psi$ oznacza gęstość prawdopodobieństwa (znormalizowaną do $1$). Mechanika kwantowa nie wyznacza klasycznego toru."
   },
   {
     "id": 45,
@@ -1108,74 +1108,74 @@ const questionDatabase = [
   {
     "id": 47,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Czym jest pakiet falowy w mechanice kwantowej?",
+    "text": "Które ze stwierdzeń na temat pakietu falowego w mechanice kwantowej są prawdziwe?",
     "options": [
       {
-        "text": "Superpozycją wielu fal płaskich o różnych pędach opisującą lokalną cząstkę.",
+        "text": "Jest superpozycją (złożeniem) wielu fal płaskich o różnych pędach i częstotliwościach.",
         "isCorrect": true
       },
       {
-        "text": "Pojedynczą falą harmoniczną rozciągającą się równo od $-\\infty$ do $+\\infty$.",
+        "text": "Reprezentuje cząstkę zlokalizowaną w ograniczonym obszarze przestrzeni ($\\Delta x < \\infty$).",
+        "isCorrect": true
+      },
+      {
+        "text": "Pojedyncza fala płaska o jednym pędzie jest zlokalizowana w jednym punkcie przestrzeni.",
         "isCorrect": false
       },
       {
-        "text": "Zbiorem nieoddziałujących fotonów emitowanych spontanicznie przez ciało.",
-        "isCorrect": false
-      },
-      {
-        "text": "Obszarem przestrzeni, w którym energia potencjalna cząstki jest ujemna.",
+        "text": "Im węższy pakiet w przestrzeni, tym mniejszy jest rozrzut pędów $\\Delta p$ fal składowych.",
         "isCorrect": false
       }
     ],
-    "explanation": "Pojedyncza fala płaska o ściśle określonym pędzie rozciąga się w całej przestrzeni ($\\Delta x = \\infty$). Aby opisać cząstkę zlokalizowaną w skończonym obszarze przestrzeni, składa się (superponuje) wiele fal płaskich o różnych długościach fal/pędach — taki zlokalizowany impuls nazywamy pakietem falowym."
+    "explanation": "Pakiet falowy to złożenie wielu fal płaskich skupione w ograniczonym obszarze przestrzeni. Pojedyncza fala płaska rozciąga się w nieskończoność ($\\Delta x = \\infty$), a z zasady Heisenberga im węższy pakiet ($\\Delta x$ małe), tym szerszy zakres pędów ($\\Delta p$ duże) trzeba złożyć."
   },
   {
     "id": 48,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Co orzeka zasada nieoznaczoności Heisenberga i jakie jest jej pochodzenie fizyczne?",
+    "text": "Które z poniższych stwierdzeń poprawnie opisują zasadę nieoznaczoności Heisenberga?",
     "options": [
       {
-        "text": "To fundamentalne prawo natury uniemożliwiające jednoczesny dokładny pomiar $x$ i $p_x$.",
+        "text": "Wyraża się nierównościami $\\Delta x\\,\\Delta p_x \\ge \\hbar/2$ oraz $\\Delta E\\,\\Delta t \\ge \\hbar/2$ (prawo natury).",
         "isCorrect": true
       },
       {
-        "text": "To techniczne ograniczenie współczesnych detektorów, które da się usunąć chłodzeniem.",
+        "text": "Jest fundamentalnym ograniczeniem, którego nie obejdzie żadna aparatura.",
+        "isCorrect": true
+      },
+      {
+        "text": "Zakazuje jednoczesnego pomiaru składowej pędu $p_x$ oraz współrzędnej $y$.",
         "isCorrect": false
       },
       {
-        "text": "To zakaz jednoczesnego pomiaru składowej pędu $p_x$ oraz prostopadłej współrzędnej $y$.",
-        "isCorrect": false
-      },
-      {
-        "text": "To relacja opisująca wyłącznie błąd statystyczny przy zliczaniu rozpadów jądrowych.",
+        "text": "Wynika wyłącznie z technicznej niedokładności współczesnych przyrządów.",
         "isCorrect": false
       }
     ],
-    "explanation": "Zasada nieoznaczoności Heisenberga ($\\Delta x \\cdot \\Delta p_x \\ge \\frac{\\hbar}{2}$ oraz $\\Delta E \\cdot \\Delta t \\ge \\frac{\\hbar}{2}$) wynika wprost z falowej natury materii (własności transformaty Fouriera pakietu falowego), a nie z niedoskonałości przyrządów pomiarowych — nie da się jej obejść żadną aparaturą. Nie dotyczy różnych składowych, np. $p_x$ i $y$ można zmierzyć jednocześnie."
+    "explanation": "Zasada nieoznaczoności Heisenberga ($\\Delta x\\,\\Delta p_x \\ge \\hbar/2$, $\\Delta E\\,\\Delta t \\ge \\hbar/2$) to fundamentalne prawo natury, a nie błąd aparatury. Nie dotyczy jednak różnych składowych prostopadłych — $p_x$ i $y$ można zmierzyć jednocześnie."
   },
   {
     "id": 49,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Dla której pary wielkości fizycznych zasada nieoznaczoności Heisenberga NIE nakłada ograniczenia na jednoczesną dokładność pomiaru?",
+    "text": "Które pary wielkości fizycznych SĄ związane zasadą nieoznaczoności Heisenberga (zgodnie ze slajdem wykładowym)?",
     "options": [
       {
-        "text": "Składowa pędu wzdłuż osi $x$ ($p_x$) oraz współrzędna położenia wzdłuż osi $y$ ($y$).",
+        "text": "Położenie wzdłuż osi $x$ ($x$) oraz składowa pędu wzdłuż osi $x$ ($p_x$).",
         "isCorrect": true
       },
       {
-        "text": "Składowa pędu wzdłuż osi $x$ ($p_x$) oraz współrzędna położenia wzdłuż osi $x$ ($x$).",
-        "isCorrect": false
+        "text": "Energia stanu kwantowego ($E$) oraz czas trwania tego stanu ($t$).",
+        "isCorrect": true
       },
       {
-        "text": "Energia stanu kwantowego ($E$) oraz czas życia (trwania) tego stanu ($t$).",
-        "isCorrect": false
+        "text": "Moment pędu ($L$) oraz kąt ($\\theta$), a także moment bezwładności ($I$) i $\\omega$.",
+        "isCorrect": true
       },
       {
-        "text": "Moment pędu układu ($L$) oraz odpowiadający mu kąt obrotu w płaszczyźnie ($\\theta$).",
+        "text": "Składowa pędu wzdłuż osi $x$ ($p_x$) oraz położenie wzdłuż osi $y$ ($y$).",
         "isCorrect": false
       }
     ],
-    "explanation": "Zasada nieoznaczoności dotyczy par zmiennych kanonicznie sprzężonych: $(x, p_x)$, $(E, t)$, $(L, \\theta)$ czy $(I, \\omega)$ (wymienionych na slajdzie wykładowym). Nie ogranicza natomiast jednoczesnego pomiaru różnych składowych ortogonalnych, takich jak składowa pędu $p_x$ i położenie $y$."
+    "explanation": "Na slajdach 8–9 wykładu EFW2 jako pary związane nieoznaczonością podano: $(x, p_x)$, $(E, t)$, $(L, \\theta)$ oraz $(I, \\omega)$. Zasada nieoznaczoności NIE obowiązuje dla różnych składowych pędu i położenia, takich jak $p_x$ i $y$."
   },
   {
     "id": 50,
@@ -1204,26 +1204,26 @@ const questionDatabase = [
   {
     "id": 51,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Które trzy filary tworzą klasyczną interpretację kopenhaską mechaniki kwantowej omawianą na wykładzie?",
+    "text": "Które ze stwierdzeń należą do założeń interpretacji kopenhaskiej mechaniki kwantowej?",
     "options": [
       {
-        "text": "Nieoznaczoność Heisenberga, komplementarność Bohra oraz statystyczna interpretacja Borna.",
+        "text": "Opiera się na nieoznaczoności Heisenberga i zasadzie komplementarności Bohra.",
         "isCorrect": true
       },
       {
-        "text": "Zasada zachowania energii, determinizm Laplace'a oraz teoria eteru Michelsona-Morleya.",
-        "isCorrect": false
+        "text": "Zawiera statystyczną interpretację kwadratu funkcji falowej Maxa Borna.",
+        "isCorrect": true
       },
       {
-        "text": "Postulaty orbit Bohra, prawo Stefana-Boltzmanna oraz prawo przesunięć Wiena dla CDC.",
-        "isCorrect": false
+        "text": "Sam pomiar wybiera jeden konkretny wynik spośród prawdopodobnych możliwości.",
+        "isCorrect": true
       },
       {
-        "text": "Zasada równoważności Einsteina, transformacja Lorentza oraz teoria pasmowa ciał stałych.",
+        "text": "Zakłada, że każda cząstka ma równocześnie ściśle określony tor i naturę fali.",
         "isCorrect": false
       }
     ],
-    "explanation": "Według wykładu EFW2 interpretacja kopenhaska opiera się na trzech filarach: (1) zasadzie nieoznaczoności Heisenberga, (2) zasadzie komplementarności Bohra (aspekt falowy i korpuskularny uzupełniają się, nie obserwuje się ich naraz) oraz (3) statystycznej interpretacji funkcji falowej Maxa Borna."
+    "explanation": "Interpretacja kopenhaska (EFW2 s. 10) opiera się na trzech filarach: nieoznaczoności Heisenberga, komplementarności Bohra (nie opisuje się zjawisk równocześnie jako cząstek i fal) oraz statystycznej interpretacji Borna; pomiar wybiera wynik spośród możliwych."
   },
   {
     "id": 52,
@@ -1252,50 +1252,50 @@ const questionDatabase = [
   {
     "id": 53,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Jakie jest widmo energii oraz postać przestrzennej funkcji falowej dla cząstki swobodnej ($V = 0$ w całej przestrzeni)?",
+    "text": "Które z poniższych cech opisują cząstkę swobodną ($V = 0$ w całej przestrzeni) w mechanice kwantowej?",
     "options": [
       {
-        "text": "Widmo energii jest ciągłe ($E \\ge 0$), a rozwiązaniem są fale płaskie $Ae^{ikx}+Be^{-ikx}$.",
+        "text": "Jej widmo energii całkowitej jest ciągłe i nieujemne ($E = p^2/(2m) \\ge 0$).",
         "isCorrect": true
       },
       {
-        "text": "Widmo energii jest dyskretne ($E_n \\propto n^2$), a funkcja znika poza odcinkiem $[0,L]$.",
-        "isCorrect": false
+        "text": "Jej równanie stacjonarne ma postać oscylatora: $\\psi''(x) + k^2\\psi(x) = 0$.",
+        "isCorrect": true
       },
       {
-        "text": "Widmo energii jest dyskretne i ujemne ($E_n \\propto -1/n^2$), dokładnie jak w wodorze.",
-        "isCorrect": false
+        "text": "Jej funkcja falowa ma postać fali płaskiej z liczbą falową $k = p/\\hbar$.",
+        "isCorrect": true
       },
       {
-        "text": "Widmo energii ogranicza się do jednej wartości $E = 0$, a funkcja falowa jest stała.",
+        "text": "Jej poziomy energetyczne są skwantowane i rosną proporcjonalnie do $n^2$.",
         "isCorrect": false
       }
     ],
-    "explanation": "Dla cząstki swobodnej ($V = 0$) brak warunków brzegowych nakładających dyskretne wartości na wektor falowy $k = \\sqrt{2mE}/\\hbar$. Równanie Schrödingera przyjmuje postać $\\psi'' + k^2\\psi = 0$, którego rozwiązaniem jest superpozycja fal płaskich $Ae^{ikx} + Be^{-ikx}$ (biegnących w prawo i w lewo), a energia może przyjmować dowolne wartości ciągłe $E = p^2/(2m) \\ge 0$."
+    "explanation": "Cząstka swobodna ($V = 0$) nie ma warunków brzegowych, więc jej widmo energii jest ciągłe ($E \\ge 0$), równanie stacjonarne przyjmuje postać równania oscylatora harmonicznego $\\psi'' + k^2\\psi = 0$ ($k^2 = 2mE/\\hbar^2$), a rozwiązaniem są fale płaskie $Ae^{ikx} + Be^{-ikx}$. Kwantowanie $\\propto n^2$ dotyczy nieskończonej studni potencjału."
   },
   {
     "id": 54,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Jakie warunki brzegowe spełnia funkcja falowa cząstki zamkniętej w jednowymiarowej nieskończonej studni potencjału o szerokości $L$ ($0 < x < L$)?",
+    "text": "Które ze stwierdzeń poprawnie opisują zachowanie cząstki w jednowymiarowej nieskończonej studni potencjału $[0, L]$?",
     "options": [
       {
-        "text": "$\\psi(0) = 0$ i $\\psi(L) = 0$, a poza studnią wynosi zero.",
+        "text": "Poza studnią funkcja falowa wynosi zero, a na jej ściankach $\\psi(0) = \\psi(L) = 0$.",
         "isCorrect": true
       },
       {
-        "text": "$\\psi(0) = 1$ i $\\psi(L) = 1$, a poza studnią zanika powoli.",
+        "text": "Wewnątrz studni powstają fale stojące o gęstości $|\\psi_n|^2$ z $n$ maksimami i $n-1$ węzłami.",
+        "isCorrect": true
+      },
+      {
+        "text": "Gęstość prawdopodobieństwa jest identyczna i stała w każdym punkcie wewnątrz studni.",
         "isCorrect": false
       },
       {
-        "text": "$\\psi'(0) = 0$ i $\\psi'(L) = 0$, a wewnątrz jest stała.",
-        "isCorrect": false
-      },
-      {
-        "text": "$\\psi(0) = \\infty$ i $\\psi(L) = \\infty$, bo poza studnią $V = \\infty$.",
+        "text": "Cząstka może swobodnie przenikać przez nieskończoną ścianę na drodze tunelowania.",
         "isCorrect": false
       }
     ],
-    "explanation": "Ponieważ poza nieskończoną studnią potencjał wynosi $V = \\infty$, cząstka nie może tam przebywać ($\\psi(x) = 0$ dla $x \\le 0$ oraz $x \\ge L$). Z warunku ciągłości funkcji falowej wynikają warunki brzegowe $\\psi(0) = \\psi(L) = 0$, które wymuszają powstanie fal stojących $\\psi_n(x) = \\sqrt{2/L}\\sin(n\\pi x/L)$."
+    "explanation": "W nieskończonej studni ($V = \\infty$ na zewnątrz) brak tunelowania: $\\psi = 0$ poza studnią i $\\psi(0) = \\psi(L) = 0$. Wewnątrz powstają fale stojące $\\sqrt{2/L}\\sin(n\\pi x/L)$, więc $|\\psi_n|^2$ ma charakter falowy ($n$ maksimów i $n-1$ węzłów), a nie stały."
   },
   {
     "id": 55,
@@ -1324,26 +1324,26 @@ const questionDatabase = [
   {
     "id": 56,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Dlaczego cząstka w nieskończonej studni potencjału nie może mieć zerowej energii ($E = 0$, czyli stanu spoczynku)?",
+    "text": "Które ze stwierdzeń dotyczących energii cząstki w jednowymiarowej nieskończonej studni potencjału są prawdziwe?",
     "options": [
       {
-        "text": "Uwięzienie w obszarze $\\Delta x \\le L$ wymusza niezerowy pęd z zasady Heisenberga.",
+        "text": "Poziomy energii są dyskretne i wyrażają się wzorem $E_n = n^2 h^2 / (8mL^2) = n^2 E_1$.",
         "isCorrect": true
       },
       {
-        "text": "Ścianki studni stale przekazują cząstce energię cieplną nawet w $T = 0\\text{ K}$.",
-        "isCorrect": false
+        "text": "Minimalna energia w stanie podstawowym ($n = 1$) jest niezerowa (energia punktu zerowego).",
+        "isCorrect": true
       },
       {
-        "text": "Wewnątrz nieskończonej studni potencjału energia potencjalna przyjmuje $V > 0$.",
-        "isCorrect": false
+        "text": "Poszerzenie studni (wzrost szerokości $L$) powoduje obniżenie poziomów energetycznych.",
+        "isCorrect": true
       },
       {
-        "text": "Zakaz Pauliego zabrania pojedynczej cząstce zajmowania stanu o zerowej energii.",
+        "text": "Dla $n = 0$ cząstka spoczywa spokojnie na dnie studni z całkowitą energią $E_0 = 0$.",
         "isCorrect": false
       }
     ],
-    "explanation": "Dla $n = 0$ funkcja falowa $\\sin(0) \\equiv 0$ znika wszędzie, więc cząstki w ogóle by nie było. Fizycznie istnienie minimalnej, niezerowej energii punktu zerowego ($E_1 = \\frac{h^2}{8mL^2} > 0$) jest bezpośrednią konsekwencją zasady nieoznaczoności Heisenberga: uwięzienie cząstki w przedziale $\\Delta x \\le L$ uniemożliwia dokładne wyzerowanie jej pędu ($p = 0, \\Delta p = 0$)."
+    "explanation": "Dla nieskończonej studni $E_n = \\frac{n^2 h^2}{8mL^2}$ dla $n = 1, 2, 3, \\dots$ Wartość $n = 0$ daje $\\psi \\equiv 0$ (brak cząstki) i jest wykluczona — minimalna energia $E_1 > 0$ wynika też z zasady nieoznaczoności Heisenberga. Wzrost szerokości $L$ obniża energię ($\\propto 1/L^2$)."
   },
   {
     "id": 57,
@@ -1420,50 +1420,50 @@ const questionDatabase = [
   {
     "id": 60,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Czym jest kropka kwantowa (quantum dot) i gdzie znajduje powszechne zastosowanie technologiczne?",
+    "text": "Które ze stwierdzeń na temat kropek kwantowych (quantum dots) są prawdziwe?",
     "options": [
       {
-        "text": "Trójwymiarową studnią potencjału dla elektronów, stosowaną m.in. w ekranach QLED.",
+        "text": "Stanowią trójwymiarową studnię potencjału ograniczającą elektrony w skali nanometrów.",
         "isCorrect": true
       },
       {
-        "text": "Jednowymiarową barierą tunelową dla protonów, stosowaną w reaktorach jądrowych.",
+        "text": "Znajdują zastosowanie w wyświetlaczach QLED oraz w medycynie do znakowania komórek.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ich rozmiar musi być znacznie większy niż jeden centymetr, by zaszło kwantowanie.",
         "isCorrect": false
       },
       {
-        "text": "Mikroskopijną wnęką ze zjonizowanym gazem, stosowaną w telewizorach plazmowych.",
-        "isCorrect": false
-      },
-      {
-        "text": "Pojedynczym atomem gazu szlachetnego używanym jako moderator szybkich neutronów.",
+        "text": "Są podstawowym elementem telewizorów plazmowych opartych na wyładowaniach w gazie.",
         "isCorrect": false
       }
     ],
-    "explanation": "Kropka kwantowa to nanostruktura półprzewodnikowa ograniczająca ruch elektronów we wszystkich trzech wymiarach (3D studnia potencjału o rozmiarach nanometrów, porównywalnych z $\\lambda$ elektronu). Zmieniając jej rozmiar, precyzyjnie stroi się poziomy energetyczne i barwę emitowanego światła — wykorzystuje się to w nowoczesnych wyświetlaczach QLED oraz w medycznym znakowaniu komórek."
+    "explanation": "Kropka kwantowa to nanostruktura półprzewodnikowa o rozmiarach rzędu nanometrów (porównywalnych z $\\lambda$ elektronu), działająca jak 3D studnia potencjału. Stosowana w ekranach QLED i medycynie — nie w telewizorach plazmowych."
   },
   {
     "id": 61,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Na czym polega zjawisko tunelowania kwantowego przez barierę potencjału o wysokości $V_0$?",
+    "text": "Które ze stwierdzeń poprawnie opisują zachowanie cząstki padającej na prostokątną barierę potencjału o wysokości $V_0$ i skończonej szerokości $L$?",
     "options": [
       {
-        "text": "Na niezerowym prawdopodobieństwie przejścia cząstki o energii $E < V_0$ przez barierę.",
+        "text": "Cząstka o energii $E < V_0$ ma niezerowe prawdopodobieństwo przetunelowania przez barierę.",
         "isCorrect": true
       },
       {
-        "text": "Na chwilowym zwiększeniu masy cząstki w celu klasycznego pokonania bariery $V_0$.",
-        "isCorrect": false
+        "text": "Wewnątrz bariery funkcja falowa cząstki o $E < V_0$ nie znika skokowo, lecz zanika wykładniczo.",
+        "isCorrect": true
       },
       {
-        "text": "Na emisji fotonu pozwalającego elektronowi przeskoczyć ponad nieskończoną ścianą.",
-        "isCorrect": false
+        "text": "Nawet cząstka o energii większej niż bariera ($E > V_0$) może się od niej odbić kwantowo.",
+        "isCorrect": true
       },
       {
-        "text": "Na całkowitym odbiciu każdej cząstki, której energia kinetyczna przekracza $V_0$.",
+        "text": "Dla każdej energii $E < V_0$ prawdopodobieństwo przejścia przez skończoną barierę wynosi zero.",
         "isCorrect": false
       }
     ],
-    "explanation": "W fizyce klasycznej cząstka o energii $E < V_0$ zawsze odbija się od bariery potencjału. W mechanice kwantowej funkcja falowa wewnątrz bariery nie znika skokowo, lecz zanika wykładniczo ($\\propto e^{-\\kappa x}$). Jeśli bariera ma skończoną szerokość $L$, po jej drugiej stronie pojawia się fala o niezerowej amplitudzie — cząstka ma niezerowe prawdopodobieństwo przetunelowania."
+    "explanation": "W mechanice kwantowej dla bariery o skończonej szerokości $L$: cząstka o $E < V_0$ ma wykładniczo zanikającą funkcję falową w barierze i niezerowe prawdopodobieństwo tunelowania, a ponadto nawet dla $E > V_0$ cząstka może ulec odbiciu (EFW2 s. 18)."
   },
   {
     "id": 62,
@@ -1492,26 +1492,26 @@ const questionDatabase = [
   {
     "id": 63,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Jak zależy współczynnik transmisji (prawdopodobieństwo tunelowania) $T$ przez szeroką barierę ($\\kappa L \\gg 1$) od szerokości bariery $L$ i masy cząstki $m$?",
+    "text": "Jakie czynniki ZWIĘKSZAJĄ prawdopodobieństwo tunelowania kwantowego (transmisji $T$) cząstki o energii $E < V_0$ przez prostokątną barierę?",
     "options": [
       {
-        "text": "Maleje wykładniczo ze wzrostem szerokości $L$ oraz ze wzrostem pierwiastka z masy $\\sqrt{m}$.",
+        "text": "Zmniejszenie szerokości (grubości) prostokątnej bariery potencjału $L$.",
         "isCorrect": true
       },
       {
-        "text": "Maleje liniowo wraz ze wzrostem szerokości $L$, a nie zależy zupełnie od masy cząstki $m$.",
-        "isCorrect": false
+        "text": "Zmniejszenie masy cząstki $m$ (lżejsze cząstki tunelują znacznie łatwiej).",
+        "isCorrect": true
       },
       {
-        "text": "Rośnie wykładniczo ze wzrostem masy cząstki $m$, ponieważ cięższe cząstki mają większy pęd.",
-        "isCorrect": false
+        "text": "Zbliżenie energii cząstki $E$ do wysokości bariery $V_0$ (mniejsze $V_0 - E$).",
+        "isCorrect": true
       },
       {
-        "text": "Maleje odwrotnie proporcjonalnie do $L^2$ i rośnie liniowo wraz z wysokością bariery $V_0$.",
+        "text": "Zwiększenie wysokości bariery $V_0$ oraz poszerzenie jej grubości $L$.",
         "isCorrect": false
       }
     ],
-    "explanation": "Dla szerokiej bariery ($\\kappa L \\gg 1$) współczynnik transmisji wyraża się przybliżonym wzorem $T \\approx 16\\frac{E}{V_0}(1 - \\frac{E}{V_0})e^{-2\\kappa L}$, gdzie $\\kappa = \\sqrt{\\frac{2m(V_0-E)}{\\hbar^2}}$. Oznacza to silny, wykładniczy spadek prawdopodobieństwa tunelowania wraz ze wzrostem szerokości bariery $L$, deficytu energii $(V_0-E)$ oraz masy cząstki $m$ (dlatego najłatwiej tunelują lekkie elektrony)."
+    "explanation": "Ponieważ $T \\propto e^{-2\\kappa L}$ z $\\kappa = \\sqrt{2m(V_0-E)}/\\hbar$, prawdopodobieństwo tunelowania rośnie wykładniczo przy zmniejszeniu szerokości $L$, masy $m$ oraz deficytu energii $(V_0 - E)$."
   },
   {
     "id": 64,
@@ -1564,26 +1564,26 @@ const questionDatabase = [
   {
     "id": 66,
     "category": "2. Mechanika kwantowa II — równanie Schrödingera i tunelowanie",
-    "text": "Dlaczego skaningowy mikroskop tunelowy (STM) osiąga ekstremalną, subatomową czułość pomiaru wysokości nierówności powierzchni?",
+    "text": "Które stwierdzenia na temat skaningowego mikroskopu tunelowego (STM) oraz innych technicznych skutków tunelowania są prawdziwe?",
     "options": [
       {
-        "text": "Natężenie prądu tunelowego zależy wykładniczo od odległości ostrza od próbki ($I \\propto e^{-\\Delta x}$).",
+        "text": "W STM prąd tunelowy zależy wykładniczo od odległości ostrza od próbki ($I \\propto e^{-\\Delta x}$).",
         "isCorrect": true
       },
       {
-        "text": "Ostrze mikroskopu dotyka fizycznie każdego atomu i mierzy jego mechaniczną twardość.",
-        "isCorrect": false
+        "text": "Tunelowanie wywołuje niepożądane prądy upływu przez cienkie tlenki w układach VLSI.",
+        "isCorrect": true
       },
       {
-        "text": "Mikroskop wykorzystuje promieniowanie rentgenowskie o długości fali mniejszej od jądra.",
-        "isCorrect": false
+        "text": "Dzięki tunelowaniu prąd płynie przez styki przewodów Al mimo izolującej warstewki tlenku.",
+        "isCorrect": true
       },
       {
-        "text": "Natężenie prądu tunelowego rośnie proporcjonalnie do kwadratu odległości ostrza od próbki.",
+        "text": "Mikroskop STM wymaga bezpośredniego mechanicznego nacisku ostrza na jądra atomowe.",
         "isCorrect": false
       }
     ],
-    "explanation": "W mikroskopie STM między ostrzem a przewodzącą próbką znajduje się cienka bariera próżniowa. Ponieważ prąd tunelowy maleje wykładniczo wraz ze wzrostem szerokości tej bariery ($I \\propto e^{-2\\kappa \\Delta x}$), nawet ułamkowa zmiana odległości (o ułamek średnicy atomu) powoduje dramatyczną zmianę mierzonego prądu, co umożliwia mapowanie pojedynczych atomów na powierzchni."
+    "explanation": "Wszystkie trzy pierwsze punkty to konkretne przykłady ze slajdów 19–20 wykładu EFW2 (STM obrazuje bez dotykania próbki dzięki czułości $I \\propto e^{-\\Delta x}$, prądy upływu w VLSI, tunelowanie przez warstwę tlenku glinu na przewodach Al, złącze Josephsona, pamięć Flash)."
   },
   {
     "id": 67,
@@ -1660,26 +1660,26 @@ const questionDatabase = [
   {
     "id": 70,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Dlaczego dla atomu wodoru gęstość prawdopodobieństwa $|\\psi(0)|^2$ dla orbitali $s$ ($l=0$) w samym jądrze jest niezerowa, mimo że radialny rozkład $P(r) = 4\\pi r^2 |\\psi(r)|^2$ wynosi tam zero?",
+    "text": "Które ze stwierdzeń na temat gęstości prawdopodobieństwa $|\\psi|^2$ i rozkładu radialnego $P(r) = 4\\pi r^2 |R_{nl}(r)|^2$ w atomie wodoru są prawdziwe?",
     "options": [
       {
-        "text": "Bo funkcja radialna $R_{n0}(0) \\neq 0$, a zerowanie $P(0)$ wynika wyłącznie z czynnika objętości $4\\pi r^2$.",
+        "text": "Dla stanów typu $s$ ($l = 0$) gęstość $|\\psi(0)|^2$ w samym jądrze jest niezerowa i maksymalna.",
         "isCorrect": true
       },
       {
-        "text": "Bo w samym jądrze atomowym oddziaływanie Coulomba przyjmuje wartość dodatnią i odpycha elektrony.",
-        "isCorrect": false
+        "text": "Radialny rozkład $P(r) = 4\\pi r^2 |\\psi|^2$ zeruje się w $r = 0$ przez czynnik objętości $4\\pi r^2$.",
+        "isCorrect": true
       },
       {
-        "text": "Bo zakaz Pauliego zmusza elektron $1s$ do przebywania zawsze w odległości większej od promienia Bohra.",
-        "isCorrect": false
+        "text": "Niezerowa gęstość $|\\psi(0)|^2$ dla elektronów $s$ umożliwia jądrowy wychwyt elektronu (EC).",
+        "isCorrect": true
       },
       {
-        "text": "Bo funkcja falowa $R_{n0}(r)$ znika w punkcie $r = 0$, natomiast czynnik $4\\pi r^2$ dąży tam do nieskończoności.",
+        "text": "Dla wszystkich stanów ($s, p, d, f$) gęstość prawdopodobieństwa w jądrze wynosi zawsze zero.",
         "isCorrect": false
       }
     ],
-    "explanation": "Częsta pułapka egzaminacyjna! Sama gęstość prawdopodobieństwa $|\\psi(r)|^2$ dla stanów $s$ osiąga maksimum właśnie w jądrze ($r = 0$). Natomiast radialna gęstość rozkładu $P(r) = 4\\pi r^2 |R_{nl}(r)|^2$ (prawdopodobieństwo znalezienia elektronu w cienkiej sferycznej warstwie o promieniu $r$) zeruje się przy $r \\to 0$ z powodu czynnika geometrycznego $r^2$. Niezerowa gęstość $|\\psi(0)|^2$ umożliwia m.in. wychwyt elektronu (EC) przez jądro."
+    "explanation": "Dla orbitali $s$ ($l=0$) funkcja $R_{n0}(0) \\neq 0$, więc gęstość prawdopodobieństwa $|\\psi(0)|^2$ jest w jądrze maksymalna (co umożliwia wychwyt elektronu z powłoki $K$ lub $L$). Natomiast radialny rozkład $4\\pi r^2 |R_{nl}|^2$ dąży do $0$ przy $r \\to 0$ z powodu czynnika geometrycznego $r^2$."
   },
   {
     "id": 71,
@@ -1780,26 +1780,26 @@ const questionDatabase = [
   {
     "id": 75,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Ile wynosi wartość bezwzględna wektora orbitalnego momentu pędu $L$ oraz jego rzut $L_z$ na oś $z$ dla elektronu o liczbach $l$ i $m_l$?",
+    "text": "Które ze stwierdzeń poprawnie opisują kwantowanie orbitalnego momentu pędu elektronu w atomie wodoru?",
     "options": [
       {
-        "text": "$L = \\hbar\\sqrt{l(l+1)}$ oraz $L_z = m_l \\hbar$.",
+        "text": "Wartość bezwzględna wektora orbitalnego momentu pędu wynosi $L = \\hbar\\sqrt{l(l+1)}$.",
         "isCorrect": true
       },
       {
-        "text": "$L = l\\hbar$ oraz $L_z = \\hbar\\sqrt{m_l(m_l+1)}$.",
+        "text": "Rzut momentu pędu na wyróżnioną oś $z$ jest skwantowany przestrzennie: $L_z = m_l \\hbar$.",
+        "isCorrect": true
+      },
+      {
+        "text": "Dla ustalonej liczby $l$ istnieje zawsze parzysta liczba ($2l$) możliwych wartości $m_l$.",
         "isCorrect": false
       },
       {
-        "text": "$L = \\hbar\\sqrt{l(l-1)}$ oraz $L_z = (2l+1)\\hbar$.",
-        "isCorrect": false
-      },
-      {
-        "text": "$L = n\\hbar$ oraz $L_z = (l + m_l)\\hbar$.",
+        "text": "Orbitalny moment pędu może ustawić się dokładnie równolegle do zewnętrznego pola $\\vec{B}$.",
         "isCorrect": false
       }
     ],
-    "explanation": "Z rozwiązania równania Schrödingera w układzie sferycznym wartość (długość) wektora orbitalnego momentu pędu wynosi $L = \\hbar\\sqrt{l(l+1)}$, a jego rzut na wyróżnioną oś $z$ (np. kierunek zewnętrznego pola magnetycznego) jest skwantowany przestrzennie: $L_z = m_l\\hbar$, gdzie $m_l = -l, \\dots, +l$."
+    "explanation": "Dla orbitalnego momentu pędu $L = \\hbar\\sqrt{l(l+1)}$ oraz $L_z = m_l\\hbar$. Liczba wartości $m_l$ wynosi $(2l + 1)$ — jest więc ZAWSZE NIEPARZYSTA ($1, 3, 5, \\dots$). Ponieważ $l < \\sqrt{l(l+1)}$, wektor $\\vec{L}$ nigdy nie jest równoległy do pola $\\vec{B}$."
   },
   {
     "id": 76,
@@ -1828,50 +1828,50 @@ const questionDatabase = [
   {
     "id": 77,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Jaki jest związek między wektorem orbitalnego momentu magnetycznego elektronu $\\vec{\\mu}_L$ a jego orbitalnym momentem pędu $\\vec{L}$?",
+    "text": "Które ze stwierdzeń na temat orbitalnego momentu magnetycznego elektronu $\\vec{\\mu}_L$ są prawdziwe?",
     "options": [
       {
-        "text": "$\\vec{\\mu}_L = -\\frac{e}{2m_e}\\vec{L}$ (wektory są równoległe, ale mają przeciwne zwroty).",
+        "text": "Wyraża się wzorem $\\vec{\\mu}_L = -\\frac{e}{2m_e}\\vec{L}$ i ma zwrot przeciwny do $\\vec{L}$.",
         "isCorrect": true
       },
       {
-        "text": "$\\vec{\\mu}_L = +\\frac{e}{2m_e}\\vec{L}$ (wektory są równoległe i mają identyczne zwroty).",
-        "isCorrect": false
+        "text": "Przeciwny zwrot $\\vec{\\mu}_L$ wobec $\\vec{L}$ wynika z ujemnego ładunku elektronu.",
+        "isCorrect": true
       },
       {
-        "text": "$\\vec{\\mu}_L = -\\frac{2m_e}{e}\\vec{L}$ (wektory są wzajemnie prostopadłe w przestrzeni).",
-        "isCorrect": false
+        "text": "Jego naturalną jednostką jest magneton Bohra $\\mu_B = e\\hbar/(2m_e)$.",
+        "isCorrect": true
       },
       {
-        "text": "$\\vec{\\mu}_L = +\\frac{e}{m_e}\\vec{L}$ (z czynnikiem żyromagnetycznym równym dokładnie 2).",
+        "text": "Wektor $\\vec{\\mu}_L$ ma zwrot zgodny z $\\vec{L}$, tak samo jak dla protonu.",
         "isCorrect": false
       }
     ],
-    "explanation": "Krążący elektron stanowi mikroskopijną pętlę z prądem o momencie magnetycznym $\\vec{\\mu}_L = -\\frac{e}{2m_e}\\vec{L}$. Znak minus (zwrot przeciwny do $\\vec{L}$) wynika z ujemnego ładunku elektronu ($-e$). Jednostką orbitalnego i spinowego momentu magnetycznego elektronu jest magneton Bohra $\\mu_B = \\frac{e\\hbar}{2m_e}$."
+    "explanation": "Elektron ma ładunek ujemny ($-e$), więc jego orbitalny moment magnetyczny $\\vec{\\mu}_L = -\\frac{e}{2m_e}\\vec{L}$ ma zwrot PRZECIWNY do $\\vec{L}$, a jego jednostką jest magneton Bohra $\\mu_B = e\\hbar/(2m_e)$."
   },
   {
     "id": 78,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Na czym polega zjawisko (efekt) Zeemana obserwowane w spektroskopii atomowej?",
+    "text": "Które z poniższych stwierdzeń poprawnie opisują efekt Zeemana w spektroskopii atomowej?",
     "options": [
       {
-        "text": "Na rozszczepieniu poziomów energetycznych i linii widmowych atomu w polu magnetycznym.",
+        "text": "Pole magnetyczne $B$ znosi degenerację poziomów względem liczby kwantowej $m_l$.",
         "isCorrect": true
       },
       {
-        "text": "Na rozszczepieniu wiązki elektrycznie obojętnych atomów w jednorodnym polu elektrycznym.",
+        "text": "W normalnym efekcie Zeemana pojedyncza linia widmowa rozszczepia się na $3$ linie.",
+        "isCorrect": true
+      },
+      {
+        "text": "Poziom $1s$ ($l = 0$) ulega w polu magnetycznym rozszczepieniu na trzy podpoziomy.",
         "isCorrect": false
       },
       {
-        "text": "Na przesunięciu długości fali fotonów rozproszonych sprężyście na swobodnych elektronach.",
-        "isCorrect": false
-      },
-      {
-        "text": "Na całkowitym zaniku widma liniowego atomu po schłodzeniu gazu poniżej zera Celsjusza.",
+        "text": "Model Bohra w pełni i dokładnie przewidywał efekt Zeemana bez mechaniki kwantowej.",
         "isCorrect": false
       }
     ],
-    "explanation": "W zewnętrznym polu magnetycznym $B$ moment magnetyczny elektronu uzyskuje energię potencjalną $V_B = \\mu_B m_l B$, co znosi degenerację względem magnetycznej liczby kwantowej $m_l$ i rozszczepia poziomy energetyczne (a w konsekwencji linie widmowe). W normalnym efekcie Zeemana (z regułami wyboru $\\Delta m_l = 0, \\pm 1$) pojedyncza linia rozszczepia się na 3 składowe."
+    "explanation": "Pole $B$ wnosi energię $V_B = \\mu_B m_l B$, znosząc degenerację względem $m_l$ (normalny efekt Zeemana daje 3 linie). Poziom $1s$ ma $l = 0$ (tylko $m_l = 0$), więc się NIE rozszczepia, a model Bohra nie potrafił wytłumaczyć efektu Zeemana."
   },
   {
     "id": 79,
@@ -1948,26 +1948,26 @@ const questionDatabase = [
   {
     "id": 82,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Dlaczego w doświadczeniu Sterna-Gerlacha konieczne jest zastosowanie NIEJEDNORODNEGO pola magnetycznego ($dB/dz \\neq 0$)?",
+    "text": "Które ze stwierdzeń na temat doświadczenia Sterna-Gerlacha z wiązką atomów srebra są prawdziwe?",
     "options": [
       {
-        "text": "Tylko w polu o niezerowym gradiencie na dipol magnetyczny działa wypadkowa siła odchylająca tor.",
+        "text": "Wymaga niejednorodnego pola magnetycznego ($dB/dz \\neq 0$), by na dipol działała wypadkowa siła.",
         "isCorrect": true
       },
       {
-        "text": "Tylko w polu niejednorodnym atomy srebra uzyskują dodatni ładunek elektryczny i siłę Lorentza.",
-        "isCorrect": false
+        "text": "Atom srebra ma jeden niesparowany elektron walencyjny $5s$ o zerowym orbitalnym momencie ($l=0$).",
+        "isCorrect": true
       },
       {
-        "text": "W jednorodnym polu magnetycznym spin elektronu znika i atomy tracą swój moment magnetyczny.",
-        "isCorrect": false
+        "text": "Rozszczepienie na parzystą liczbę (dwie) wiązek stanowi bezpośredni dowód na spin $s = 1/2$.",
+        "isCorrect": true
       },
       {
-        "text": "W jednorodnym polu magnetycznym wiązka atomów srebra rozszczepia się na nieskończenie wiele linii.",
+        "text": "Rozszczepienie zachodzi tak samo wyraźnie w całkowicie jednorodnym polu magnetycznym.",
         "isCorrect": false
       }
     ],
-    "explanation": "Na elektrycznie obojętny atom posiadający moment magnetyczny $\\vec{\\mu}$ w polu jednorodnym działa jedynie moment sił (skręcający), natomiast wypadkowa siła translacyjna wynosi zero ($F_z = \\mu_z \\frac{\\partial B}{\\partial z} = 0$). Dopiero gradient pola magnetycznego ($\\frac{\\partial B}{\\partial z} \\neq 0$) wywiera siłę odchylającą atomy w górę lub w dół zależnie od znaku $m_s = \\pm 1/2$."
+    "explanation": "W jednorodnym polu magnetycznym wypadkowa siła na dipol magnetyczny wynosi zero — niezbędny jest gradient $dB/dz \\neq 0$. Atom Ag ma $l = 0$ i 1 niesparowany elektron $5s$, a parzysta liczba wiązek ($2 = 2s+1$) dowodzi istnienia połówkowego spinu elektronu ($s = 1/2$)."
   },
   {
     "id": 83,
@@ -1996,26 +1996,26 @@ const questionDatabase = [
   {
     "id": 84,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Czym jest spin elektronu i jaka jest relacja między jego wektorem spinu $\\vec{S}$ a spinowym momentem magnetycznym $\\vec{\\mu}_s$?",
+    "text": "Które ze stwierdzeń poprawnie opisują spin elektronu oraz jego związek z momentem magnetycznym?",
     "options": [
       {
-        "text": "To własny (wewnętrzny) kwantowy moment pędu; $\\vec{\\mu}_s = -g_s\\frac{e}{2m_e}\\vec{S}$ ma zwrot przeciwny do $\\vec{S}$.",
+        "text": "Spin jest wewnętrznym momentem pędu elektronu o $s = 1/2$ i rzucie $S_z = \\pm\\hbar/2$.",
         "isCorrect": true
       },
       {
-        "text": "To klasyczny obrót kulistego elektronu wokół osi; $\\vec{\\mu}_s = +g_s\\frac{e}{2m_e}\\vec{S}$ ma zwrot zgodny z $\\vec{S}$.",
-        "isCorrect": false
+        "text": "Spinowy moment magnetyczny $\\vec{\\mu}_s = -g_s\\frac{e}{2m_e}\\vec{S}$ ma zwrot przeciwny do $\\vec{S}$.",
+        "isCorrect": true
       },
       {
-        "text": "To ruch elektronu wokół jądra w stanie $s$; $\\vec{\\mu}_s$ jest zawsze prostopadły do wektora spinu $\\vec{S}$.",
-        "isCorrect": false
+        "text": "Spinowy czynnik żyromagnetyczny elektronu wynosi $g_s \\approx 2$ (wobec $g_L = 1$).",
+        "isCorrect": true
       },
       {
-        "text": "To energia oddziaływania elektronu z jądrem; czynnik żyromagnetyczny elektronu wynosi $g_s = 1/2$.",
+        "text": "Spin elektronu to klasyczny obrót kulki z prędkością powierzchni większą od $c$.",
         "isCorrect": false
       }
     ],
-    "explanation": "Spin jest fundamentalną, wewnętrzną cechą kwantową cząstki (jak masa czy ładunek), niemającą klasycznego odpowiednika wirującej kulki. Dla elektronu $s = 1/2$, $S = \\frac{\\sqrt{3}}{2}\\hbar$, $S_z = \\pm\\frac{1}{2}\\hbar$, a spinowy moment magnetyczny wynosi $\\vec{\\mu}_s = -g_s\\frac{e}{2m_e}\\vec{S}$ z czynnikiem żyromagnetycznym $g_s \\approx 2$ (dwukrotnie większym niż $g_L = 1$!). Znak minus oznacza zwrot przeciwny do $\\vec{S}$."
+    "explanation": "Spin to fundamentalna cecha kwantowa bez klasycznego odpowiednika wirującej kulki. Dla elektronu $s = 1/2$, $S_z = \\pm\\hbar/2$, $g_s \\approx 2$ (dwukrotnie więcej niż $g_L = 1$), a $\\vec{\\mu}_s$ jest antyrównoległy do $\\vec{S}$."
   },
   {
     "id": 85,
@@ -2044,74 +2044,74 @@ const questionDatabase = [
   {
     "id": 86,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Jak brzmi zakaz Pauliego i jakich cząstek dotyczy?",
+    "text": "Które z poniższych stwierdzeń na temat zakazu Pauliego są prawdziwe?",
     "options": [
       {
-        "text": "Żadne dwa fermiony (spin połówkowy) w układzie nie mogą mieć tych samych $(n, l, m_l, m_s)$.",
+        "text": "W atomie żadne dwa elektrony nie mogą mieć tego samego zestawu $(n, l, m_l, m_s)$.",
         "isCorrect": true
       },
       {
-        "text": "Żadne dwa bozony (spin całkowity) w układzie nie mogą mieć tej samej energii ani pędu.",
+        "text": "Obowiązuje dla wszystkich fermionów, czyli cząstek o spinie połówkowym ($1/2$).",
+        "isCorrect": true
+      },
+      {
+        "text": "Obowiązuje również dla fotonów oraz fononów, blokując zjawisko emisji laserowej.",
         "isCorrect": false
       },
       {
-        "text": "Żadne dwa elektrony w atomie nie mogą mieć tej samej głównej liczby kwantowej $n$.",
-        "isCorrect": false
-      },
-      {
-        "text": "Żadne dwa fotony w wiązce laserowej nie mogą mieć identycznej fazy ani częstotliwości.",
+        "text": "Zabrania dwóm elektronom w atomie posiadania tej samej głównej liczby $n$.",
         "isCorrect": false
       }
     ],
-    "explanation": "Zakaz Pauliego mówi, że w jednym układzie kwantowym (np. atomie) żadne dwa elektrony — i ogólniej żadne dwa fermiony (cząstki o spinie połówkowym, m.in. elektrony, protony, neutrony) — nie mogą zajmować tego samego stanu kwantowego, czyli mieć identycznego zestawu $(n, l, m_l, m_s)$. Zakaz NIE dotyczy bozonów (spin całkowity, np. fotony, fonony, pary Coopera)."
+    "explanation": "Zakaz Pauliego dotyczy wyłącznie fermionów (spin połówkowy) i wyklucza identyczność WSZYSTKICH czterech liczb $(n,l,m_l,m_s)$ — dwa elektrony mogą mieć tę samą liczbę $n$ (powłokę). Bozony (fotony, fonony) nie podlegają zakazowi Pauliego."
   },
   {
     "id": 87,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Które z poniższych cząstek są BOZONAMI (o spinie całkowitym), dla których NIE obowiązuje zakaz Pauliego?",
+    "text": "Które z poniższych cząstek lub kwazicząstek są BOZONAMI (nie podlegają zakazowi Pauliego)?",
     "options": [
       {
-        "text": "Fotony (kwanty pola EM) oraz fonony (kwanty drgań sieci krystalicznej).",
+        "text": "Fotony — kwanty pola elektromagnetycznego (spin całkowity).",
         "isCorrect": true
       },
       {
-        "text": "Elektrony w atomie oraz swobodne pozytony powstające w rozpadzie beta.",
-        "isCorrect": false
+        "text": "Fonony — kwanty drgań sieci krystalicznej (spin całkowity).",
+        "isCorrect": true
       },
       {
-        "text": "Protony i neutrony tworzące wspólnie jądra atomowe wszystkich pierwiastków.",
-        "isCorrect": false
+        "text": "Pary Coopera w nadprzewodnikach (elektrony o przeciwnych spinach).",
+        "isCorrect": true
       },
       {
-        "text": "Elektrony walencyjne w metalach oraz neutrina powstające w rozpadach jądrowych.",
+        "text": "Elektrony, protony oraz neutrony (spin połówkowy $s = 1/2$).",
         "isCorrect": false
       }
     ],
-    "explanation": "Na wykładzie (EFW3 s. 14 oraz EFW5) wskazano, że bozonami (spin całkowity) są m.in. fotony, fonony oraz pary Coopera w nadprzewodnikach — mogą one masowo zajmować ten sam stan kwantowy (co umożliwia działanie lasera i nadprzewodnictwo!). Natomiast elektrony, pozytony, protony, neutrony i neutrina to fermiony (spin $1/2$)."
+    "explanation": "Bozonami (spin całkowity, brak zakazu Pauliego) są fotony, fonony (EFW3 s. 14) oraz pary Coopera w nadprzewodnikach (EFW5). Natomiast elektrony, protony i neutrony mają spin $1/2$ i są fermionami."
   },
   {
     "id": 88,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Dlaczego w atomach WIELOELEKTRONOWYCH energia elektronu zależy nie tylko od $n$, lecz także od orbitalnej liczby kwantowej $l$ (np. $E_{3s} < E_{3p} < E_{3d}$)?",
+    "text": "Które stwierdzenia poprawnie opisują budowę i energetykę atomów wieloelektronowych?",
     "options": [
       {
-        "text": "Elektrony o niskim $l$ wnikają bliżej jądra i ekranują je przed elektronami o wyższym $l$.",
+        "text": "W atomach wieloelektronowych energia zależy zarówno od liczby $n$, jak i od $l$.",
         "isCorrect": true
       },
       {
-        "text": "Elektrony o wysokim $l$ mają większy ładunek elektryczny niż elektrony z podpowłoki $s$.",
-        "isCorrect": false
+        "text": "Elektrony o niskim $l$ ekranują jądro, więc elektrony o wysokim $l$ leżą wyżej.",
+        "isCorrect": true
       },
       {
-        "text": "Elektrony o wysokim $l$ przebywają średnio bliżej jądra i są silniej przyciągane kulombowsko.",
-        "isCorrect": false
+        "text": "Przy dodawaniu elektronów zapełniane są najniższe stany zgodnie z zakazem Pauliego.",
+        "isCorrect": true
       },
       {
-        "text": "W atomach wieloelektronowych znika całkowicie przyciąganie jądra na rzecz oddziaływania silnego.",
+        "text": "W atomach wieloelektronowych poziomy $3s, 3p$ i $3d$ mają identyczną energię.",
         "isCorrect": false
       }
     ],
-    "explanation": "W atomie wodoru potencjał jest ściśle kulombowski ($\\propto 1/r$), więc energia zależy tylko od $n$. W atomach wieloelektronowych elektrony o dużym $l$ spędzają średnio więcej czasu dalej od jądra, a elektrony o niskim $l$ (np. $s$) częściowo ekranują dodatni ładunek jądra $+Ze$. W efekcie elektrony o wyższym $l$ czują mniejszy efektywny ładunek jądra i mają wyższą energię."
+    "explanation": "W atomach wieloelektronowych elektrony o niskim $l$ wnikają bliżej jądra i ekranują jego ładunek przed elektronami o wysokim $l$ — stąd energia zależy od $n$ oraz $l$ ($E_{3s} < E_{3p} < E_{3d}$), a kolejne elektrony obsadzają najniższe wolne stany według zakazu Pauliego."
   },
   {
     "id": 89,
@@ -2140,50 +2140,50 @@ const questionDatabase = [
   {
     "id": 90,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Jak zmienia się energia jonizacji oraz promień atomowy w OBRĘBIE JEDNEGO OKRESU układu okresowego (od lewej do prawej, ze wzrostem $Z$)? (pytanie z kolokwium)",
+    "text": "Które ze zmian parametrów atomu zachodzą w OBRĘBIE JEDNEGO OKRESU układu okresowego wraz ze wzrostem $Z$ (od lewej do prawej)?",
     "options": [
       {
-        "text": "Energia jonizacji rośnie, a promień atomowy maleje ze wzrostem liczby atomowej $Z$.",
+        "text": "Promień atomowy maleje z powodu rosnącego przyciągania przez większy ładunek jądra.",
         "isCorrect": true
       },
       {
-        "text": "Energia jonizacji maleje, a promień atomowy rośnie ze wzrostem liczby atomowej $Z$.",
+        "text": "Energia jonizacji rośnie, osiągając maksimum w danym okresie dla gazu szlachetnego.",
+        "isCorrect": true
+      },
+      {
+        "text": "Wraz ze wzrostem $Z$ w okresie przybywa kolejna nowa powłoka elektronowa o wyższym $n$.",
         "isCorrect": false
       },
       {
-        "text": "Zarówno energia jonizacji, jak i promień atomowy maleją ze wzrostem liczby $Z$.",
-        "isCorrect": false
-      },
-      {
-        "text": "Zarówno energia jonizacji, jak i promień atomowy rosną ze wzrostem liczby $Z$.",
+        "text": "Promień atomowy gwałtownie rośnie, a energia jonizacji systematycznie spada do zera.",
         "isCorrect": false
       }
     ],
-    "explanation": "To bardzo częste pytanie z kolokwium (2022 i 2023)! W obrębie jednego okresu (od lewej do prawej) rośnie dodatni ładunek jądra $+Ze$, podczas gdy elektrony zapełniają tę samą powłokę walencyjną (ekranowanie zmienia się nieznacznie). Silniejsze przyciąganie kulombowskie ściąga powłokę bliżej jądra (promień maleje) i utrudnia oderwanie elektronu (energia jonizacji rośnie)."
+    "explanation": "W obrębie jednego okresu (ze wzrostem $Z$) elektrony zapełniają TĘ SAMĄ powłokę walencyjną (nie przybywa nowych powłok — to dzieje się w dół grupy!). Rosnący ładunek jądra zmniejsza promień atomowy i zwiększa energię jonizacji."
   },
   {
     "id": 91,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Jak zmienia się energia jonizacji oraz promień atomowy w OBRĘBIE JEDNEJ GRUPY układu okresowego (z góry na dół, ze wzrostem $Z$)? (pytanie z kolokwium)",
+    "text": "Które ze zmian parametrów atomu zachodzą w OBRĘBIE JEDNEJ GRUPY układu okresowego wraz ze wzrostem $Z$ (z góry na dół)?",
     "options": [
       {
-        "text": "Energia jonizacji maleje, a promień atomowy rośnie ze wzrostem liczby atomowej $Z$.",
+        "text": "Promień atomowy rośnie, ponieważ przybywa kolejnych powłok elektronowych o większym $n$.",
         "isCorrect": true
       },
       {
-        "text": "Energia jonizacji rośnie, a promień atomowy maleje ze wzrostem liczby atomowej $Z$.",
-        "isCorrect": false
+        "text": "Energia jonizacji maleje, ponieważ elektron walencyjny jest dalej i jest lepiej ekranowany.",
+        "isCorrect": true
       },
       {
-        "text": "Energia jonizacji pozostaje stała, a promień atomowy maleje ze wzrostem liczby $Z$.",
-        "isCorrect": false
+        "text": "Układ elektronów walencyjnych pozostaje taki sam, co daje zbliżone właściwości chemiczne.",
+        "isCorrect": true
       },
       {
-        "text": "Zarówno energia jonizacji, jak i promień atomowy rosną ze wzrostem liczby $Z$.",
+        "text": "Promień atomowy maleje, a energia jonizacji rośnie aż do maksimum u najcięższego pierwiastka.",
         "isCorrect": false
       }
     ],
-    "explanation": "Przechodząc w dół grupy (ze wzrostem $Z$), dochodzą kolejne powłoki elektronowe o wyższym $n$. Elektrony walencyjne znajdują się coraz dalej od jądra (promień atomowy rośnie) i są coraz silniej ekranowane przez zamknięte powłoki wewnętrzne — dlatego coraz łatwiej oderwać elektron walencyjny (energia jonizacji maleje)."
+    "explanation": "W dół grupy przybywa powłok (rośnie $n$) i ekranowania przez elektrony wewnętrzne, dlatego promień atomowy rośnie, a energia jonizacji maleje. Wspólna konfiguracja walencyjna zapewnia zbliżone właściwości chemiczne pierwiastków w grupie."
   },
   {
     "id": 92,
@@ -2236,98 +2236,98 @@ const questionDatabase = [
   {
     "id": 94,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Które właściwości wynikają bezpośrednio ze struktury elektronowej GAZÓW SZLACHETNYCH (grupa 18)?",
+    "text": "Które z poniższych cech są charakterystyczne dla GAZÓW SZLACHETNYCH (grupa 18)?",
     "options": [
       {
-        "text": "Zapełnione podpowłoki, zerowy moment pędu, bierna chemia i niska temperatura wrzenia.",
+        "text": "Mają całkowicie zapełnione podpowłoki walencyjne oraz bardzo wysoką energię jonizacji.",
         "isCorrect": true
       },
       {
-        "text": "Jeden elektron walencyjny $s$, wysoka reaktywność i dobre przewodnictwo elektryczne.",
-        "isCorrect": false
+        "text": "Mają zerowy całkowity orbitalny i spinowy moment pędu oraz bardzo niskie temp. wrzenia.",
+        "isCorrect": true
       },
       {
-        "text": "Brak jednego elektronu do oktetu, silna aktywność i łatwe tworzenie soli z metalami.",
-        "isCorrect": false
+        "text": "W temperaturze pokojowej są chemicznie biernymi gazami jednoatomowymi (słabe siły vdW).",
+        "isCorrect": true
       },
       {
-        "text": "Niesparowane elektrony w podpowłoce $d$ będące źródłem silnych właściwości magnetycznych.",
+        "text": "Są bardzo reaktywnymi metalami łatwo oddającymi pojedynczy elektron walencyjny $ns^1$.",
         "isCorrect": false
       }
     ],
-    "explanation": "Gazy szlachetne (He, Ne, Ar, Kr, Xe, Rn) mają całkowicie zapełnione podpowłoki walencyjne, zerowy całkowity orbitalny i spinowy moment pędu oraz bardzo wysoką energię jonizacji. Dlatego są chemicznie bierne, występują w temperaturze pokojowej jako gazy jednoatomowe (tylko słabe siły van der Waalsa), słabo przewodzą prąd i mają bardzo niskie temperatury wrzenia."
+    "explanation": "Wszystkie trzy pierwsze cechy wynikają z zamkniętych powłok gazów szlachetnych (EFW3 s. 17). Ostatnia opcja opisuje metale alkaliczne (grupa 1)."
   },
   {
     "id": 95,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Które właściwości charakteryzują METALE ALKALICZNE (grupa 1: Li, Na, K, Rb, Cs) na skutek ich konfiguracji elektronowej?",
+    "text": "Które z poniższych cech są charakterystyczne dla METALI ALKALICZNYCH (grupa 1: Li, Na, K, Rb, Cs)?",
     "options": [
       {
-        "text": "Zamknięty rdzeń i jeden elektron $ns^1$, niska energia jonizacji, wysoka reaktywność i jony $+1$.",
+        "text": "Mają zamknięty rdzeń oraz jeden słabo związany elektron walencyjny typu $s$ ($ns^1$).",
         "isCorrect": true
       },
       {
-        "text": "Całkowicie zapełniona powłoka walencyjna, bardzo wysoka energia jonizacji i brak reaktywności.",
-        "isCorrect": false
+        "text": "Mają najniższą energię jonizacji w okresie i łatwo tworzą jednododatnie kationy ($+1$).",
+        "isCorrect": true
       },
       {
-        "text": "Dwa elektrony walencyjne w podpowłoce $s$, wysoka temperatura topnienia i wyłącznie jony $+2$.",
-        "isCorrect": false
+        "text": "Cechują się wysoką reaktywnością chemiczną oraz dobrym przewodnictwem elektrycznym.",
+        "isCorrect": true
       },
       {
-        "text": "Siedem elektronów walencyjnych, silne przyjmowanie elektronów i tworzenie głównie anionów $-1$.",
+        "text": "Mają całkowicie zapełnioną powłokę walencyjną i nie wchodzą w żadne reakcje z halogenami.",
         "isCorrect": false
       }
     ],
-    "explanation": "Metale alkaliczne posiadają zamknięty rdzeń gazu szlachetnego oraz pojedynczy, słabo związany elektron walencyjny $ns^1$. Dzięki temu mają najniższą energię jonizacji w okresie, są bardzo reaktywne chemicznie, łatwo oddają ten elektron tworząc kationy $+1$ i dobrze przewodzą prąd elektryczny."
+    "explanation": "Metale alkaliczne (grupa 1) mają jeden elektron walencyjny $ns^1$ poza zamkniętym rdzeniem, stąd niska energia jonizacji, wysoka reaktywność (chętnie reagują z halogenami tworząc sole jonowe jak NaCl), kationy $+1$ i dobre przewodnictwo elektryczne."
   },
   {
     "id": 96,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Czym charakteryzują się HALOGENY (fluorowce, grupa 17) pod względem struktury elektronowej i reaktywności?",
+    "text": "Które z poniższych stwierdzeń poprawnie opisują HALOGENY (fluorowce, grupa 17) oraz METALE ZIEM ALKALICZNYCH (grupa 2)?",
     "options": [
       {
-        "text": "Brakuje im jednego elektronu do pełnej powłoki; są aktywne i tworzą silne wiązania jonowe.",
+        "text": "Halogenom brakuje jednego elektronu do pełnej powłoki i tworzą silne wiązania jonowe.",
         "isCorrect": true
       },
       {
-        "text": "Posiadają dokładnie jeden elektron walencyjny; łatwo tworzą kationy $+1$ i przewodzą prąd.",
+        "text": "Metale ziem alkalicznych mają $2$ elektrony walencyjne, niską energię jonizacji i są reaktywne.",
+        "isCorrect": true
+      },
+      {
+        "text": "Halogeny mają całkowicie zamknięte podpowłoki i są biernymi gazami jednoatomowymi.",
         "isCorrect": false
       },
       {
-        "text": "Posiadają całkowicie zamknięte podpowłoki $p$; są jednoatomowymi gazami obojętnymi chemicznie.",
-        "isCorrect": false
-      },
-      {
-        "text": "Mają częściowo zapełnioną podpowłokę $4f$; wszystkie wykazują silne właściwości ferromagnetyczne.",
+        "text": "Metale ziem alkalicznych są izolatorami o najwyższej energii jonizacji w okresie.",
         "isCorrect": false
       }
     ],
-    "explanation": "Halogeny (F, Cl, Br, I) mają konfigurację $ns^2 np^5$ — brakuje im zaledwie jednego elektronu do stabilnej, zamkniętej powłoki gazu szlachetnego. Są więc bardzo aktywne chemicznie i chętnie łączą się z metalami alkalicznymi, tworząc silne wiązania jonowe (np. $\\text{NaCl, KCl, NaI}$)."
+    "explanation": "Halogeny (grupa 17: F, Cl, Br, I) potrzebują 1 elektronu do zapełnienia powłoki, więc są bardzo reaktywne i łatwo łączą się z metalami alkalicznymi (wiązania jonowe, np. KCl, NaI). Metale ziem alkalicznych (grupa 2) mają 2 łatwo usuwalne elektrony walencyjne, niską energię jonizacji, dobrze przewodzą prąd i są reaktywne (EFW3 s. 17)."
   },
   {
     "id": 97,
     "category": "3. Elementy fizyki atomowej i układ okresowy",
-    "text": "Skąd biorą się właściwości magnetyczne metali przejściowych (np. Fe, Co, Ni) oraz podobieństwo chemiczne w obrębie tej grupy?",
+    "text": "Które ze stwierdzeń na temat METALI PRZEJŚCIOWYCH oraz LANTANOWCÓW są prawdziwe?",
     "options": [
       {
-        "text": "Magnetyzm wynika z niesparowanych elektronów podpowłoki $d$, a chemię wyznaczają elektrony $s$.",
+        "text": "W metalach przejściowych niesparowane elektrony podpowłoki $d$ są źródłem magnetyzmu (Fe, Co, Ni).",
         "isCorrect": true
       },
       {
-        "text": "Magnetyzm wynika z całkowicie zapełnionej powłoki $1s$, a chemię wyznaczają wyłącznie neutrony.",
-        "isCorrect": false
+        "text": "Podobieństwo chemiczne metali przejściowych determinują głównie zewnętrzne elektrony $s$.",
+        "isCorrect": true
       },
       {
-        "text": "Magnetyzm wynika z braku elektronów walencyjnych $s$, a chemię wyznaczają elektrony rdzenia $p$.",
-        "isCorrect": false
+        "text": "W lantanowcach niezapełniona podpowłoka $4f$ daje magnetyzm, a zapełniona $6s^2$ zbliżoną chemię.",
+        "isCorrect": true
       },
       {
-        "text": "Magnetyzm wynika z zerowego spinu jądra, a chemię wyznacza dokładnie identyczna masa atomowa.",
+        "text": "Zarówno metale przejściowe, jak i lantanowce są gazami jednoatomowymi w temperaturze pokojowej.",
         "isCorrect": false
       }
     ],
-    "explanation": "W metalach przejściowych zapełniane są wewnętrzne podpowłoki $3d, 4d, 5d$, podczas gdy na zewnątrz znajdują się elektrony $s$. Zewnętrzne elektrony $s$ odpowiadają za zbliżone właściwości chemiczne tych pierwiastków, natomiast niesparowane momenty magnetyczne elektronów w niepełnej podpowłoce $d$ są źródłem magnetyzmu (np. ferromagnetyzm Fe, Co, Ni)."
+    "explanation": "Na slajdzie 17 wykładu EFW3 podkreślono właśnie ten mechanizm: zewnętrzne elektrony $s$ ($6s^2$ u lantanowców) decydują o zbliżonych właściwościach chemicznych, natomiast niesparowane elektrony w wewnętrznych podpowłokach $d$ (Fe, Co, Ni) oraz $4f$ (lantanowce) odpowiadają za silne właściwości magnetyczne."
   },
   {
     "id": 98,
@@ -2476,50 +2476,50 @@ const questionDatabase = [
   {
     "id": 104,
     "category": "4. Lasery — fizyka, zasada działania i zastosowania",
-    "text": "Które trzy elementarne procesy oddziaływania światła z atomami dwupoziomowymi opisał Albert Einstein za pomocą współczynników $A, B_{12}, B_{21}$?",
+    "text": "Które z poniższych procesów należą do trzech elementarnych oddziaływań światła z atomami opisanych przez Einsteina?",
     "options": [
       {
-        "text": "Absorpcję wymuszoną, emisję spontaniczną oraz emisję wymuszoną (stymulowaną).",
+        "text": "Absorpcja wymuszona o częstości proporcjonalnej do $B_{12} N_1 u(\\nu)$.",
         "isCorrect": true
       },
       {
-        "text": "Rozpraszanie Comptona, zjawisko fotoelektryczne oraz kreację par elektron-pozyton.",
-        "isCorrect": false
+        "text": "Emisja spontaniczna o częstości $A N_2$ (niezależnej od gęstości $u$).",
+        "isCorrect": true
       },
       {
-        "text": "Dyfrakcję elektronów, tunelowanie kwantowe oraz rozszczepienie poziomów Zeemana.",
-        "isCorrect": false
+        "text": "Emisja wymuszona (stymulowana) o częstości równej $B_{21} N_2 u(\\nu)$.",
+        "isCorrect": true
       },
       {
-        "text": "Absorpcję spontaniczną, anihilację termiczną oraz promieniowanie hamowania elektronów.",
+        "text": "Absorpcja spontaniczna zachodząca samorzutnie bez udziału fotonów.",
         "isCorrect": false
       }
     ],
-    "explanation": "W obecności pola elektromagnetycznego o gęstości energii $u(\\nu)$ zachodzą trzy procesy: absorpcja wymuszona ($B_{12}N_1 u(\\nu)$), emisja spontaniczna ($A N_2$) oraz emisja wymuszona ($B_{21}N_2 u(\\nu)$). Z analizy równowagi termodynamicznej ze wzorem Plancka wynikają fundamentalne związki między współczynnikami Einsteina."
+    "explanation": "W obecności promieniowania zachodzą trzy procesy: absorpcja wymuszona ($B_{12}N_1 u$), emisja spontaniczna ($AN_2$) oraz emisja wymuszona ($B_{21}N_2 u$). Nie istnieje absorpcja spontaniczna bez padającego fotonu."
   },
   {
     "id": 105,
     "category": "4. Lasery — fizyka, zasada działania i zastosowania",
-    "text": "Jakie właściwości ma foton wyemitowany w procesie EMISJI WYMUSZONEJ w porównaniu z fotonem wymuszającym?",
+    "text": "Które cechy charakteryzują foton wyemitowany w procesie EMISJI WYMUSZONEJ w porównaniu z fotonem wymuszającym?",
     "options": [
       {
-        "text": "Ma identyczną częstotliwość, fazę, kierunek ruchu oraz polaryzację (fotony są spójne).",
+        "text": "Ma identyczną częstotliwość ($h\\nu = E_2 - E_1$) oraz zgodną fazę (fotony są spójne).",
         "isCorrect": true
       },
       {
-        "text": "Ma przypadkową fazę i losowy kierunek ruchu, ale zawsze dwukrotnie większą energię.",
+        "text": "Ma dokładnie ten sam kierunek propagacji oraz taką samą polaryzację fali.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ma losową fazę i przypadkowy kierunek ruchu jak w emisji spontanicznej.",
         "isCorrect": false
       },
       {
-        "text": "Ma przeciwny kierunek propagacji i fazę przesuniętą dokładnie o połowę okresu fali.",
-        "isCorrect": false
-      },
-      {
-        "text": "Ma ciągłe widmo częstotliwości i jest zawsze całkowicie niespolaryzowany przestrzennie.",
+        "text": "Ma zawsze dwukrotnie mniejszą długość fali niż foton inicjujący przejście.",
         "isCorrect": false
       }
     ],
-    "explanation": "W emisji wymuszonej (stymulowanej) padający foton o energii $h\\nu = E_2 - E_1$ zmusza wzbudzony atom do natychmiastowego przejścia w dół z emisją drugiego, będącego jego idealnym klonem fotonu: o identycznej częstotliwości, fazie, kierunku i polaryzacji. To właśnie źródło koherencji (spójności) i wzmocnienia w laserze."
+    "explanation": "Emisja wymuszona (stymulowana) tworzy foton będący idealną kopią fotonu wymuszającego: o identycznej częstotliwości (długości fali), fazie, kierunku ruchu i polaryzacji — to zapewnia spójność i wzmocnienie wiązki laserowej."
   },
   {
     "id": 106,
@@ -2572,98 +2572,98 @@ const questionDatabase = [
   {
     "id": 108,
     "category": "4. Lasery — fizyka, zasada działania i zastosowania",
-    "text": "Który zestaw wymienia wszystkie pięć podstawowych cech światła laserowego omawianych na wykładzie i kolokwiach?",
+    "text": "Które z poniższych właściwości należą do pięciu podstawowych cech światła laserowego?",
     "options": [
       {
-        "text": "Spójność, równoległość wiązki, monochromatyczność, polaryzacja liniowa i ogniskowalność do $\\sim\\lambda$.",
+        "text": "Wysoka spójność (koherencja) czasowa i przestrzenna oraz monochromatyczność.",
         "isCorrect": true
       },
       {
-        "text": "Niespójność, duża rozbieżność kątowa, widmo ciągłe, brak polaryzacji i brak możliwości skupienia.",
+        "text": "Równoległy bieg promieni (mała rozbieżność) oraz liniowa polaryzacja wiązki.",
+        "isCorrect": true
+      },
+      {
+        "text": "Brak możliwości zogniskowania wiązki w plamce mniejszej niż jeden centymetr.",
         "isCorrect": false
       },
       {
-        "text": "Spójność, widmo ciągłe CDC, brak polaryzacji, duża masa spoczynkowa i prędkość mniejsza od $c$.",
-        "isCorrect": false
-      },
-      {
-        "text": "Monochromatyczność, dyfrakcja bez szczelin, brak fazy czasowej, izotropowość i niska gęstość mocy.",
+        "text": "Ciągłe, szerokie widmo termiczne zgodne z prawem ciała doskonale czarnego.",
         "isCorrect": false
       }
     ],
-    "explanation": "To klasyczne pytanie kolokwialne (2023 i 2024)! Pięć podstawowych cech światła laserowego z wykładu EFW4 to: (1) spójność (koherencja czasowa i przestrzenna), (2) równoległy bieg promieni (mała rozbieżność), (3) monochromatyczność (bardzo wąskie widmo $\\lambda$), (4) polaryzacja liniowa oraz (5) duża jasność/gęstość mocy — możliwość zogniskowania w plamce o rozmiarze rzędu długości fali $\\lambda$."
+    "explanation": "Pięć cech światła laserowego to spójność, monochromatyczność, równoległość wiązki, polaryzacja liniowa oraz możliwość zogniskowania w bardzo małej plamce o średnicy rzędu długości fali $\\lambda$ (a nie $\\ge 1\\text{ cm}$!)."
   },
   {
     "id": 109,
     "category": "4. Lasery — fizyka, zasada działania i zastosowania",
-    "text": "Co oznacza spójność (koherencja) światła laserowego?",
+    "text": "Które ze stwierdzeń poprawnie opisują spójność światła laserowego wobec światła z emisji spontanicznej?",
     "options": [
       {
-        "text": "Stałą różnicę faz fal świetlnych zarówno w czasie (czasowa), jak i w przestrzeni (przestrzenna).",
+        "text": "Spójność czasowa oznacza stałą różnicę faz fal w kolejnych chwilach czasu.",
         "isCorrect": true
       },
       {
-        "text": "Zdolność wiązki świetlnej do przenikania przez nieprzezroczyste płyty metalowe bez tłumienia.",
-        "isCorrect": false
+        "text": "Spójność przestrzenna oznacza stałą różnicę faz w przekroju poprzecznym wiązki.",
+        "isCorrect": true
       },
       {
-        "text": "Równomierny rozkład natężenia światła we wszystkich długościach fal od podczerwieni po UV.",
-        "isCorrect": false
+        "text": "Fotony z emisji spontanicznej mają przypadkowe fazy i nie są ze sobą spójne.",
+        "isCorrect": true
       },
       {
-        "text": "Zanik pola elektrycznego fali elektromagnetycznej w płaszczyźnie prostopadłej do wiązki.",
+        "text": "Spójność światła laserowego polega na tym, że wiązka składa się z wielu różnych barw.",
         "isCorrect": false
       }
     ],
-    "explanation": "Spójność (koherencja) oznacza uporządkowanie fazowe fal świetlnych: spójność czasowa to stałość relacji fazowych w kolejnych chwilach (związana z monochromatycznością), a spójność przestrzenna to stała różnica faz w poprzek czoła fali. Obie wynikają z mechanizmu emisji wymuszonej i geometrii rezonatora."
+    "explanation": "Spójność (koherencja) obejmuje zarówno spójność czasową, jak i przestrzenną (EFW4 s. 4) i wynika z emisji wymuszonej, podczas gdy emisja spontaniczna daje losowe fazy. Mieszanka wielu barw (szerokie widmo) niszczy spójność czasową."
   },
   {
     "id": 110,
     "category": "4. Lasery — fizyka, zasada działania i zastosowania",
-    "text": "Jakie trzy podstawowe elementy konstrukcyjne są niezbędne do działania lasera?",
+    "text": "Które elementy są niezbędne do zbudowania i działania klasycznego lasera?",
     "options": [
       {
-        "text": "Ośrodek czynny, układ pompujący energię oraz rezonator optyczny (układ dwóch luster).",
+        "text": "Ośrodek czynny (gaz, ciecz lub ciało stałe) z odpowiednimi poziomami energii.",
         "isCorrect": true
       },
       {
-        "text": "Katoda z żarnikiem, ciężka anoda wolframowa oraz wysokonapięciowy zasilacz prądu stałego.",
-        "isCorrect": false
+        "text": "Układ pompujący dostarczający energię potrzebną do inwersji obsadzeń.",
+        "isCorrect": true
       },
       {
-        "text": "Moderator neutronów, pręty regulacyjne z kadmu oraz osłona biologiczna z grubego betonu.",
-        "isCorrect": false
+        "text": "Rezonator optyczny z lustrem całkowicie odbijającym i lustrem półprzepuszczalnym.",
+        "isCorrect": true
       },
       {
-        "text": "Piec z parami srebra, niejednorodny elektromagnes oraz ekran fluorescencyjny za szczeliną.",
+        "text": "Moderator spowalniający prędkie neutrony oraz pręty kontrolne z kadmu lub boru.",
         "isCorrect": false
       }
     ],
-    "explanation": "Działanie każdego lasera wymaga trzech elementów: (1) ośrodka czynnego (gaz, ciecz lub ciało stałe z odpowiednim układem poziomów energetycznych), (2) układu pompującego wytwarzającego inwersję obsadzeń oraz (3) rezonatora optycznego (dwa równoległe zwierciadła — jedno całkowicie odbijające, drugie półprzepuszczalne)."
+    "explanation": "Każdy laser składa się z trzech kluczowych części: ośrodka czynnego, układu pompującego i rezonatora optycznego (dwóch luster). Moderator i pręty kontrolne to elementy reaktora jądrowego."
   },
   {
     "id": 111,
     "category": "4. Lasery — fizyka, zasada działania i zastosowania",
-    "text": "Czym jest inwersja (odwrócenie) obsadzeń, bez której akcja laserowa nie może zajść?",
+    "text": "Które ze stwierdzeń na temat inwersji obsadzeń w laserze są prawdziwe?",
     "options": [
       {
-        "text": "Stanem, w którym na wyższym poziomie ($E_2$) jest więcej atomów niż na niższym ($N_2 > N_1$).",
+        "text": "Oznacza przewagę liczby atomów na wyższym poziomie nad niższym ($N_2 > N_1$).",
         "isCorrect": true
       },
       {
-        "text": "Stanem równowagi termicznej, w którym wszystkie atomy znajdują się na poziomie podstawowym.",
+        "text": "Nie występuje samorzutnie w równowadze termicznej (wymaga pompowania).",
+        "isCorrect": true
+      },
+      {
+        "text": "W układzie dwupoziomowym można ją uzyskać bez problemu silną lampą błyskową.",
         "isCorrect": false
       },
       {
-        "text": "Odwróceniem kierunku biegu fotonów po odbiciu od całkowicie odbijającego lustra rezonatora.",
-        "isCorrect": false
-      },
-      {
-        "text": "Zamianą elektronów w pozytony wewnątrz ośrodka czynnego pod wpływem pompowania optycznego.",
+        "text": "Oznacza przewagę liczby atomów w stanie podstawowym ($N_1 > N_2$) jak u Boltzmanna.",
         "isCorrect": false
       }
     ],
-    "explanation": "Ponieważ prawdopodobieństwa absorpcji i emisji wymuszonej są równe ($B_{12} = B_{21}$), wzmocnienie światła (przewaga emisji wymuszonej $B_{21}N_2 u$ nad absorpcją $B_{12}N_1 u$) wymaga, aby $N_2 > N_1$, czyli większej liczby atomów na wyższym poziomie metastabilnym niż na dolnym poziomie przejścia laserującego. Taki nierównowagowy stan nazywamy inwersją obsadzeń."
+    "explanation": "Inwersja obsadzeń to stan nierównowagowy $N_2 > N_1$ (w równowadze Boltzmanna zawsze $N_1 > N_2$), wymagający pompowania i co najmniej 3 poziomów energetycznych (w układzie 2-poziomowym $B_{12} = B_{21}$ uniemożliwia uzyskanie $N_2 > N_1$)."
   },
   {
     "id": 112,
@@ -2692,26 +2692,26 @@ const questionDatabase = [
   {
     "id": 113,
     "category": "4. Lasery — fizyka, zasada działania i zastosowania",
-    "text": "Jaką rolę w laserze 3-poziomowym odgrywa pośredni poziom energetyczny $E_2$ nazywany poziomem METASTABILNYM?",
+    "text": "Które stwierdzenia poprawnie opisują rolę poziomu METASTABILNEGO ($E_2$) w laserze 3-poziomowym?",
     "options": [
       {
-        "text": "Ma długi czas życia ($\\sim 10^{-3}\\text{ s}$), więc gromadzą się na nim atomy, tworząc inwersję obsadzeń.",
+        "text": "Ma stosunkowo długi czas życia ($\\sim 10^{-3}\\text{ s}$ wobec $\\sim 10^{-9}\\text{ s}$ dla $E_3$).",
         "isCorrect": true
       },
       {
-        "text": "Ma najkrótszy czas życia ($\\sim 10^{-15}\\text{ s}$), więc atomy natychmiast wracają na poziom $E_3$.",
-        "isCorrect": false
+        "text": "Umożliwia gromadzenie wzbudzonych atomów i uzyskanie inwersji obsadzeń.",
+        "isCorrect": true
       },
       {
-        "text": "Pochłania wszystkie fotony z emisji wymuszonej, zapobiegając przegrzaniu ośrodka czynnego.",
-        "isCorrect": false
+        "text": "Jego długi czas życia wynika z reguł wyboru (np. zakazane $\\Delta l = \\pm 1$).",
+        "isCorrect": true
       },
       {
-        "text": "Służy wyłącznie do chłodzenia luster rezonatora poprzez emisję drgań akustycznych (fononów).",
+        "text": "Służy do natychmiastowej emisji spontanicznej fotonów w losowe kierunki.",
         "isCorrect": false
       }
     ],
-    "explanation": "Po szybkim spadku z krótkożyciowego poziomu $E_3$ ($\\sim 10^{-9}\\text{ s}$) atomy trafiają na długożyciowy poziom metastabilny $E_2$ (czas życia $\\sim 10^{-3}\\text{ s}$, często dlatego, że przejście spontaniczne $E_2 \\to E_1$ jest zabronione przez regułę wyboru $\\Delta l = \\pm 1$). Dzięki temu elektrony „czekają” na $E_2$, budując inwersję obsadzeń aż do nadejścia fotonu wymuszającego."
+    "explanation": "Poziom metastabilny $E_2$ żyje długo ($\\sim 10^{-3}\\text{ s}$, często przez zakaz przejścia spontanicznego regułą wyboru $\\Delta l = \\pm 1$), dzięki czemu gromadzi atomy i buduje inwersję obsadzeń."
   },
   {
     "id": 114,
@@ -2740,26 +2740,26 @@ const questionDatabase = [
   {
     "id": 115,
     "category": "4. Lasery — fizyka, zasada działania i zastosowania",
-    "text": "Jaką funkcję pełnią dwa równoległe zwierciadła tworzące rezonator optyczny lasera?",
+    "text": "Które ze stwierdzeń poprawnie opisują działanie rezonatora optycznego (układu luster) w laserze?",
     "options": [
       {
-        "text": "Wielokrotnie odbijają fotony dla wzmocnienia lawinowego; ok. 1% wychodzi jako wiązka.",
+        "text": "Wielokrotne odbicia fotonów wzdłuż osi wywołują lawinową emisję wymuszoną.",
         "isCorrect": true
       },
       {
-        "text": "Zatrzymują wszystkie fotony w ośrodku i przepuszczają wyłącznie wiązkę szybkich elektronów.",
-        "isCorrect": false
+        "text": "Jedno lustro jest w pełni odbijające, a przez drugie wychodzi ok. $1\\%$–$5\\%$ światła.",
+        "isCorrect": true
       },
       {
-        "text": "Rozszczepiają światło białe na widmo ciągłe i kierują je równomiernie w całej przestrzeni.",
-        "isCorrect": false
+        "text": "Wyróżnienie osi między lustrami zapewnia znakomitą równoległość wiązki wyjściowej.",
+        "isCorrect": true
       },
       {
-        "text": "Zamieniają bezpośrednio energię elektryczną zasilacza na twarde promieniowanie X.",
+        "text": "Oba lustra muszą być całkowicie nieprzezroczyste, by żaden foton nie opuścił wnęki.",
         "isCorrect": false
       }
     ],
-    "explanation": "Jedno zwierciadło rezonatora jest całkowicie odbijające (~100%), a drugie półprzepuszczalne (przepuszcza zwykle ok. $1\\%$–$5\\%$ światła). Fotony biegnące dokładnie wzdłuż osi rezonatora wielokrotnie wracają przez ośrodek czynny, wywołując lawinową emisję wymuszoną (fotony biegnące ukośnie uciekają bokiem — stąd znakomita równoległość wiązki laserowej)."
+    "explanation": "Rezonator optyczny składa się ze zwierciadła całkowicie odbijającego oraz półprzepuszczalnego (przepuszczającego ok. $1\\%$–$5\\%$ fotonów jako wiązkę użytkową). Odbicia wzdłuż osi wzmacniają lawinowo falę i selekcjonują promienie równoległe."
   },
   {
     "id": 116,
@@ -2812,26 +2812,26 @@ const questionDatabase = [
   {
     "id": 118,
     "category": "4. Lasery — fizyka, zasada działania i zastosowania",
-    "text": "Jak przebiega pompowanie i emisja w klasycznym laserze helowo-neonowym (He-Ne, $\\lambda = 632{,}8\\text{ nm}$) omówionym na wykładzie?",
+    "text": "Które ze stwierdzeń poprawnie charakteryzują omawiany na wykładzie laser gazowy He-Ne?",
     "options": [
       {
-        "text": "Wyładowanie wzbudza atomy He (10:1), które przekazują energię atomom Ne emitującym światło.",
+        "text": "Ośrodkiem czynnym jest mieszanina helu i neonu w proporcji około $10:1$.",
         "isCorrect": true
       },
       {
-        "text": "Lampa błyskowa wzbudza atomy Ne (10:1), które przekazują energię atomom He emitującym IR.",
-        "isCorrect": false
+        "text": "Jest to laser 4-poziomowy, co ułatwia inwersję i eliminuje reabsorpcję.",
+        "isCorrect": true
       },
       {
-        "text": "Promieniowanie rentgenowskie jonizuje czysty neon bez helu, dając niebieską wiązkę laserową.",
-        "isCorrect": false
+        "text": "Emituje czerwoną wiązkę o długości fali $\\lambda = 632{,}8\\text{ nm}$ (z przejść w Ne).",
+        "isCorrect": true
       },
       {
-        "text": "Prąd w złączu p-n chłodzi mieszaninę He-Ne, wywołując spójną emisję z przejść jądrowych helu.",
+        "text": "Pompowanie zachodzi wyłącznie przez promieniowanie gamma z reaktora.",
         "isCorrect": false
       }
     ],
-    "explanation": "W laserze He-Ne ośrodkiem czynnym jest mieszanina gazów He:Ne w stosunku 10:1. Kontrolowane wyładowanie elektryczne (zderzenia z elektronami) wzbudza atomy helu na stany metastabilne, skąd w zderzeniach (bezpromieniście) energia przekazywana jest na bliskie energetycznie poziomy neonu. Samo przejście laserujące ($\\lambda = 632{,}8\\text{ nm}$, światło czerwone) zachodzi w atomach neonu."
+    "explanation": "Laser He-Ne (EFW4 s. 6) to laser 4-poziomowy z mieszaniną He:Ne (10:1), pompowany wyładowaniem elektrycznym w gazie i emitujący czerwoną linię $632{,}8\\text{ nm}$ z przejść w atomach neonu."
   },
   {
     "id": 119,
@@ -2860,26 +2860,26 @@ const questionDatabase = [
   {
     "id": 120,
     "category": "4. Lasery — fizyka, zasada działania i zastosowania",
-    "text": "Na czym polega działanie lasera światłowodowego oraz komunikacji światłowodowej przedstawionych na wykładzie?",
+    "text": "Które stwierdzenia dotyczące komunikacji światłowodowej oraz lasera światłowodowego są prawdziwe?",
     "options": [
       {
-        "text": "Światło prowadzi całkowite odbicie wewnętrzne ($n_1 > n_2$), a akcję laserową daje szkło z Er lub Yb.",
+        "text": "Transmisja w światłowodzie opiera się na całkowitym odbiciu wewnętrznym ($n_1 > n_2$).",
         "isCorrect": true
       },
       {
-        "text": "Światło prowadzi dyfrakcja Bragga ($n_1 < n_2$), a akcję laserową daje ciekły azot w rdzeniu kabla.",
+        "text": "W laserze światłowodowym akcję laserową daje szkło domieszkowane Er lub Yb.",
+        "isCorrect": true
+      },
+      {
+        "text": "W laserze światłowodowym wnęką rezonansową musi być wyłącznie zewnętrzna tuba z Ne.",
         "isCorrect": false
       },
       {
-        "text": "Światło rozchodzi się przez tunelowanie przez metalowy rdzeń, a wzmacniają je atomy żelaza.",
-        "isCorrect": false
-      },
-      {
-        "text": "Światło odbija się od warstwy powietrza o wyższym współczynniku załamania niż szkło rdzenia.",
+        "text": "Współczynnik załamania rdzenia światłowodu musi być mniejszy od płaszcza ($n_1 < n_2$).",
         "isCorrect": false
       }
     ],
-    "explanation": "W światłowodzie rdzeń ma wyższy współczynnik załamania światła niż płaszcz ($n_1 > n_2$), co zapewnia zjawisko całkowitego odbicia wewnętrznego. W laserze światłowodowym sam światłowód stanowi wnękę rezonansową, a ośrodkiem czynnym jest szkło domieszkowane pierwiastkami ziem rzadkich, np. erbem (Er) lub iterbem (Yb)."
+    "explanation": "Światłowód prowadzi światło przez całkowite odbicie wewnętrzne ($n_1 > n_2$, rdzeń ma większy współczynnik załamania niż płaszcz). W laserze światłowodowym sam światłowód (szkło z Er/Yb) pełni funkcję wnęki rezonansowej (EFW4 s. 8)."
   },
   {
     "id": 121,
@@ -3028,98 +3028,98 @@ const questionDatabase = [
   {
     "id": 127,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Dlaczego krzywa energii potencjalnej $V(r) = \\frac{A}{r^n} - \\frac{B}{r^m}$ ($n > m$) dwóch zbliżających się atomów gwałtownie rośnie dla bardzo małych odległości $r$?",
+    "text": "Które stwierdzenia poprawnie opisują krzywą energii potencjalnej $V(r) = \\frac{A}{r^n} - \\frac{B}{r^m}$ ($n > m$) zbliżających się atomów?",
     "options": [
       {
-        "text": "Przez osłabienie ekranowania odpychających się jąder oraz zakaz Pauliego dla nakładających się powłok.",
+        "text": "Minimum krzywej $V(r)$ wyznacza odległość równowagową (długość wiązania w cząsteczce).",
         "isCorrect": true
       },
       {
-        "text": "Przez zanik oddziaływania elektrostatycznego na rzecz silnego odpychania grawitacyjnego między jądrami.",
-        "isCorrect": false
+        "text": "Przy bardzo małych $r$ energia gwałtownie rośnie przez zakaz Pauliego i odpychanie jąder.",
+        "isCorrect": true
       },
       {
-        "text": "Przez spontaniczne przekształcanie się elektronów walencyjnych w pozytony przy zbliżaniu atomów.",
-        "isCorrect": false
+        "text": "Głębokość minimum energii potencjalnej poniżej zera odpowiada energii wiązania cząsteczki.",
+        "isCorrect": true
       },
       {
-        "text": "Przez przejście obu atomów w stan nadprzewodzący wypychający linie pola elektrycznego na zewnątrz.",
+        "text": "W odległości równowagowej na atomy działa nieskończenie wielka siła odpychająca.",
         "isCorrect": false
       }
     ],
-    "explanation": "Wykład EFW5 (s. 2–4) wyjaśnia, że przy dużych odległościach dominuje przyciąganie ($-B/r^m$), co daje minimum $V(r)$ w odległości równowagowej. Przy zbyt dużym zbliżeniu atomów energia gwałtownie rośnie ($+A/r^n$, $n > m$) z dwóch powodów: słabnącego ekranowania dodatnich jąder oraz zakazu Pauliego, który nie pozwala elektronom nakładających się powłok zajmować tych samych stanów."
+    "explanation": "W minimum $V(r)$ siły przyciągania i odpychania równoważą się (siła wypadkowa $F = -dV/dr = 0$), co wyznacza długość wiązania, a głębokość minimum daje energię wiązania. Gwałtowny wzrost dla małych $r$ wynika z osłabienia ekranowania jąder oraz zakazu Pauliego."
   },
   {
     "id": 128,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Na czym polega wiązanie JONOWE i kiedy najczęściej powstaje między dwoma atomami?",
+    "text": "Które ze stwierdzeń na temat wiązania JONOWEGO są prawdziwe?",
     "options": [
       {
-        "text": "Na przekazaniu elektronu przy dużej różnicy elektroujemności ($\\Delta EN > 1{,}7$) i przyciąganiu jonów.",
+        "text": "Powstaje przy dużej różnicy elektroujemności ($\\Delta EN > 1{,}7$, np. w $\\text{NaCl}$ i $\\text{KCl}$).",
         "isCorrect": true
       },
       {
-        "text": "Na równym uwspólnieniu pary elektronów przez dwa identyczne atomy o zerowej różnicy elektroujemności.",
+        "text": "Polega na przekazaniu elektronu i niekierunkowym przyciąganiu utworzonych jonów.",
+        "isCorrect": true
+      },
+      {
+        "text": "Polega na równym uwspólnieniu pary elektronów przez dwa identyczne atomy niemetalu.",
         "isCorrect": false
       },
       {
-        "text": "Na utworzeniu wspólnego gazu swobodnych elektronów między dodatnimi jonami w czystym metalu.",
-        "isCorrect": false
-      },
-      {
-        "text": "Na słabym przyciąganiu chwilowych dipoli indukowanych między obojętnymi atomami gazów szlachetnych.",
+        "text": "Jest słabsze od sił van der Waalsa i daje kryształy o niskiej temperaturze topnienia.",
         "isCorrect": false
       }
     ],
-    "explanation": "Wiązanie jonowe tworzy się przy dużej różnicy elektroujemności ($\\Delta EN > 1{,}7$, np. metal alkaliczny + halogen: $\\text{NaCl, KCl, NaF}$). Atom mniej elektroujemny oddaje elektron bardziej elektroujemnemu, a powstałe różnoimienne jony (kation i anion) przyciągają się silnym, niekierunkowym oddziaływaniem elektrostatycznym."
+    "explanation": "Wiązanie jonowe tworzy się przy dużej różnicy elektroujemności ($\\Delta EN > 1{,}7$), polega na przekazaniu elektronu i silnym, niekierunkowym przyciąganiu jonów (stąd wysoka $T_t$ kryształów jonowych). Współdzielenie elektronów to wiązanie kowalencyjne."
   },
   {
     "id": 129,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Dlaczego w wiązaniu KOWALENCYJNYM (np. w cząsteczce $\\text{H}_2^+$ lub $\\text{H}_2$) stan z SYMETRYCZNĄ (parzystą) przestrzenną funkcją falową ma niższą energię niż stan z funkcją antysymetryczną?",
+    "text": "Które ze stwierdzeń poprawnie opisują kwantowy mechanizm wiązania KOWALENCYJNEGO (np. w $\\text{H}_2$)?",
     "options": [
       {
-        "text": "Daje duże prawdopodobieństwo obecności elektronu między jądrami, gdzie potencjał silnie wiąże.",
+        "text": "Istotą jest uwspólnienie pary (lub par) elektronów walencyjnych przez atomy.",
         "isCorrect": true
       },
       {
-        "text": "Daje zerowe prawdopodobieństwo obecności elektronu między jądrami, zmniejszając ich masę.",
+        "text": "Stan z parzystą (symetryczną) funkcją falową ma niższą energię (stan wiążący).",
+        "isCorrect": true
+      },
+      {
+        "text": "W cząsteczce $\\text{H}_2$ dwa wspólne elektrony w stanie podstawowym mają spiny zgodne.",
         "isCorrect": false
       },
       {
-        "text": "Wymusza równoległe ustawienie spinów obu elektronów na tym samym orbitalu z zakazu Pauliego.",
-        "isCorrect": false
-      },
-      {
-        "text": "Eliminuje całkowicie energię kinetyczną elektronów, sprowadzając ją dokładnie do zera.",
+        "text": "Stan z nieparzystą (antysymetryczną) funkcją falową ma najniższą energię wiązania.",
         "isCorrect": false
       }
     ],
-    "explanation": "W stanie z parzystą (symetryczną) funkcją falową $\\Psi_A + \\Psi_B$ gęstość prawdopodobieństwa elektronu skupia się między dodatnimi jądrami (ekranując ich odpychanie i korzystając z głębokiej studni potencjału obu jąder) — to stan wiążący o niższej energii (dla $\\text{H}_2$ elektrony mają spiny antyrównoległe). Stan antysymetryczny $\\Psi_A - \\Psi_B$ ma węzeł między jądrami i wyższą energię."
+    "explanation": "W wiązaniu kowalencyjnym atomy współdzielą parę elektronów, a stan wiążący o niższej energii odpowiada symetrycznej (parzystej) funkcji przestrzennej. Zgodnie z zakazem Pauliego dwa elektrony na tym samym orbitalu w $\\text{H}_2$ muszą mieć spiny ANTYRÓWNOLEGŁE (przeciwne), a nie zgodne!"
   },
   {
     "id": 130,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Co jest fizyczną przyczyną słabych oddziaływań (wiązań) van der Waalsa między niepolarnymi cząsteczkami (np. $\\text{CH}_4$, $\\text{Cl}_2$) lub atomami gazów szlachetnych?",
+    "text": "Które stwierdzenia poprawnie opisują oddziaływania (wiązania) van der Waalsa?",
     "options": [
       {
-        "text": "Wzajemne oddziaływanie elektrostatyczne chwilowych i indukowanych dipoli elektrycznych.",
+        "text": "Mają charakter elektrostatyczny, lecz są znacznie słabsze od wiązań jonowych i kowalencyjnych.",
         "isCorrect": true
       },
       {
-        "text": "Przekazanie elektronów walencyjnych i utworzenie gęstej sieci kationów oraz anionów.",
-        "isCorrect": false
+        "text": "Występują między cząsteczkami niepolarnymi (np. $\\text{CH}_4, \\text{Cl}_2$) oraz atomami gazów szlachetnych.",
+        "isCorrect": true
       },
       {
-        "text": "Uwspólnienie kierunkowej pary elektronów wzdłuż osi łączącej dwa sąsiednie atomy.",
-        "isCorrect": false
+        "text": "Wynikają z oddziaływania chwilowych oraz indukowanych dipoli elektrycznych chmur elektronów.",
+        "isCorrect": true
       },
       {
-        "text": "Oddziaływanie jądrowe silne działające na odległościach rzędu kilku nanometrów.",
+        "text": "Odpowiadają za ekstremalną twardość i wysoką temperaturę topnienia diamentu oraz krzemu.",
         "isCorrect": false
       }
     ],
-    "explanation": "Oddziaływania van der Waalsa mają charakter elektrostatyczny, lecz są bardzo słabe: nawet w cząsteczkach niepolarnych i atomach gazów szlachetnych chwilowe fluktuacje chmury elektronowej tworzą chwilowe dipole, które indukują dipole w sąsiednich cząsteczkach i słabo je przyciągają."
+    "explanation": "Siły van der Waalsa to słabe oddziaływania elektrostatyczne między chwilowymi/indukowanymi dipolami w cząsteczkach niepolarnych i gazach szlachetnych (tworzą miękkie kryształy molekularne o niskiej $T_t$). Diament i krzem zawdzięczają twardość silnym wiązaniom kowalencyjnym."
   },
   {
     "id": 131,
@@ -3148,26 +3148,26 @@ const questionDatabase = [
   {
     "id": 132,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Czym różnią się ciała AMORFICZNE (bezpostaciowe) od ciał KRYSTALICZNYCH?",
+    "text": "Które ze stwierdzeń poprawnie charakteryzują ciała AMORFICZNE w odróżnieniu od ciał KRYSTALICZNYCH?",
     "options": [
       {
-        "text": "Amorficzne mają porządek bliskiego zasięgu (szkło), a krystaliczne regularną sieć dalekiego zasięgu.",
+        "text": "Ciała amorficzne wykazują jedynie uporządkowanie bliskiego zasięgu (jak w cieczy).",
         "isCorrect": true
       },
       {
-        "text": "Amorficzne tworzą 14 sieci Bravais w 3D (np. sól), a krystaliczne mają ułożenie atomów jak w gazie.",
-        "isCorrect": false
+        "text": "Typowymi przykładami ciał amorficznych są szkło oraz większość polimerów.",
+        "isCorrect": true
       },
       {
-        "text": "Amorficzne są wyłącznie czystymi metalami przewodzącymi prąd, a krystaliczne wyłącznie izolatorami.",
-        "isCorrect": false
+        "text": "W ciałach krystalicznych atomy tworzą regularną sieć przestrzenną dalekiego zasięgu.",
+        "isCorrect": true
       },
       {
-        "text": "Amorficzne występują wyłącznie jako pojedyncze monokryształy, a krystaliczne jako mieszanina cieczy.",
+        "text": "Szkło i polimery są typowymi przykładami idealnych monokryształów o sieci regularnej.",
         "isCorrect": false
       }
     ],
-    "explanation": "Ciała amorficzne (np. szkło, większość polimerów) nie mają uporządkowania dalekiego zasięgu — wykazują jedynie porządek lokalny (bliskiego zasięgu), podobnie jak przechłodzona ciecz. W ciałach krystalicznych atomy tworzą regularną, okresową sieć przestrzenną (7 układów krystalograficznych, 14 sieci Bravais w 3D)."
+    "explanation": "Ciała amorficzne (szkło, większość polimerów) mają tylko porządek lokalny (bliskiego zasięgu), bez powtarzalnej sieci dalekiego zasięgu charakterystycznej dla kryształów."
   },
   {
     "id": 133,
@@ -3196,26 +3196,26 @@ const questionDatabase = [
   {
     "id": 134,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Czym różni się MONOKRYSZTAŁ od POLIKRYSZTAŁU?",
+    "text": "Które ze stwierdzeń na temat MONOKRYSZTAŁÓW, POLIKRYSZTAŁÓW oraz badania struktury kryształów są prawdziwe?",
     "options": [
       {
-        "text": "Monokryształ ma jedną ciągłą sieć w całej objętości, a polikryształ jest zlepkiem wielu ziaren.",
+        "text": "Monokryształ posiada jedną jednolitą sieć krystaliczną w całej objętości.",
         "isCorrect": true
       },
       {
-        "text": "Monokryształ składa się z jednego pierwiastka, a polikryształ musi zawierać co najmniej dwa.",
-        "isCorrect": false
+        "text": "Polikryształ jest zlepkiem wielu drobnych, różnie zorientowanych ziaren.",
+        "isCorrect": true
       },
       {
-        "text": "Monokryształ nie posiada uporządkowania dalekiego zasięgu, a polikryształ ma idealną sieć.",
-        "isCorrect": false
+        "text": "Strukturę kryształów bada się dyfrakcją promieni X (prawo Bragga).",
+        "isCorrect": true
       },
       {
-        "text": "Monokryształ przewodzi prąd wyłącznie w $T=0\\text{ K}$, a polikryształ w każdej temperaturze.",
+        "text": "Monokryształ musi składać się wyłącznie z jednego czystego pierwiastka.",
         "isCorrect": false
       }
     ],
-    "explanation": "Monokryształ (np. kryształ szafiru $\\text{Al}_2\\text{O}_3$, monokryształ Si używany w mikroelektronice) ma jednolitą, nieprzerwaną sieć krystaliczną w całej objętości (może być związkiem wielu pierwiastków!). Polikryształ (np. typowe metale, mosiądz, poly-Si) zbudowany jest ze zlepku wielu drobnych, losowo zorientowanych ziaren krystalicznych."
+    "explanation": "Monokryształ ma jednolitą sieć w całej objętości (może być związkiem, np. szafir $\\text{Al}_2\\text{O}_3$, $\\text{NaCl}$), polikryształ to zlepek wielu ziaren (np. mosiądz, poly-Si), a strukturę bada się krystalografią rentgenowską (prawo Bragga)."
   },
   {
     "id": 135,
@@ -3268,74 +3268,74 @@ const questionDatabase = [
   {
     "id": 137,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Które właściwości fizyczne charakteryzują KRYSZTAŁY MOLEKULARNE (cząsteczkowe), np. lód lub zestalony argon?",
+    "text": "Które cechy i przykłady dotyczą KRYSZTAŁÓW MOLEKULARNYCH (cząsteczkowych)?",
     "options": [
       {
-        "text": "Słabe wiązania van der Waalsa, miękkość (podatność na odkształcenia) i niska temperatura topnienia.",
+        "text": "Tworzą je cząsteczki połączone słabymi siłami van der Waalsa lub wodorowymi.",
         "isCorrect": true
       },
       {
-        "text": "Silne kierunkowe wiązania kowalencyjne, ekstremalna twardość i bardzo wysoka temperatura topnienia.",
+        "text": "Przykłady to lód ($\\text{H}_2\\text{O}$), suchy lód ($\\text{CO}_2$) i zestalone gazy szlachetne.",
+        "isCorrect": true
+      },
+      {
+        "text": "Są wyjątkowo twarde, sztywne i mają bardzo wysoką temperaturę topnienia.",
         "isCorrect": false
       },
       {
-        "text": "Wspólny gaz zdelokalizowanych elektronów, połysk metaliczny i świetne przewodnictwo elektryczne.",
-        "isCorrect": false
-      },
-      {
-        "text": "Naprzemienne kationy i aniony związane elektrostatycznie, wysoka twardość i wysoka temp. topnienia.",
+        "text": "Przykłady to diament, krzem i miedź, świetnie przewodzące prąd w stanie stałym.",
         "isCorrect": false
       }
     ],
-    "explanation": "Kryształy molekularne (cząsteczkowe) składają się z obojętnych cząsteczek ze sparowanymi elektronami, utrzymywanych słabymi siłami van der Waalsa (lub wiązaniami wodorowymi jak w lodzie). Stąd ich mała twardość, podatność na odkształcenia, niska temperatura topnienia i brak przewodnictwa."
+    "explanation": "Kryształy molekularne (lód, suchy lód, zestalone $\\text{O}_2, \\text{N}_2$ i gazy szlachetne) wiążą słabe siły van der Waalsa lub wodorowe, dlatego są miękkie, podatne na odkształcenia, mają niską temperaturę topnienia i są izolatorami."
   },
   {
     "id": 138,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Które cechy są charakterystyczne dla KRYSZTAŁÓW JONOWYCH (np. $\\text{NaCl, KCl}$)?",
+    "text": "Które cechy i przykłady poprawnie opisują KRYSZTAŁY JONOWE?",
     "options": [
       {
-        "text": "Wiązania niekierunkowe, twardość, wysoka temp. topnienia, przezroczystość w widzialnym i absorpcja UV.",
+        "text": "Zbudowane są z naprzemiennie, gęsto upakowanych jonów dodatnich i ujemnych (np. $\\text{NaCl, KCl}$).",
         "isCorrect": true
       },
       {
-        "text": "Wiązania kierunkowe, bardzo niska temperatura topnienia, nieprzezroczystość i bardzo wysoka kowalność.",
-        "isCorrect": false
+        "text": "Mają wysoką temperaturę topnienia, są twarde (choć kruche) i mają wiązania niekierunkowe.",
+        "isCorrect": true
       },
       {
-        "text": "Swobodny gaz elektronowy, doskonałe przewodnictwo w stanie stałym i całkowite odbijanie światła.",
-        "isCorrect": false
+        "text": "Są przezroczyste dla światła widzialnego, natomiast silnie absorbują nadfiolet (UV).",
+        "isCorrect": true
       },
       {
-        "text": "Słabe oddziaływania van der Waalsa, miękkość i przewodzenie prądu już w temperaturze zera Kelwina.",
+        "text": "W stanie stałym przewodzą prąd lepiej niż miedź dzięki swobodnemu gazowi elektronowemu.",
         "isCorrect": false
       }
     ],
-    "explanation": "Kryształy jonowe (EFW5 s. 8) tworzą gęsto upakowane, naprzemiennie ułożone jony dodatnie i ujemne powiązane silnym, niekierunkowym oddziaływaniem elektrostatycznym. Są twarde (ale kruche), mają wysoką temperaturę topnienia, są przezroczyste dla światła widzialnego, natomiast silnie absorbują nadfiolet (UV)."
+    "explanation": "Kryształy jonowe ($\\text{NaCl, KCl, CsCl}$) w stanie stałym nie mają swobodnych nośników (przewodzą dopiero po stopieniu lub rozpuszczeniu). Są twarde, mają wysoką $T_t$, niekierunkowe wiązania elektrostatyczne, są przezroczyste w widzialnym i absorbują UV (EFW5 s. 8)."
   },
   {
     "id": 139,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Dlaczego kryształy ATOMOWE (kowalentne, np. diament, krzem) są bardzo twarde i słabo przewodzą ciepło oraz prąd w niskich temperaturach?",
+    "text": "Które cechy i przykłady poprawnie opisują KRYSZTAŁY ATOMOWE (kowalentne)?",
     "options": [
       {
-        "text": "Atomy łączą silne, kierunkowe wiązania kowalencyjne bez swobodnych elektronów w sieci.",
+        "text": "Atomy połączone są silnymi, kierunkowymi wiązaniami kowalencyjnymi w sztywną sieć.",
         "isCorrect": true
       },
       {
-        "text": "Atomy łączą słabe siły van der Waalsa blokujące przepływ ładunków i odkształcenia sieci.",
-        "isCorrect": false
+        "text": "Są bardzo twarde, niepodatne na odkształcenia i mają wysoką temperaturę topnienia.",
+        "isCorrect": true
       },
       {
-        "text": "W sieci występuje nadmiar swobodnych elektronów, które wzajemnie się hamują w zderzeniach.",
-        "isCorrect": false
+        "text": "Typowymi przykładami kryształów atomowych są diament (C), krzem (Si) i german (Ge).",
+        "isCorrect": true
       },
       {
-        "text": "Kryształy atomowe nie posiadają uporządkowanej sieci przestrzennej i są ciałami amorficznymi.",
+        "text": "Zawierają gęsty gaz swobodnych elektronów, świetnie przewodząc prąd już w $0\\text{ K}$.",
         "isCorrect": false
       }
     ],
-    "explanation": "W kryształach atomowych (kowalentnych) atomy połączone są parami wspólnych elektronów w silne, kierunkowe wiązania wyznaczające sztywną przestrzenną sieć (stąd wielka twardość i niepodatność na odkształcenia). Brak swobodnych elektronów skutkuje słabym przewodnictwem elektrycznym (izolatory jak diament lub półprzewodniki jak Si, Ge)."
+    "explanation": "Kryształy atomowe (diament, Si, Ge) mają silne, kierunkowe wiązania kowalencyjne (duża twardość, wysoka $T_t$), natomiast nie zawierają swobodnego gazu elektronowego i w $T = 0\\text{ K}$ są izolatorami."
   },
   {
     "id": 140,
@@ -3364,50 +3364,50 @@ const questionDatabase = [
   {
     "id": 141,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Skąd bierze się dobre przewodnictwo elektryczne METALI i dlaczego ich opór elektryczny ROŚNIE wraz ze wzrostem temperatury? (pytanie z kolokwium)",
+    "text": "Które ze stwierdzeń poprawnie wyjaśniają przewodnictwo elektryczne METALI oraz wpływ temperatury na ich opór?",
     "options": [
       {
-        "text": "Pasma się nakładają (dużo wolnych elektronów); wyższe $T$ wzmaga drgania sieci i rozpraszanie.",
+        "text": "Pasmo walencyjne i pasmo przewodnictwa nakładają się (brak przerwy energetycznej $E_g$).",
         "isCorrect": true
       },
       {
-        "text": "Pasma dzieli szeroka przerwa; wyższe $T$ zmniejsza wykładniczo liczbę swobodnych elektronów.",
-        "isCorrect": false
+        "text": "Koncentracja swobodnych elektronów walencyjnych jest ogromna i niemal niezależna od temperatury.",
+        "isCorrect": true
       },
       {
-        "text": "Metale mają nadmiar dziur walencyjnych; wyższe $T$ zatrzymuje drgania termiczne jonów sieci.",
-        "isCorrect": false
+        "text": "Wzrost temperatury wzmaga drgania jonów sieci (fonony), co nasila rozpraszanie i zwiększa opór.",
+        "isCorrect": true
       },
       {
-        "text": "Elektrony płyną w parach Coopera; wyższe $T$ poszerza warstwę zubożoną na granicach ziaren.",
+        "text": "Wzrost temperatury powoduje spadek oporu metalu wskutek gwałtownego wzrostu liczby elektronów.",
         "isCorrect": false
       }
     ],
-    "explanation": "To jedno z kluczowych pytań z kolokwiów (2023 i 2024)! W metalach pasmo walencyjne i pasmo przewodnictwa zachodzą na siebie (brak przerwy energetycznej), zapewniając ogromną, niemal stałą w funkcji $T$ koncentrację swobodnych elektronów (gaz elektronowy w modelu Drudego). Wzrost temperatury zwiększa amplitudę drgań cieplnych jonów sieci (liczbę fononów), co powoduje częstsze rozpraszanie elektronów i wzrost oporu."
+    "explanation": "W metalach pasma się nakładają (duży, stały gaz elektronowy w modelu Drudego), a wzrost temperatury zwiększa amplitudę drgań sieci (liczbę fononów) — częstsze zderzenia skracają drogę swobodną i ZWIĘKSZAJĄ opór elektryczny metalu (odwrotnie niż w półprzewodnikach!)."
   },
   {
     "id": 142,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "W jaki sposób powstają pasma energetyczne i przerwy energetyczne w krysztale według teorii pasmowej?",
+    "text": "Które ze stwierdzeń na temat teorii pasmowej ciał stałych są prawdziwe?",
     "options": [
       {
-        "text": "Zbliżanie ogromnej liczby atomów powoduje nakładanie funkcji falowych i rozszczepienie poziomów w pasma.",
+        "text": "Pasma energetyczne powstają z rozszczepienia poziomów atomowych przy zbliżeniu $N$ atomów.",
         "isCorrect": true
       },
       {
-        "text": "Zewnętrzne pole magnetyczne Ziemi rozszczepia każdy poziom atomowy w ciągłe pasmo na mocy efektu Zeemana.",
+        "text": "Energia Fermiego $E_F$ to najwyższa energia obsadzonego stanu elektronowego w $T = 0\\text{ K}$.",
+        "isCorrect": true
+      },
+      {
+        "text": "Przerwa energetyczna $E_g$ to przedział energii dozwolonych o największej gęstości stanów.",
         "isCorrect": false
       },
       {
-        "text": "Zderzenia elektronów z jądrami niszczą kwantowanie energii, tworząc ciągłe widmo bez żadnych przerw.",
-        "isCorrect": false
-      },
-      {
-        "text": "Ciepło właściwe sieci krystalicznej rozmywa poziomy energetyczne wyłącznie powyżej temperatury topnienia.",
+        "text": "Obsadzenie stanów elektronowych w krysztale opisuje klasyczny rozkład fal świetlnych.",
         "isCorrect": false
       }
     ],
-    "explanation": "Gdy zbliżamy dwa atomy, ich funkcje falowe nakładają się i poziom rozszczepia się na dwa (symetryczny i antysymetryczny). Gdy w krysztale zbliżymy $N \\sim 10^{23}$ atomów, zgodnie z zakazem Pauliego każdy dyskretny poziom atomowy rozszczepia się na $N$ niezwykle gęsto ułożonych poziomów tworzących niemal ciągłe pasma dozwolone, oddzielone przerwami zabronionymi $E_g$."
+    "explanation": "Pasma powstają przez nakładanie funkcji falowych i rozszczepienie poziomów $N$ atomów, obsadzenie opisuje rozkład Fermiego-Diraca, a $E_F$ to najwyższy zajęty stan w $T = 0\\text{ K}$. Przerwa energetyczna $E_g$ to obszar energii ZABRONIONYCH, a nie dozwolonych!"
   },
   {
     "id": 143,
@@ -3436,26 +3436,26 @@ const questionDatabase = [
   {
     "id": 144,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Które stwierdzenie poprawnie opisuje układ pasm energetycznych w metalu, półprzewodniku i izolatorze?",
+    "text": "Które ze stwierdzeń poprawnie rozróżniają metale, półprzewodniki i izolatory w teorii pasmowej?",
     "options": [
       {
-        "text": "Metal ma nakładające się pasma; półprzewodnik wąską przerwę ($\\sim 0{,}1$–$2\\text{ eV}$); izolator szeroką ($> 3\\text{ eV}$).",
+        "text": "W półprzewodnikach i izolatorach poziom Fermiego $E_F$ leży wewnątrz przerwy energetycznej.",
         "isCorrect": true
       },
       {
-        "text": "Izolator ma nakładające się pasma; półprzewodnik szeroką przerwę ($> 5\\text{ eV}$); metal wąską ($\\sim 1\\text{ eV}$).",
-        "isCorrect": false
+        "text": "Półprzewodniki mają wąską przerwę (np. Si $1{,}12\\text{ eV}$, Ge $0{,}67\\text{ eV}$), a izolatory szeroką ($>3\\text{ eV}$).",
+        "isCorrect": true
       },
       {
-        "text": "Półprzewodnik ma nakładające się pasma; metal wąską przerwę ($\\sim 1\\text{ eV}$); izolator brak pasm.",
-        "isCorrect": false
+        "text": "W metalach pasmo przewodnictwa jest częściowo zapełnione lub nakłada się z walencyjnym.",
+        "isCorrect": true
       },
       {
-        "text": "Wszystkie trzy mają identyczną przerwę $E_g$, a różnią się wyłącznie znakiem ładunku elektronów.",
+        "text": "W izolatorach pasmo walencyjne i pasmo przewodnictwa całkowicie się na siebie nakładają.",
         "isCorrect": false
       }
     ],
-    "explanation": "W metalach pasmo walencyjne i pasmo przewodnictwa nakładają się (lub pasmo jest częściowo zapełnione — brak przerwy). W półprzewodnikach przerwa energetyczna $E_g$ jest wąska (ok. $0{,}1$–$2\\text{ eV}$, np. Si: $1{,}12\\text{ eV}$, Ge: $0{,}67\\text{ eV}$), więc wzbudzenie termiczne przenosi elektrony do pasma przewodnictwa. W izolatorach $E_g$ jest bardzo szeroka ($> 3$–$4\\text{ eV}$)."
+    "explanation": "Nakładanie się pasm (brak przerwy) jest cechą metali. W półprzewodnikach i izolatorach $E_F$ leży w przerwie energetycznej $E_g$, która w półprzewodnikach jest wąska ($\\sim 0{,}1$–$2\\text{ eV}$), a w izolatorach bardzo szeroka ($> 3$–$4\\text{ eV}$)."
   },
   {
     "id": 145,
@@ -3508,26 +3508,26 @@ const questionDatabase = [
   {
     "id": 147,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Z jakich grup układu okresowego pochodzą klasyczne pierwiastkowe półprzewodniki samoistne (np. Si, Ge) oraz ich dwuskładnikowe związki (np. GaN, GaAs)?",
+    "text": "Które ze stwierdzeń poprawnie opisują półprzewodniki samoistne oraz domieszkowane typu $n$ i typu $p$?",
     "options": [
       {
-        "text": "Z grupy IV (14.) układu okresowego (Si, Ge) oraz ze związków grup III–V (GaAs, GaN).",
+        "text": "W czystym półprzewodniku samoistnym (Si, Ge) koncentracja elektronów równa się dziurom ($n = p$).",
         "isCorrect": true
       },
       {
-        "text": "Z grupy I (1.) układu okresowego (Li, Na) oraz ze związków grup I–VII (NaCl, KCl).",
-        "isCorrect": false
+        "text": "Półprzewodnik typu $n$ tworzy domieszka z grupy V (P, As — donory, większość elektrony).",
+        "isCorrect": true
       },
       {
-        "text": "Z grupy 18. gazów szlachetnych (Ar, Kr) oraz czystych metali przejściowych (Fe, Co).",
-        "isCorrect": false
+        "text": "Półprzewodnik typu $p$ tworzy domieszka z grupy III (B, Al, Ga — akceptory, większość dziury).",
+        "isCorrect": true
       },
       {
-        "text": "Z grupy II (2.) berylowców (Mg, Ca) oraz ze związków grup II–VIII (CaHe, MgNe).",
+        "text": "W półprzewodniku typu $n$ nośnikami większościowymi ładunku są zawsze dodatnie dziury.",
         "isCorrect": false
       }
     ],
-    "explanation": "Półprzewodniki samoistne to pierwiastki 14. (IV) grupy układu okresowego (C, Si, Ge, Sn) o strukturze diamentu i 4 elektronach walencyjnych tworzących wiązania kowalencyjne, a także związki pierwiastków grup III–V (np. GaN, InN, GaAs). W czystym półprzewodniku samoistnym koncentracja elektronów równa się koncentracji dziur ($n = p$)."
+    "explanation": "W półprzewodniku samoistnym $n = p$; domieszkowanie grupą V (donory: P, As) daje typ $n$ z większością elektronów, a grupą III (akceptory: B, Al, Ga, In) daje typ $p$ z większością dziur."
   },
   {
     "id": 148,
@@ -3580,74 +3580,74 @@ const questionDatabase = [
   {
     "id": 150,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Jak powstaje warstwa zubożona (zaporowa) w niespolaryzowanym złączu $p$–$n$ diody półprzewodnikowej?",
+    "text": "Które ze stwierdzeń poprawnie opisują złącze $p$–$n$ diody w stanie równowagi (bez przyłożonego napięcia)?",
     "options": [
       {
-        "text": "Przez dyfuzję nośników przez złącze i ich rekombinację, zostawiając nieruchome jony.",
+        "text": "Przez granicę dyfundują nośniki większościowe i rekombinują, tworząc warstwę zubożoną.",
         "isCorrect": true
       },
       {
-        "text": "Przez stopienie obszarów $p$ i $n$ oraz wstawienie między nie cienkiej płytki ze szkła.",
+        "text": "Nieruchome jony w warstwie zubożonej tworzą pole hamujące dalszą dyfuzję (barierę).",
+        "isCorrect": true
+      },
+      {
+        "text": "Wewnątrz warstwy zubożonej koncentracja swobodnych nośników jest największa w diodzie.",
         "isCorrect": false
       },
       {
-        "text": "Przez dyfuzję nieruchomych jąder krzemu do przeciwnych końców monokryształu diody.",
-        "isCorrect": false
-      },
-      {
-        "text": "Przez wyparowanie elektronów walencyjnych na granicy złącza w trakcie jego produkcji.",
+        "text": "Przez niespolaryzowane złącze płynie stale duży prąd przewodzenia rosnący wykładniczo.",
         "isCorrect": false
       }
     ],
-    "explanation": "Po zetknięciu obszarów $p$ i $n$ w jednym monokrysztale elektrony dyfundują z $n$ do $p$, a dziury z $p$ do $n$ i rekombinują w pobliżu granicy. Powstaje warstwa zubożona (pozbawiona swobodnych nośników) zawierająca odkryte, nieruchome jony domieszek, których wewnętrzne pole elektryczne tworzy barierę potencjału (ok. $0{,}7\\text{ V}$ dla Si, $0{,}3\\text{ V}$ dla Ge) hamującą dalszą dyfuzję."
+    "explanation": "W niespolaryzowanym złączu $p$–$n$ dyfuzja i rekombinacja tworzą warstwę zubożoną (POZBAWIONĄ swobodnych nośników!) z nieruchomymi jonami, których wewnętrzna bariera potencjału równoważy dyfuzję, więc wypadkowy prąd wynosi zero."
   },
   {
     "id": 151,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Jak zachowuje się złącze $p$–$n$ diody przy POLARYZACJI W KIERUNKU PRZEWODZENIA („$+$” źródła do obszaru $p$, „$-$” do obszaru $n$)?",
+    "text": "Które ze zjawisk zachodzą w diodzie półprzewodnikowej przy POLARYZACJI W KIERUNKU PRZEWODZENIA („$+$” do $p$, „$-$” do $n$)?",
     "options": [
       {
-        "text": "Warstwa zubożona zwęża się, bariera maleje i po przekroczeniu napięcia progowego płynie duży prąd.",
+        "text": "Zewnętrzne napięcie przeciwdziała barierze potencjału i zwęża warstwę zubożoną.",
         "isCorrect": true
       },
       {
-        "text": "Warstwa zubożona poszerza się, bariera rośnie i płynie wyłącznie znikomy prąd nośników mniejszościowych.",
-        "isCorrect": false
+        "text": "Dziury z $p$ i elektrony z $n$ są wypychane w stronę złącza, dając duży prąd przewodzenia.",
+        "isCorrect": true
       },
       {
-        "text": "Warstwa zubożona nie zmienia swojej szerokości, a natężenie prądu rośnie ściśle liniowo jak w oporniku.",
-        "isCorrect": false
+        "text": "Po przekroczeniu napięcia progowego ($\\sim 0{,}7\\text{ V}$ dla Si) prąd rośnie gwałtownie wykładniczo.",
+        "isCorrect": true
       },
       {
-        "text": "Nośniki większościowe są odciągane od złącza ku elektrodom, całkowicie blokując przepływ ładunku.",
+        "text": "Warstwa zubożona poszerza się i całkowicie blokuje przepływ nośników większościowych.",
         "isCorrect": false
       }
     ],
-    "explanation": "Przy polaryzacji w kierunku przewodzenia („$+$” do $p$, „$-$” do $n$) zewnętrzne pole przeciwdziała wewnętrznej barierze potencjału, wypychając dziury z $p$ i elektrony z $n$ w stronę złącza. Warstwa zubożona zwęża się, a po przekroczeniu napięcia progowego ($\\sim 0{,}7\\text{ V}$ dla Si) przez diodę płynie duży prąd rosnący wykładniczo ($I = I_0(e^{eV/k_BT}-1)$)."
+    "explanation": "Polaryzacja w kierunku przewodzenia („$+$” do $p$, „$-$” do $n$) zwęża warstwę zubożoną, obniża barierę i powyżej napięcia progowego umożliwia wykładniczy wzrost prądu nośników większościowych ($I = I_0(e^{eV/k_BT} - 1)$). Poszerzanie warstwy zachodzi w polaryzacji zaporowej."
   },
   {
     "id": 152,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Jak zachowuje się dioda półprzewodnikowa przy POLARYZACJI W KIERUNKU ZAPOROWYM („$-$” źródła do $p$, „$+$” do $n$)?",
+    "text": "Które ze stwierdzeń dotyczą POLARYZACJI ZAPOROWEJ („$-$” do $p$, „$+$” do $n$) diody półprzewodnikowej oraz diody Zenera?",
     "options": [
       {
-        "text": "Warstwa zubożona poszerza się i płynie tylko znikomy prąd wsteczny aż do napięcia przebicia.",
+        "text": "Warstwa zubożona poszerza się, a bariera potencjału na złączu rośnie, blokując duży prąd.",
         "isCorrect": true
       },
       {
-        "text": "Warstwa zubożona zanika całkowicie i przez złącze płynie ogromny prąd nośników większościowych.",
-        "isCorrect": false
+        "text": "Poniżej napięcia przebicia płynie jedynie bardzo mały, niemal stały prąd wsteczny ($-I_0$).",
+        "isCorrect": true
       },
       {
-        "text": "Dioda emituje spójne światło laserowe o długości fali zależnej od przyłożonego napięcia.",
-        "isCorrect": false
+        "text": "Dioda Zenera wykorzystuje kontrolowane przebicie wsteczne do stabilizacji napięcia.",
+        "isCorrect": true
       },
       {
-        "text": "Opór diody spada dokładnie do zera, zamieniając złącze $p$–$n$ w idealny nadprzewodnik.",
+        "text": "W polaryzacji zaporowej opór złącza spada natychmiast do zera już przy $V = -0{,}1\\text{ V}$.",
         "isCorrect": false
       }
     ],
-    "explanation": "W polaryzacji zaporowej („$-$” do $p$, „$+$” do $n$) nośniki większościowe są odciągane od granicy złącza, co poszerza warstwę zubożoną i podwyższa barierę potencjału. Płynie wtedy jedynie znikomy, niemal stały prąd unoszenia nośników mniejszościowych ($-I_0$, rzędu $\\text{nA}$–$\\mu\\text{A}$), aż do osiągnięcia ujemnego napięcia przebicia."
+    "explanation": "W polaryzacji zaporowej warstwa zubożona rośnie i płynie znikomy prąd nośników mniejszościowych ($-I_0$) aż do napięcia przebicia. Kontrolowane przebicie wsteczne wykorzystuje dioda Zenera do regulacji i stabilizacji napięcia (EFW5 s. 17)."
   },
   {
     "id": 153,
@@ -3700,26 +3700,26 @@ const questionDatabase = [
   {
     "id": 155,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Jak zbudowany jest tranzystor bipolarny ($n$–$p$–$n$ lub $p$–$n$–$p$) i dlaczego środkowy obszar (baza) musi być bardzo cienki?",
+    "text": "Które ze stwierdzeń poprawnie opisują budowę i zasadę działania tranzystora bipolarnego ($n$–$p$–$n$ lub $p$–$n$–$p$)?",
     "options": [
       {
-        "text": "To dwa złącza $p$–$n$ złączone plecami; cienka baza daje $I_E \\approx I_C$, a mały prąd bazy steruje $I_C$.",
+        "text": "Składa się z dwóch złączy $p$–$n$ połączonych wspólnym, bardzo cienkim obszarem bazy.",
         "isCorrect": true
       },
       {
-        "text": "To pojedyncze złącze $p$–$n$ z grubym izolatorem; cienka baza blokuje całkowicie przepływ prądu.",
-        "isCorrect": false
+        "text": "Dzięki cienkiej bazie niemal cały prąd emitera wychodzi kolektorem ($I_E \\approx I_C$).",
+        "isCorrect": true
       },
       {
-        "text": "To układ trzech warstw czystego metalu bez domieszek; cienka baza zamienia prąd stały w fale radiowe.",
-        "isCorrect": false
+        "text": "Mały prąd wpływający do bazy steruje dużo większym prądem emiter–kolektor.",
+        "isCorrect": true
       },
       {
-        "text": "To para nadprzewodników oddzielonych próżnią; cienka baza wymusza powstawanie par Coopera w $300\\text{ K}$.",
+        "text": "Baza musi być bardzo gruba, aby całkowicie zablokować przepływ do kolektora.",
         "isCorrect": false
       }
     ],
-    "explanation": "Tranzystor bipolarny składa się z emitera, bardzo cienkiej bazy i kolektora (dwie diody $p$–$n$ złączone „plecami”). Ponieważ baza jest bardzo wąska, większość nośników wstrzykniętych z emitera przelatuje przez nią do kolektora ($I_E \\approx I_C$), a niewielki prąd bazy steruje dużym prądem emiter–kolektor — stąd wzmacnianie sygnałów."
+    "explanation": "Tranzystor bipolarny ($n$–$p$–$n$ lub $p$–$n$–$p$) to dwie diody połączone bardzo cienką bazą. Dzięki temu $I_E \\approx I_C$, a niewielki prąd bazy steruje dużym prądem kolektora (wzmacnianie i przełączanie sygnałów)."
   },
   {
     "id": 156,
@@ -3748,26 +3748,26 @@ const questionDatabase = [
   {
     "id": 157,
     "category": "5. Fizyka materii skondensowanej — wiązania, kryształy, półprzewodniki, nadprzewodniki",
-    "text": "Kto i w którym roku odkrył zjawisko nadprzewodnictwa oraz na jakich dwóch kluczowych cechach ono polega?",
+    "text": "Które ze stwierdzeń poprawnie opisują zjawisko nadprzewodnictwa i efekt Meissnera?",
     "options": [
       {
-        "text": "H. Kamerlingh Onnes (1911, w rtęci); spadek oporu DC do zera poniżej $T_c$ oraz efekt Meissnera.",
+        "text": "Zjawisko odkrył H. Kamerlingh Onnes w 1911 r. dla rtęci poniżej $T_c = 4{,}2\\text{ K}$.",
         "isCorrect": true
       },
       {
-        "text": "W. Röntgen (1895, w miedzi); spadek oporu do małej stałej wartości oraz silny ferromagnetyzm.",
+        "text": "Poniżej $T_c$ opór DC spada do zera, a pole $B$ jest wypychane (efekt Meissnera).",
+        "isCorrect": true
+      },
+      {
+        "text": "Zniszczenie nadprzewodnictwa silnym polem magnetycznym jest całkowicie nieodwracalne.",
         "isCorrect": false
       },
       {
-        "text": "J.J. Thomson (1897, w złocie); podwojenie oporu poniżej $T_c$ oraz wciąganie pola magnetycznego.",
-        "isCorrect": false
-      },
-      {
-        "text": "N. Bohr (1913, w krzemie); zanik przerwy energetycznej powyżej $300\\text{ K}$ oraz emisja fotonów.",
+        "text": "Nadprzewodnik poniżej $T_c$ wciąga i wzmacnia pole magnetyczne jak ferromagnetyk.",
         "isCorrect": false
       }
     ],
-    "explanation": "Nadprzewodnictwo odkrył Heike Kamerlingh Onnes w 1911 roku dla rtęci ($\\text{Hg}$) w temperaturze $4{,}2\\text{ K}$. Dwa fundamentalne wyznaczniki stanu nadprzewodzącego poniżej $T_c$ to: (1) dokładny spadek oporu elektrycznego dla prądu stałego do zera ($R = 0$) oraz (2) efekt Meissnera — wypychanie linii pola magnetycznego z wnętrza nadprzewodnika (idealny diamagnetyzm $\\chi = -1$)."
+    "explanation": "Onnes odkrył nadprzewodnictwo w 1911 r. dla Hg ($4{,}2\\text{ K}$). Cechuje je $R = 0$ (dla DC) oraz idealny diamagnetyzm (efekt Meissnera, wypychanie pola $B$). Zniszczenie stanu nadprzewodzącego przez pole $B > B_c$ jest ODWRACALNE — po zabraniu pola nadprzewodnictwo wraca."
   },
   {
     "id": 158,
@@ -3988,50 +3988,50 @@ const questionDatabase = [
   {
     "id": 167,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Które definicje izotopów, izotonów i izobarów w fizyce jądrowej są poprawne?",
+    "text": "Które definicje podstawowych pojęć z budowy jądra atomowego są poprawne?",
     "options": [
       {
-        "text": "Izotopy mają tę samą liczbę protonów $Z$, izotony neutronów $N$, a izobary masową $A$.",
+        "text": "Izotopy to nuklidy o tej samej liczbie protonów $Z$ i różnej liczbie neutronów $N$.",
         "isCorrect": true
       },
       {
-        "text": "Izotopy mają tę samą liczbę masową $A$, izotony protonów $Z$, a izobary neutronów $N$.",
-        "isCorrect": false
+        "text": "Izotony mają tę samą liczbę neutronów $N$, a izobary tę samą liczbę masową $A$.",
+        "isCorrect": true
       },
       {
-        "text": "Izotopy mają tę samą liczbę neutronów $N$, izotony masową $A$, a izobary protonów $Z$.",
-        "isCorrect": false
+        "text": "Liczba masowa $A = Z + N$ oznacza łączną liczbę nukleonów w jądrze atomowym.",
+        "isCorrect": true
       },
       {
-        "text": "Izotopy, izotony oraz izobary mają zawsze tę samą liczbę $Z$ i różnią się tylko spinem.",
+        "text": "Izotopy mają zawsze tę samą liczbę masową $A$, lecz różne liczby protonów $Z$.",
         "isCorrect": false
       }
     ],
-    "explanation": "Dla nuklidu $^A_Z X$ mamy: $Z$ — liczba atomowa (protonów), $N = A - Z$ — liczba neutronów, $A = Z + N$ — liczba masowa (nukleonów). Izotopy mają to samo $Z$ (ten sam pierwiastek, np. $^{12}_6\\text{C}$ i $^{14}_6\\text{C}$), izotony mają to samo $N$, a izobary mają tę samą liczbę masową $A$ (np. $^{14}_6\\text{C}$ i $^{14}_7\\text{N}$)."
+    "explanation": "Izotopy mają to samo $Z$ (różne $N$ i $A$), izotony to samo $N$, a izobary to samo $A$ (różne $Z$). Liczba masowa $A = Z + N$ to łączna liczba nukleonów."
   },
   {
     "id": 168,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Jak zależy promień jądra atomowego $R$ od liczby masowej $A$ oraz jak zmienia się gęstość materii jądrowej ze wzrostem $A$?",
+    "text": "Które ze stwierdzeń na temat promienia jądra atomowego oraz gęstości materii jądrowej są prawdziwe?",
     "options": [
       {
-        "text": "$R = r_0 A^{1/3}$ ($r_0 \\approx 1{,}2\\text{ fm}$), więc gęstość materii jądrowej jest niemal stała.",
+        "text": "Promień jądra rośnie z liczbą masową według wzoru $R = r_0 A^{1/3}$ ($r_0 \\approx 1{,}2\\text{ fm}$).",
         "isCorrect": true
       },
       {
-        "text": "$R = r_0 A$ ($r_0 \\approx 1{,}2\\text{ fm}$), więc gęstość materii jądrowej szybko maleje ze wzrostem $A$.",
-        "isCorrect": false
+        "text": "Gęstość materii jądrowej jest niemal stała i nie zależy od liczby masowej $A$ jądra.",
+        "isCorrect": true
       },
       {
-        "text": "$R = r_0 A^2$ ($r_0 \\approx 1{,}2\\text{ fm}$), więc ciężkie jądra są lżejsze objętościowo od gazu.",
-        "isCorrect": false
+        "text": "Materia jądrowa jest o ok. $14$ rzędów wielkości gęstsza niż zwykła materia atomowa.",
+        "isCorrect": true
       },
       {
-        "text": "$R = r_0 / A^{1/3}$ ($r_0 \\approx 1{,}2\\text{ fm}$), więc im większa liczba $A$, tym mniejszy promień.",
+        "text": "Promień jądra jest liniowo proporcjonalny do liczby masowej ($R = r_0 A$).",
         "isCorrect": false
       }
     ],
-    "explanation": "Promień jądra wynosi $R = r_0 A^{1/3}$ ($r_0 \\approx 1{,}2 \\times 10^{-15}\\text{ m} = 1{,}2\\text{ fm}$). Objętość jądra $V = \\frac{4}{3}\\pi R^3 = \\frac{4}{3}\\pi r_0^3 A$ jest więc wprost proporcjonalna do liczby nukleonów $A$, co oznacza, że gęstość materii jądrowej jest niemal stała (ok. $14$ rzędów wielkości większa od gęstości zwykłej materii!)."
+    "explanation": "Ponieważ $R = r_0 A^{1/3}$, objętość jądra $V \\propto R^3 \\propto A$ jest proporcjonalna do liczby nukleonów, co oznacza niemal stałą, gigantyczną gęstość materii jądrowej ($\\sim 10^{14}\\times$ większą niż zwykłej materii — 1 łyżeczka ważyłaby ok. $1{,}2\\cdot 10^{12}\\text{ t}$, EFW6 s. 2)."
   },
   {
     "id": 169,
@@ -4108,26 +4108,26 @@ const questionDatabase = [
   {
     "id": 172,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Dlaczego elektrycznie obojętny NEUTRON posiada mimo wszystko niezerowy moment magnetyczny ($-1{,}91\\,\\mu_N$)?",
+    "text": "Które ze stwierdzeń na temat właściwości NEUTRONU są prawdziwe?",
     "options": [
       {
-        "text": "Wynika to z wewnętrznej struktury i rozkładu naładowanych kwarków wewnątrz neutronu.",
+        "text": "Jest fermionem o spinie połówkowym $1/2$ i zerowym ładunku elektrycznym.",
         "isCorrect": true
       },
       {
-        "text": "Wynika to z faktu, że neutron jest na stałe otoczony chmurą elektronów walencyjnych.",
+        "text": "Posiada niezerowy moment magnetyczny ($-1{,}91\\,\\mu_N$) przeciwny do spinu.",
+        "isCorrect": true
+      },
+      {
+        "text": "Ma masę nieco mniejszą niż proton, dzięki czemu swobodny neutron jest stabilny.",
         "isCorrect": false
       },
       {
-        "text": "Wynika to z dodatniego ładunku $+e$, który neutron uzyskuje wewnątrz pola magnetycznego.",
-        "isCorrect": false
-      },
-      {
-        "text": "Wynika to wyłącznie z ruchu orbitalnego neutronu wokół jądra w powłoce elektronowej $1s$.",
+        "text": "Nie posiada momentu magnetycznego, bo nie ma wypadkowego ładunku elektrycznego.",
         "isCorrect": false
       }
     ],
-    "explanation": "Choć wypadkowy ładunek elektryczny neutronu wynosi zero, neutron nie jest cząstką punktową, lecz składa się z naładowanych elektrycznie kwarków ($u, d, d$). Ich niejednorodny wewnętrzny rozkład ładunku i spinu wytwarza niezerowy moment magnetyczny o zwrocie przeciwnym do spinu neutronu."
+    "explanation": "Neutron to fermion ($s = 1/2$) o ładunku $0$, lecz przez wewnętrzną strukturę kwarkową ma niezerowy moment magnetyczny ($-1{,}91\\,\\mu_N$, przeciwny do spinu). Jego masa jest nieco WIĘKSZA niż protonu, dlatego swobodny neutron jest niestabilny ($\\beta^-$)."
   },
   {
     "id": 173,
@@ -4156,50 +4156,50 @@ const questionDatabase = [
   {
     "id": 174,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Które cechy poprawnie charakteryzują ODDZIAŁYWANIE JĄDROWE SILNE utrzymujące nukleony w jądrze?",
+    "text": "Które właściwości charakteryzują ODDZIAŁYWANIE JĄDROWE SILNE utrzymujące nukleony razem w jądrze?",
     "options": [
       {
-        "text": "Jest krótkozasięgowe ($\\sim 1$–$2\\text{ fm}$), najsilniejsze i niezależne od ładunku ($p$-$p$, $p$-$n$, $n$-$n$).",
+        "text": "Jest najsilniejszym oddziaływaniem podstawowym i przejawem sił między kwarkami.",
         "isCorrect": true
       },
       {
-        "text": "Ma nieskończony zasięg jak siła Coulomba i przyciąga wyłącznie cząstki o przeciwnym ładunku.",
+        "text": "Ma krótki zasięg ($\\sim 1$–$2\\text{ fm}$) i jest niezależne od ładunku ($p$-$p$, $p$-$n$, $n$-$n$).",
+        "isCorrect": true
+      },
+      {
+        "text": "Działa również bardzo silnie na neutrina powstające podczas rozpadów $\\beta$.",
         "isCorrect": false
       },
       {
-        "text": "Działa tak samo silnie na elektrony, neutrina oraz protony na odległościach atomowych.",
-        "isCorrect": false
-      },
-      {
-        "text": "Jest znacznie słabsze od odpychania elektrostatycznego, ale działa na dystansie kilku metrów.",
+        "text": "Ma nieskończony zasięg i przyciąga elektrony krążące na odległych powłokach.",
         "isCorrect": false
       }
     ],
-    "explanation": "Siły jądrowe to przejaw oddziaływania silnego (łączącego kwarki w nukleony). Są najsilniejsze ze wszystkich czterech oddziaływań podstawowych, mają bardzo krótki zasięg ($\\sim 1$–$2\\text{ fm}$, wykazują nasycenie) i są niezależne od ładunku elektrycznego (przyciągają jednakowo pary $p$–$p$, $n$–$n$ i $p$–$n$). Nie działają na elektrony ani neutrina!"
+    "explanation": "Oddziaływanie jądrowe silne jest najsilniejsze, krótkozasięgowe ($\\sim 1$–$2\\text{ fm}$) i niezależne od ładunku ($p$-$p$, $p$-$n$, $n$-$n$). Nie działa w ogóle na elektrony ani neutrina i nie ma nieskończonego zasięgu."
   },
   {
     "id": 175,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Czym jest energia wiązania jądra atomowego $\\Delta E$ i jak wiąże się z masą związanego jądra wobec sumy mas swobodnych nukleonów?",
+    "text": "Które ze stwierdzeń poprawnie opisują energię wiązania jądra atomowego oraz model kroplowy von Weizsäckera?",
     "options": [
       {
-        "text": "To praca rozbicia jądra na nukleony; masa związanego jądra jest mniejsza od sumy mas nukleonów.",
+        "text": "Energia wiązania to praca rozbicia jądra na osobne nukleony: $\\Delta E = \\Delta m\\,c^2$.",
         "isCorrect": true
       },
       {
-        "text": "To energia kinetyczna elektronów $1s$; masa związanego jądra jest większa od sumy mas nukleonów.",
-        "isCorrect": false
+        "text": "Masa związanego jądra stabilnego jest mniejsza niż suma mas wolnych nukleonów.",
+        "isCorrect": true
       },
       {
-        "text": "To energia potrzebna do oderwania elektronu walencyjnego; masa jądra równa się dokładnie sumie mas.",
-        "isCorrect": false
+        "text": "Równanie von Weizsäckera uwzględnia człony objętościowy, powierzchniowy i kulombowski.",
+        "isCorrect": true
       },
       {
-        "text": "To energia odrzutu jądra w rozpadzie gamma; dla jąder stabilnych przyjmuje zawsze wartość ujemną.",
+        "text": "Masa związanego jądra stabilnego jest zawsze większa niż suma mas wolnych nukleonów.",
         "isCorrect": false
       }
     ],
-    "explanation": "Energia wiązania $\\Delta E = [Z m_p + (A-Z)m_n - m_{\\text{jądra}}]c^2 > 0$ (dla jąder stabilnych) to praca potrzebna na rozbicie jądra na pojedyncze, swobodne nukleony. Związane jądro ma mniejszą masę niż suma mas jego wolnych składników — różnica to tzw. deficyt (ubytek) masy $\\Delta m$ zamieniony na energię wiązania zgodnie z $E = mc^2$."
+    "explanation": "Związane jądro ma mniejszą masę niż suma mas jego swobodnych nukleonów (ubytek masy $\\Delta m$ odpowiada energii wiązania $\\Delta E = \\Delta m c^2$). Model kroplowy von Weizsäckera opisuje ją przez człony objętościowy, powierzchniowy, kulombowski, symetrii i parzystości."
   },
   {
     "id": 176,
@@ -4228,50 +4228,50 @@ const questionDatabase = [
   {
     "id": 177,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Dlaczego dla stabilnych jąder o dużej liczbie masowej ($A > 40$) preferowana jest przewaga neutronów nad protonami ($N > Z$), a powyżej $Z = 83$ (bizmut) brak stabilnych nuklidów?",
+    "text": "Które ze stwierdzeń poprawnie opisują ścieżkę stabilności jąder atomowych?",
     "options": [
       {
-        "text": "Z powodu rosnącego dalekozasięgowego odpychania kulombowskiego między dodatnimi protonami.",
+        "text": "Dla lekkich jąder ($A \\le 40$) preferowana jest zbliżona liczba neutronów ($N \\approx Z$).",
         "isCorrect": true
       },
       {
-        "text": "Z powodu malejącej masy pojedynczego neutronu wewnątrz coraz cięższych jąder atomowych.",
-        "isCorrect": false
+        "text": "Dla cięższych jąder ($A > 40$) potrzeba nadmiaru neutronów ($N > Z$) przez odpychanie.",
+        "isCorrect": true
       },
       {
-        "text": "Z powodu rosnącego przyciągania grawitacyjnego elektronów powłoki $K$ do protonów jądra.",
-        "isCorrect": false
+        "text": "Powyżej $Z = 83$ (bizmut $^{209}\\text{Bi}$) brak w pełni stabilnych nuklidów w przyrodzie.",
+        "isCorrect": true
       },
       {
-        "text": "Z powodu całkowitego zaniku oddziaływania słabego w jądrach zawierających ponad $40$ nukleonów.",
+        "text": "Dla ciężkich jąder ($A > 150$) najtrwalsze są jądra o przewadze protonów ($Z > N$).",
         "isCorrect": false
       }
     ],
-    "explanation": "Siły jądrowe silne są krótkozasięgowe (działają tylko między najbliższymi sąsiadami), natomiast odpychanie kulombowskie protonów ma nieskończony zasięg (każdy proton odpycha wszystkie pozostałe, energia rośnie jak $Z^2/R$). Aby ustabilizować jądro dla $A > 40$, potrzeba coraz więcej neutronów ($N > Z$), a powyżej $Z = 83$ ($^{209}\\text{Bi}$) odpychanie kulombowskie uniemożliwia pełną stabilność."
+    "explanation": "Dla $A \\le 40$ stabilne jądra mają $N \\approx Z$, dla $A > 40$ wymagają nadmiaru neutronów ($N > Z$) kompensujących dalekozasięgowe odpychanie kulombowskie protonów, a powyżej $Z = 83$ ($^{209}\\text{Bi}$) brak w pełni stabilnych nuklidów."
   },
   {
     "id": 178,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Jaką rolę odgrywa zakaz Pauliego w parzystości liczb protonów $Z$ i neutronów $N$ w stabilnych nuklidach?",
+    "text": "Które stwierdzenia dotyczące parzystości nukleonów i stabilności wybranych lekkich jąder są prawdziwe?",
     "options": [
       {
-        "text": "Większość trwałych jąder jest parzysto-parzystych, a nieparzysto-nieparzystych są tylko 4.",
+        "text": "Większość trwałych nuklidów o parzystym $A$ ma parzyste $Z$ oraz parzyste $N$ (parowanie spinów).",
         "isCorrect": true
       },
       {
-        "text": "Większość trwałych jąder jest nieparzysto-nieparzystych, a parzysto-parzyste rozpadają się szybko.",
-        "isCorrect": false
+        "text": "Istnieją tylko cztery stabilne nuklidy nieparzysto-nieparzyste: $^2\\text{H}, ^6\\text{Li}, ^{10}\\text{B}, ^{14}\\text{N}$.",
+        "isCorrect": true
       },
       {
-        "text": "Wszystkie stabilne jądra muszą mieć zawsze nieparzystą liczbę masową $A$ oraz parzystą liczbę $Z$.",
-        "isCorrect": false
+        "text": "Wśród lekkich jąder jądro helu $^4_2\\text{He}$ jest szczególnie silnie związane (ostry pik na wykresie).",
+        "isCorrect": true
       },
       {
-        "text": "Zakaz Pauliego nie dotyczy protonów ani neutronów, więc parzystość nie wpływa na stabilność.",
+        "text": "Jądra parzysto-parzyste są najmniej trwałe i ulegają natychmiastowemu rozpadowi w próżni.",
         "isCorrect": false
       }
     ],
-    "explanation": "Protony i neutrony to fermiony podlegające zakazowi Pauliego, więc parowanie nukleonów o przeciwnych spinach na tym samym poziomie jądrowym jest silnie korzystne energetycznie (człon parzystości w równaniu von Weizsäckera). Dlatego większość trwałych nuklidów jest parzysto-parzysta, a istnieją zaledwie 4 stabilne nuklidy nieparzysto-nieparzyste: $^2_1\\text{H}, ^6_3\\text{Li}, ^{10}_5\\text{B}, ^{14}_7\\text{N}$."
+    "explanation": "Z powodu zakazu Pauliego parowanie nukleonów o przeciwnych spinach jest silnie korzystne: jądra parzysto-parzyste są najbardziej stabilne (w tym ostry pik dla $^4\\text{He}$, dlatego emitowane jest ono w rozpadzie $\\alpha$), a nieparzysto-nieparzystych stabilnych nuklidów jest tylko 4 ($^2\\text{H}, ^6\\text{Li}, ^{10}\\text{B}, ^{14}\\text{N}$)."
   },
   {
     "id": 179,
@@ -4300,26 +4300,26 @@ const questionDatabase = [
   {
     "id": 180,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Jakie jest znaczenie fizyczne stałej rozpadu $\\lambda$ oraz czym jest aktywność promieniotwórcza $R$ (w bekerelach, $\\text{Bq}$)?",
+    "text": "Które ze stwierdzeń poprawnie opisują prawo rozpadu promieniotwórczego oraz aktywność próbki?",
     "options": [
       {
-        "text": "$\\lambda$ to prawdopodobieństwo rozpadu jednego jądra w $1\\text{ s}$, a $R = \\lambda N$ to liczba rozpadów na sekundę.",
+        "text": "Liczba nierozpadniętych jąder maleje wykładniczo: $N(t) = N_0 e^{-\\lambda t}$.",
         "isCorrect": true
       },
       {
-        "text": "$\\lambda$ to długość fali emitowanego fotonu gamma, a $R = N/\\lambda$ to czas życia całej próbki w sekundach.",
-        "isCorrect": false
+        "text": "Stała rozpadu $\\lambda$ [$\\text{s}^{-1}$] to prawdopodobieństwo rozpadu w ciągu $1\\text{ s}$.",
+        "isCorrect": true
       },
       {
-        "text": "$\\lambda$ to czas połowicznego rozpadu izotopu, a $1\\text{ Bq}$ oznacza dokładnie $10^6$ rozpadów na godzinę.",
-        "isCorrect": false
+        "text": "Aktywność $R = \\lambda N$ wyraża się w bekerelach ($1\\text{ Bq} = 1\\text{ rozpad/s}$).",
+        "isCorrect": true
       },
       {
-        "text": "$\\lambda$ to masa jądra w jednostkach atomowych, a $R$ oznacza energię wiązania przypadającą na nukleon.",
+        "text": "Po czasie równym $2\\,t_{1/2}$ rozpadowi ulega dokładnie $100\\%$ wszystkich jąder.",
         "isCorrect": false
       }
     ],
-    "explanation": "W prawie rozpadu promieniotwórczego $N(t) = N_0 e^{-\\lambda t}$ stała rozpadu $\\lambda$ [$\\text{s}^{-1}$] oznacza prawdopodobieństwo rozpadu pojedynczego jądra w czasie $1\\text{ s}$ (nie mylić z długością fali!). Aktywność $R(t) = |dN/dt| = \\lambda N(t)$ to liczba rozpadów w jednostce czasu; jej jednostką jest bekerel ($1\\text{ Bq} = 1\\text{ rozpad/s}$)."
+    "explanation": "Rozpad promieniotwórczy opisuje funkcja wykładnicza $N(t) = N_0 e^{-\\lambda t}$, gdzie $\\lambda$ [$\\text{s}^{-1}$] to prawdopodobieństwo rozpadu w $1\\text{ s}$, a aktywność $R = \\lambda N$ mierzy się w Bq. Po czasie $2 t_{1/2}$ rozpada się $75\\%$ jąder (pozostaje $25\\%$), a nie $100\\%$."
   },
   {
     "id": 181,
@@ -4420,26 +4420,26 @@ const questionDatabase = [
   {
     "id": 185,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Jak przedstawia się zdolność przenikania przez materię promieniowania $\\alpha$, $\\beta$ i $\\gamma$ (od najmniej do najbardziej przenikliwego)?",
+    "text": "Które ze stwierdzeń poprawnie charakteryzują przenikliwość promieniowania $\\alpha$, $\\beta$ oraz $\\gamma$?",
     "options": [
       {
-        "text": "$\\alpha$ zatrzymuje kartka papieru, $\\beta$ cienka płytka Al lub pleksi, a $\\gamma$ wymaga grubego ołowiu.",
+        "text": "Promieniowanie $\\alpha$ ma najmniejszą przenikliwość — zatrzymuje je już kartka papieru.",
         "isCorrect": true
       },
       {
-        "text": "$\\gamma$ zatrzymuje kartka papieru, $\\beta$ cienka płytka Al lub pleksi, a $\\alpha$ wymaga grubego ołowiu.",
-        "isCorrect": false
+        "text": "Promieniowanie $\\beta$ ma średnią przenikliwość — zatrzymuje je cienka płyta Al lub pleksi.",
+        "isCorrect": true
       },
       {
-        "text": "$\\beta$ zatrzymuje kartka papieru, $\\alpha$ cienka płytka Al lub pleksi, a $\\gamma$ przenika bez strat przez ołów.",
-        "isCorrect": false
+        "text": "Promieniowanie $\\gamma$ jest najbardziej przenikliwe — wymaga grubej warstwy ołowiu lub betonu.",
+        "isCorrect": true
       },
       {
-        "text": "$\\alpha$ przenika przez płytę aluminiową i ołowianą, podczas gdy $\\gamma$ zatrzymuje już kilka cm powietrza.",
+        "text": "Cząstki $\\alpha$ z łatwością przechodzą przez grubą płytę ołowianą bez wyraźnego osłabienia.",
         "isCorrect": false
       }
     ],
-    "explanation": "Cząstki $\\alpha$ są ciężkie i podwójnie naładowane ($+2e$), więc silnie jonizują materię i błyskawicznie tracą energię — zatrzymuje je już kartka papieru lub kilka cm powietrza. Cząstki $\\beta$ (elektrony/pozytony) zatrzymuje cienka warstwa pleksi lub aluminium, natomiast najbardziej przenikliwe fotony $\\gamma$ wymagają grubej osłony z ołowiu lub betonu."
+    "explanation": "Przenikliwość rośnie w kolejności $\\alpha < \\beta < \\gamma$: ciężkie i podwójnie naładowane cząstki $\\alpha$ zatrzymuje kartka papieru, cząstki $\\beta$ cienka blacha aluminiowa/pleksi, a wysokoenergetyczne fotony $\\gamma$ dopiero gruba osłona z ołowiu lub betonu."
   },
   {
     "id": 186,
@@ -4492,26 +4492,26 @@ const questionDatabase = [
   {
     "id": 188,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Które oddziaływanie podstawowe odpowiada za rozpad $\\beta$ oraz jak zmieniają się w nim liczby $A$ i $Z$?",
+    "text": "Które ze stwierdzeń poprawnie opisują rozpad promieniotwórczy $\\beta$?",
     "options": [
       {
-        "text": "Oddziaływanie słabe; $A$ nie ulega zmianie, $Z$ rośnie o $1$ w $\\beta^-$ i maleje o $1$ w $\\beta^+$ oraz EC.",
+        "text": "Jest przejawem oddziaływania słabego i zachodzi bez zmiany liczby masowej $A$.",
         "isCorrect": true
       },
       {
-        "text": "Oddziaływanie silne; $A$ maleje o $4$, a $Z$ maleje o $2$ w obu odmianach rozpadu $\\beta^-$ oraz $\\beta^+$.",
-        "isCorrect": false
+        "text": "Jądra z nadmiarem neutronów ulegają rozpadowi $\\beta^-$ (liczba $Z$ rośnie o $1$).",
+        "isCorrect": true
       },
       {
-        "text": "Oddziaływanie elektromagnetyczne; zarówno liczba masowa $A$, jak i atomowa $Z$ pozostają bez zmian.",
-        "isCorrect": false
+        "text": "Jądra z nadmiarem protonów ulegają rozpadowi $\\beta^+$ lub EC (liczba $Z$ maleje o $1$).",
+        "isCorrect": true
       },
       {
-        "text": "Oddziaływanie słabe; $Z$ pozostaje bez zmian, a liczba masowa $A$ rośnie o $1$ przy emisji elektronu.",
+        "text": "W każdym rozpadzie $\\beta$ liczba masowa $A$ jądra maleje zawsze dokładnie o cztery.",
         "isCorrect": false
       }
     ],
-    "explanation": "Rozpad $\\beta$ (w trzech odmianach: $\\beta^-$, $\\beta^+$ i wychwyt elektronu EC) jest przejawem oddziaływania słabego. W jego wyniku jeden nukleon zamienia się w drugi ($n \\leftrightarrow p$), więc łączna liczba nukleonów $A$ się nie zmienia, natomiast liczba protonów $Z$ rośnie o $1$ w $\\beta^-$ (dla jąder z nadmiarem neutronów) lub maleje o $1$ w $\\beta^+$ i EC (dla jąder z nadmiarem protonów)."
+    "explanation": "Rozpad $\\beta$ zachodzi przez oddziaływanie słabe bez zmiany $A$ ($A$ maleje o 4 w rozpadzie $\\alpha$). Przy nadmiarze neutronów zachodzi $\\beta^-$ ($Z \\to Z+1$), a przy nadmiarze protonów $\\beta^+$ lub wychwyt elektronu ($Z \\to Z-1$)."
   },
   {
     "id": 189,
@@ -4564,74 +4564,74 @@ const questionDatabase = [
   {
     "id": 191,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Dlaczego Wolfgang Pauli w 1930 roku postulował istnienie neutrina w rozpadzie $\\beta$?",
+    "text": "Które ze stwierdzeń na temat neutrin oraz historii ich odkrycia są prawdziwe?",
     "options": [
       {
-        "text": "Aby wyjaśnić ciągłe widmo energii elektronów i zachować energię, pęd oraz moment pędu (spin).",
+        "text": "Postulował je W. Pauli w 1930 r., aby zachować energię, pęd i moment pędu w rozpadzie $\\beta$.",
         "isCorrect": true
       },
       {
-        "text": "Aby wyjaśnić dyskretne linie w widmie emisyjnym atomu wodoru oraz rozszczepienie Zeemana.",
-        "isCorrect": false
+        "text": "Dzielą się energią rozpadu $\\beta$ z elektronem, co tłumaczy ciągłe widmo energii elektronów $\\beta$.",
+        "isCorrect": true
       },
       {
-        "text": "Aby zrównoważyć dodatni ładunek elektryczny protonów w ciężkich jądrach powyżej $Z = 83$.",
-        "isCorrect": false
+        "text": "Nie działa na nie oddziaływanie silne i ekstremalnie słabo oddziałują z materią.",
+        "isCorrect": true
       },
       {
-        "text": "Aby wytłumaczyć kwantowe tunelowanie cząstek alfa przez dwudziestomegaelektronowoltową barierę.",
+        "text": "Stanowią główny naładowany składnik jąder atomowych obok protonów i elektronów.",
         "isCorrect": false
       }
     ],
-    "explanation": "Gdyby w rozpadzie $\\beta^-$ powstawały tylko dwie cząstki (jądro potomne i elektron), elektron miałby zawsze jedną, ściśle określoną energię, a ponadto nie zgadzałby się całkowity spin ($1/2 \\neq 1/2 + 1/2$). Ponieważ widmo energii elektronów $\\beta$ jest ciągłe, Pauli postulował trzecią, neutralną cząstkę o spinie $1/2$ (neutrino), unoszącą brakującą część energii, pędu i momentu pędu."
+    "explanation": "Neutrina są elektrycznie obojętne, nie wchodzą w skład jąder atomowych i nie podlegają oddziaływaniu silnemu. Pauli postulował je w 1930 r., by ocalić zasady zachowania energii, pędu i spinu oraz wyjaśnić ciągłe widmo elektronów w rozpadzie $\\beta$."
   },
   {
     "id": 192,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Na czym polega rozpad (emisja) $\\gamma$ i czym jest izomer jądrowy (np. używany w medycynie $^{99m}\\text{Tc}$)?",
+    "text": "Które ze stwierdzeń na temat rozpadu (emisji) $\\gamma$ oraz izomerów jądrowych są prawdziwe?",
     "options": [
       {
-        "text": "Wzbudzone jądro emituje foton bez zmiany $A$ i $Z$; izomer to długożyciowy stan wzbudzony jądra.",
+        "text": "Wzbudzone jądro emituje wysokoenergetyczny foton ($>100\\text{ keV}$) bez zmiany $A$ oraz $Z$.",
         "isCorrect": true
       },
       {
-        "text": "Jądro emituje pozyton ze zmianą $Z$ o $1$; izomer to jądro z identyczną liczbą masową $A$ i różnym $Z$.",
-        "isCorrect": false
+        "text": "Długożyciowe stany wzbudzone (metastabilne) jąder nazywamy izomerami jądrowymi.",
+        "isCorrect": true
       },
       {
-        "text": "Jądro rozpada się na dwa równe fragmenty; izomer to atom z identycznym $Z$ i różną liczbą elektronów.",
-        "isCorrect": false
+        "text": "Izomer $^{99m}\\text{Tc}$ ($t_{1/2} = 6\\text{ h}$, $140\\text{ keV}$) jest szeroko używany w medycynie nuklearnej.",
+        "isCorrect": true
       },
       {
-        "text": "Wzbudzone jądro emituje cząstkę $^4\\text{He}$ bez zmiany $A$; izomer to pierwiastek z grupy gazów szlachetnych.",
+        "text": "Emisja fotonu $\\gamma$ zawsze zmniejsza liczbę atomową $Z$ jądra o dwa i liczbę $A$ o cztery.",
         "isCorrect": false
       }
     ],
-    "explanation": "Jądro (często tuż po rozpadzie $\\alpha$ lub $\\beta$) może znaleźć się w kwantowym stanie wzbudzonym i pozbywa się nadmiaru energii, emitując wysokoenergetyczny foton $\\gamma$ ($^A_Z X^* \\to {}^A_Z X + \\gamma$, bez zmiany $A$ i $Z$). Długożyciowe (metastabilne) stany wzbudzone jąder nazywamy izomerami jądrowymi — np. $^{99m}\\text{Tc}$ ($t_{1/2} = 6\\text{ h}$, fotony $140\\text{ keV}$) jest powszechnym znacznikiem w medycynie nuklearnej (scyntygrafii)."
+    "explanation": "Rozpad $\\gamma$ to deekscytacja wzbudzonego jądra bez zmiany liczb $A$ i $Z$ (zmiana $A-4, Z-2$ to rozpad $\\alpha$). Długożyciowe stany wzbudzone to izomery jądrowe, np. $^{99m}\\text{Tc}$ stosowany w scyntygrafii (EFW6 s. 13 i 20)."
   },
   {
     "id": 193,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Które pojęcia poprawnie opisują wymienione na wykładzie typy reakcji jądrowych wywołanych bombardowaniem jąder?",
+    "text": "Które ze stwierdzeń na temat sztucznych reakcji jądrowych (bombardowania jąder) są prawdziwe?",
     "options": [
       {
-        "text": "Transmutacja zmienia pierwiastek, fotodezintegracja to rozpad po fotonie $\\gamma$, a wychwyt radiacyjny pochłania $n$/$p$.",
+        "text": "Transmutacja oznacza zamianę jednego pierwiastka w inny wskutek zderzenia z cząstką.",
         "isCorrect": true
       },
       {
-        "text": "Transmutacja dotyczy wyłącznie elektronów, fotodezintegracja to fuzja wodoru, a wychwyt radiacyjny emituje $\\alpha$.",
-        "isCorrect": false
+        "text": "Fotodezintegracja to rozpad jądra wywołany pochłonięciem wysokoenergetycznego fotonu $\\gamma$.",
+        "isCorrect": true
       },
       {
-        "text": "Transmutacja to reakcja chemiczna soli, fotodezintegracja to efekt Zeemana, a wychwyt to zjawisko fotoelektryczne.",
-        "isCorrect": false
+        "text": "Po uderzeniu pocisku powstaje pośrednie jądro złożone dające piki rezonansowe przekroju.",
+        "isCorrect": true
       },
       {
-        "text": "Wszystkie trzy reakcje zachodzą wyłącznie spontanicznie w temperaturze pokojowej bez udziału pocisków.",
+        "text": "Wychwyt radiacyjny polega na wybiciu z atomu zewnętrznego elektronu przez światło widzialne.",
         "isCorrect": false
       }
     ],
-    "explanation": "Na slajdzie 14 wykładu EFW6 omówiono reakcje jądrowe: transmutację (zamianę jednego pierwiastka w inny pod wpływem pocisku), fotodezintegrację (rozpad jądra wzbudzonego fotonem $\\gamma$) oraz wychwyt radiacyjny (pochłonięcie neutronu lub protonu z emisją $\\gamma$). Po zderzeniu powstaje pośrednie jądro złożone (dające rezonansowe piki w funkcji aktywacji)."
+    "explanation": "Wychwyt radiacyjny to pochłonięcie neutronu lub protonu przez jądro z utworzeniem cięższego jądra (i emisją $\\gamma$) — nie ma nic wspólnego ze zjawiskiem fotoelektrycznym. Pozostałe trzy zdania wiernie opisują reakcje jądrowe z wykładu EFW6 s. 14."
   },
   {
     "id": 194,
@@ -4660,26 +4660,26 @@ const questionDatabase = [
   {
     "id": 195,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Co powstaje w pojedynczym rozszczepieniu jądra $^{235}_{92}\\text{U}$ po pochłonięciu neutronu termicznego oraz czym jest masa krytyczna?",
+    "text": "Które ze stwierdzeń poprawnie opisują reakcję rozszczepienia ciężkich jąder (np. $^{235}_{92}\\text{U}$)?",
     "options": [
       {
-        "text": "Dwa nierówne lżejsze jądra, 2–3 szybkie neutrony i ok. $200\\text{ MeV}$; masa krytyczna podtrzymuje reakcję łańcuchową.",
+        "text": "Jądro dzieli się na dwa nierówne fragmenty, $2$–$3$ prędkie neutrony i ok. $200\\text{ MeV}$.",
         "isCorrect": true
       },
       {
-        "text": "Dwa identyczne jądra helu, jeden pozyton i ok. $13{,}6\\text{ eV}$; masa krytyczna zatrzymuje reakcję łańcuchową.",
+        "text": "Do podtrzymania reakcji łańcuchowej potrzebna jest minimalna masa krytyczna paliwa.",
+        "isCorrect": true
+      },
+      {
+        "text": "Rozszczepienie wymuszone zachodzi łatwiej pod wpływem prędkich niż termicznych neutronów.",
         "isCorrect": false
       },
       {
-        "text": "Jeden cięższy izotop plutonu bez emisji neutronów; masa krytyczna to maksymalna dopuszczalna masa chłodziwa.",
-        "isCorrect": false
-      },
-      {
-        "text": "Wyłącznie promieniowanie gamma bez fragmentów jądrowych; masa krytyczna to masa pojedynczego pręta kadmu.",
+        "text": "Rozszczepienie samoistne jest szybkie i stanowi główne źródło mocy w elektrowniach.",
         "isCorrect": false
       }
     ],
-    "explanation": "Rozszczepienie jądra $^{235}\\text{U}$ daje dwa nierówne, bogate w neutrony fragmenty rozszczepienia, $2$–$3$ swobodne prędkie neutrony oraz dużą porcję energii ($\\sim 200\\text{ MeV}$). Aby uwolnione neutrony wywoływały samopodtrzymującą się reakcję łańcuchową (zamiast uciekać z próbki), potrzeba minimalnej ilości paliwa zwanej masą krytyczną."
+    "explanation": "Rozszczepienie $^{235}\\text{U}$ daje dwa nierówne fragmenty, $2$–$3$ neutrony i ok. $200\\text{ MeV}$, a reakcja łańcuchowa wymaga masy krytycznej. Najskuteczniejsze są jednak powolne neutrony TERMICZNE (nie prędkie!), a rozszczepienie samoistne jest skrajnie rzadkie."
   },
   {
     "id": 196,
@@ -4756,26 +4756,26 @@ const questionDatabase = [
   {
     "id": 199,
     "category": "6. Elementy fizyki jądrowej — budowa jądra, rozpady, reaktory",
-    "text": "Które reakcje syntezy jądrowej (fuzji) zasilają gwiazdy takie jak Słońce i jakie są dwie główne metody kontrolowanej fuzji D+T na Ziemi?",
+    "text": "Które ze stwierdzeń na temat reakcji syntezy jądrowej (fuzji) w gwiazdach i na Ziemi są prawdziwe?",
     "options": [
       {
-        "text": "W gwiazdach łańcuch $p$-$p$ i cykl CNO; na Ziemi uwięzienie magnetyczne (tokamak) i inercyjne (NIF).",
+        "text": "W gwiazdach energię dają łańcuch protonowy ($>4\\cdot 10^6\\text{ K}$) oraz gorący cykl CNO.",
         "isCorrect": true
       },
       {
-        "text": "W gwiazdach rozszczepienie uranu $^{235}\\text{U}$ w $300\\text{ K}$; na Ziemi wyłącznie reaktory wodne PWR i BWR.",
-        "isCorrect": false
+        "text": "W fuzji kontrolowanej (D+T) rozwija się uwięzienie magnetyczne (tokamak) i inercyjne.",
+        "isCorrect": true
       },
       {
-        "text": "W gwiazdach rozpad $\\alpha$ ciężkiego bizmutu; na Ziemi chłodzenie wodoru w skaningowych mikroskopach STM.",
-        "isCorrect": false
+        "text": "Połączenie jąder w rdzeniu gwiazdy wymaga tunelowania przez barierę kulombowską.",
+        "isCorrect": true
       },
       {
-        "text": "W gwiazdach anihilacja antymaterii z neutronami; na Ziemi spowalnianie neutronów w ciężkiej wodzie.",
+        "text": "Fuzja jąder wodoru zachodzi samorzutnie w $300\\text{ K}$ bez żadnej bariery potencjału.",
         "isCorrect": false
       }
     ],
-    "explanation": "Na slajdach 18–19 wykładu EFW6 omówiono syntezę jądrową: w gwiazdach zachodzi łańcuch protonowy ($T > 4\\cdot 10^6\\text{ K}$, $26{,}7\\text{ MeV}$) oraz cykl CNO ($T > 15\\cdot 10^6\\text{ K}$). W ziemskich badaniach nad kontrolowaną fuzją (reakcja deuter + tryt) rozwijane są dwa podejścia: magnetyczne uwięzienie plazmy (tokamak, stellarator) oraz inercyjne uwięzienie plazmy laserami (NIF)."
+    "explanation": "Fuzja w gwiazdach (łańcuch $p$-$p$ i cykl CNO) wymaga wysokich temperatur i kwantowego tunelowania przez barierę kulombowską. Na Ziemi (fuzja D+T) rozwijane są tokamaki (uwięzienie magnetyczne) i lasery NIF (inercyjne)."
   },
   {
     "id": 200,

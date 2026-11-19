@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elementy Fizyki Współczesnej — Quiz (UPEL)</title>
+<title>Elementy Fizyki Współczesnej — Quiz</title>
 <style>
   :root {
     --accent: #2563eb;
@@ -138,24 +138,7 @@
     border-color: var(--accent-border);
     box-shadow: 0 2px 12px rgba(37, 99, 235, 0.08);
   }
-  .mode-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-  }
   .mode-card h2 { margin: 0; font-size: 1.15em; color: var(--text); }
-  .pill {
-    display: inline-block;
-    font-size: 0.74em;
-    font-weight: 600;
-    padding: 3px 9px;
-    border-radius: 999px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    border: 1px solid var(--accent-border);
-    white-space: nowrap;
-  }
   .mode-card p { margin: 0; color: var(--muted); font-size: 0.91em; flex-grow: 1; }
   .mode-card .info-line { font-size: 0.84em; color: var(--accent); min-height: 1.2em; font-weight: 500; }
 
@@ -248,21 +231,6 @@
   .resume-banner span { font-weight: 500; color: var(--text); }
   .resume-banner .resume-actions { display: flex; gap: 8px; }
 
-  .tips-strip {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    padding: 12px 14px;
-    border-radius: 10px;
-    background: var(--surface-alt);
-    border: 1px solid var(--border);
-    font-size: 0.84em;
-    color: var(--muted);
-    margin-bottom: 12px;
-  }
-  .tips-strip span strong { color: var(--text-secondary); }
-
   /* ---------- Progress / timer ---------- */
   .top-bar {
     display: flex;
@@ -349,34 +317,13 @@
     background: var(--wrong-bg);
   }
 
-  .question-meta-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 8px;
-  }
   .question-category {
     font-size: 0.76em;
     color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 0.03em;
     font-weight: 600;
-  }
-  .q-type-badge {
-    font-size: 0.73em;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    color: var(--muted);
-  }
-  .q-type-badge.multi {
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-color: var(--accent-border);
+    margin-bottom: 8px;
   }
 
   .question-text {
@@ -616,21 +563,10 @@
       </div>
     </div>
 
-    <div class="tips-strip">
-      <span><strong>Format kolokwium:</strong> test zamknięty UPEL, 25 min</span>
-      <span>•</span>
-      <span><strong>Wyjaśnienia:</strong> pełne omówienie każdego pytania po sprawdzeniu</span>
-      <span>•</span>
-      <span><strong>Wyrównane odpowiedzi:</strong> brak podpowiedzi długością</span>
-    </div>
-
     <div class="mode-grid">
       <div class="mode-card">
-        <div class="mode-card-header">
-          <h2>Tryb Nauki</h2>
-          <span class="pill">Wyjaśnienia</span>
-        </div>
-        <p>Przechodzisz przez bazę pytań w turach z możliwością wyboru konkretnego działu. Po sprawdzeniu pytania lub całej strony od razu widzisz dokładne wyjaśnienie fizyczne.</p>
+        <h2>Tryb Nauki</h2>
+        <p>Przechodzisz przez bazę pytań w turach po 20 z możliwością wyboru działu. Po sprawdzeniu pytania lub strony widzisz poprawne odpowiedzi i wyjaśnienie.</p>
 
         <div class="field-group">
           <label for="study-category-select">Zakres materiału:</label>
@@ -642,25 +578,22 @@
       </div>
 
       <div class="mode-card">
-        <div class="mode-card-header">
-          <h2>Symulacja UPEL</h2>
-          <span class="pill">25 minut</span>
-        </div>
-        <p>Losowy test zamknięty przekrojowo ze wszystkich 6 wykładów w limicie czasu prawdziwego kolokwium (25 minut). Po zakończeniu widzisz wynik, podział na działy i pełne wyjaśnienia.</p>
+        <h2>Tryb Kolokwium</h2>
+        <p>Losowy test ze wszystkich 6 działów na czas (domyślnie 25 pytań, 25 minut). Wynik, poprawne odpowiedzi i wyjaśnienia zobaczysz po zakończeniu.</p>
 
         <div class="inline-row">
           <div class="field-group">
             <label for="exam-count-select">Liczba pytań:</label>
             <select id="exam-count-select">
               <option value="20">20 pytań</option>
-              <option value="25" selected>25 pytań (zalecane)</option>
+              <option value="25" selected>25 pytań</option>
               <option value="30">30 pytań</option>
             </select>
           </div>
           <div class="field-group">
             <label for="exam-time-select">Limit czasu:</label>
             <select id="exam-time-select">
-              <option value="25" selected>25 minut (UPEL)</option>
+              <option value="25" selected>25 minut</option>
               <option value="20">20 minut</option>
               <option value="30">30 minut</option>
             </select>
@@ -953,28 +886,17 @@ function goToMenu() {
    BUDOWANIE I OCENIANIE PYTAŃ
    ========================================================= */
 function buildQuestionElement(qIndex, displayNumber, optionsConfig = {}) {
-  const { allowInlineCheck = false, inputGroupPrefix = 'q', fixedOptionOrder = null } = optionsConfig;
+  const { allowInlineCheck = false, fixedOptionOrder = null } = optionsConfig;
   const q = questionDatabase[qIndex];
-  const multi = isMultiSelect(q);
 
   const block = document.createElement('div');
   block.className = 'question-block';
   block.dataset.qindex = qIndex;
   block.dataset.graded = 'false';
 
-  const metaRow = document.createElement('div');
-  metaRow.className = 'question-meta-row';
-
   const category = document.createElement('div');
   category.className = 'question-category';
   category.textContent = q.category;
-
-  const badge = document.createElement('span');
-  badge.className = 'q-type-badge' + (multi ? ' multi' : '');
-  badge.textContent = multi ? 'Wielokrotny wybór (wiele poprawnych)' : 'Jednokrotny wybór';
-
-  metaRow.appendChild(category);
-  metaRow.appendChild(badge);
 
   const questionText = document.createElement('div');
   questionText.className = 'question-text';
@@ -996,8 +918,7 @@ function buildQuestionElement(qIndex, displayNumber, optionsConfig = {}) {
     const label = document.createElement('label');
 
     const input = document.createElement('input');
-    input.type = multi ? 'checkbox' : 'radio';
-    if (!multi) input.name = inputGroupPrefix + '_' + qIndex;
+    input.type = 'checkbox';
     input.dataset.qindex = qIndex;
     input.dataset.optindex = optIndex;
 
@@ -1011,7 +932,7 @@ function buildQuestionElement(qIndex, displayNumber, optionsConfig = {}) {
     optionsList.appendChild(li);
   });
 
-  block.appendChild(metaRow);
+  block.appendChild(category);
   block.appendChild(questionText);
   block.appendChild(optionsList);
 
@@ -1183,11 +1104,7 @@ function renderMenu() {
     return;
   }
 
-  const multiCount = questionDatabase.filter(isMultiSelect).length;
-  const singleCount = questionDatabase.length - multiCount;
-  dbBadge.textContent =
-    'Baza zawiera ' + questionDatabase.length + ' pytań (' +
-    singleCount + ' jednokrotnego i ' + multiCount + ' wielokrotnego wyboru) z pełnymi wyjaśnieniami.';
+  dbBadge.textContent = 'Baza zawiera ' + questionDatabase.length + ' pytań.';
   dbBadge.style.color = '';
 
   populateCategorySelect();
