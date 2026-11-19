@@ -3,176 +3,584 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Algorytmy i Struktury Danych — Quiz</title>
+<title>Elementy Fizyki Współczesnej — Quiz (UPEL)</title>
 <style>
   :root {
-    --accent: #3498db;
-    --accent-dark: #2980b9;
-    --correct: #27ae60;
-    --correct-bg: #eafaf1;
-    --wrong: #c0392b;
-    --wrong-bg: #fdf2f0;
-    --missed: #e67e22;
-    --text: #2c3e50;
-    --muted: #7f8c8d;
-    --border: #ddd;
-    --bg: #f4f4f9;
+    --accent: #2563eb;
+    --accent-dark: #1d4ed8;
+    --accent-soft: #eff6ff;
+    --accent-border: #bfdbfe;
+    --correct: #15803d;
+    --correct-bg: #f0fdf4;
+    --correct-border: #86efac;
+    --wrong: #b91c1c;
+    --wrong-bg: #fef2f2;
+    --wrong-border: #fca5a5;
+    --missed: #c2410c;
+    --missed-bg: #fff7ed;
+    --text: #0f172a;
+    --text-secondary: #334155;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --bg: #f1f5f9;
+    --surface: #ffffff;
+    --surface-alt: #f8fafc;
+    --exp-bg: #f8fafc;
+    --shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+  }
+
+  [data-theme="dark"] {
+    --accent: #3b82f6;
+    --accent-dark: #60a5fa;
+    --accent-soft: #172554;
+    --accent-border: #1e40af;
+    --correct: #4ade80;
+    --correct-bg: #052e16;
+    --correct-border: #166534;
+    --wrong: #f87171;
+    --wrong-bg: #450a0a;
+    --wrong-border: #991b1b;
+    --missed: #fb923c;
+    --missed-bg: #431407;
+    --text: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --muted: #94a3b8;
+    --border: #334155;
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --surface-alt: #162032;
+    --exp-bg: #0f172a;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
   }
 
   * { box-sizing: border-box; }
 
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
+    padding: 20px 14px 40px;
     background-color: var(--bg);
     color: var(--text);
+    transition: background-color 0.2s, color 0.2s;
   }
 
   .container {
-    max-width: 900px;
-    margin: auto;
-    background: #fff;
-    padding: 24px 30px 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    max-width: 920px;
+    margin: 0 auto;
+    background: var(--surface);
+    padding: 28px 32px 34px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
   }
 
-  h1 { text-align: center; color: var(--text); margin-top: 0; font-size: 1.6em; }
-  .subtitle { text-align: center; color: var(--muted); margin-top: -6px; margin-bottom: 24px; font-size: 0.95em; }
+  .header-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .header-titles { flex: 1; text-align: center; }
+
+  h1 {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.65em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: var(--muted);
+    margin: 6px 0 22px;
+    font-size: 0.94em;
+  }
+
+  .theme-toggle {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    padding: 6px 11px;
+    font-size: 0.85em;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
   .hidden { display: none !important; }
 
   /* ---------- Menu ---------- */
-  .mode-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-  @media (max-width: 600px) { .mode-grid { grid-template-columns: 1fr; } }
+  .mode-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 680px) { .mode-grid { grid-template-columns: 1fr; } }
 
   .mode-card {
     border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 18px;
-    background: #fafbfc;
+    border-radius: 12px;
+    padding: 20px;
+    background: var(--surface-alt);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .mode-card:hover {
+    border-color: var(--accent-border);
+    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.08);
+  }
+  .mode-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
   }
   .mode-card h2 { margin: 0; font-size: 1.15em; color: var(--text); }
-  .mode-card p { margin: 0; color: var(--muted); font-size: 0.92em; flex-grow: 1; }
-  .mode-card .info-line { font-size: 0.85em; color: var(--accent-dark); min-height: 1.2em; }
+  .pill {
+    display: inline-block;
+    font-size: 0.74em;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--accent-border);
+    white-space: nowrap;
+  }
+  .mode-card p { margin: 0; color: var(--muted); font-size: 0.91em; flex-grow: 1; }
+  .mode-card .info-line { font-size: 0.84em; color: var(--accent); min-height: 1.2em; font-weight: 500; }
+
+  .field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .field-group label {
+    font-size: 0.82em;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+  .field-group select {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 0.9em;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .field-group select:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+
+  .inline-row {
+    display: flex;
+    gap: 10px;
+  }
+  .inline-row > .field-group { flex: 1; }
 
   button.primary-btn {
-    padding: 11px 16px; background: var(--accent); color: #fff; border: none;
-    border-radius: 5px; font-size: 15px; cursor: pointer; font-weight: 600;
+    padding: 11px 16px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.96em;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    transition: background 0.15s, transform 0.05s;
   }
   button.primary-btn:hover { background: var(--accent-dark); }
-  button.primary-btn:disabled { background: #a9c8de; cursor: not-allowed; }
+  button.primary-btn:active { transform: translateY(1px); }
+  button.primary-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
   button.secondary-btn {
-    padding: 9px 14px; background: #fff; color: var(--accent-dark); border: 1px solid var(--accent);
-    border-radius: 5px; cursor: pointer; font-size: 14px;
+    padding: 9px 14px;
+    background: var(--surface);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    font-family: inherit;
+    transition: background 0.15s;
   }
-  button.secondary-btn:hover { background: #eaf4fb; }
+  button.secondary-btn:hover { background: var(--accent-soft); }
 
   button.link-btn {
-    background: none; border: none; color: var(--accent-dark); cursor: pointer;
-    font-size: 14px; padding: 4px 0; text-decoration: underline;
+    background: none;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 4px 0;
+    text-decoration: none;
+    font-family: inherit;
   }
+  button.link-btn:hover { text-decoration: underline; }
 
   .btn-block { width: 100%; margin-top: 12px; }
 
   .resume-banner {
-    border: 1px solid var(--accent); background: #eaf4fb; border-radius: 6px;
-    padding: 14px 16px; margin-bottom: 20px; display: flex; flex-wrap: wrap;
-    align-items: center; justify-content: space-between; gap: 10px;
+    border: 1px solid var(--accent-border);
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
   }
+  .resume-banner span { font-weight: 500; color: var(--text); }
   .resume-banner .resume-actions { display: flex; gap: 8px; }
+
+  .tips-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    font-size: 0.84em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .tips-strip span strong { color: var(--text-secondary); }
 
   /* ---------- Progress / timer ---------- */
   .top-bar {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
   }
-  .progress-text { font-size: 0.9em; color: var(--muted); }
+  .progress-text { font-size: 0.89em; color: var(--muted); font-weight: 500; }
   .progress-bar-track {
-    width: 100%; height: 8px; background: #e6e9ec; border-radius: 4px; overflow: hidden; margin-bottom: 18px;
+    width: 100%;
+    height: 8px;
+    background: var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 20px;
   }
-  .progress-bar-fill { height: 100%; background: var(--accent); transition: width 0.3s ease; }
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.3s ease;
+    border-radius: 999px;
+  }
 
   .timer-bar {
-    position: sticky; top: 0; background: #fff; z-index: 10;
-    padding: 10px 0 14px; margin-bottom: 8px;
-    display: flex; align-items: center; justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    z-index: 20;
+    padding: 12px 0 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
     border-bottom: 2px solid var(--accent);
   }
-  .timer-display { font-size: 1.3em; font-weight: bold; color: var(--text); font-variant-numeric: tabular-nums; }
-  .timer-display.timer-warning { color: var(--wrong); animation: pulse 1s infinite; }
-  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+  .timer-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .answered-counter {
+    font-size: 0.9em;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .timer-display {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    padding: 3px 10px;
+    border-radius: 8px;
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+  }
+  .timer-display.timer-warning {
+    color: var(--wrong);
+    background: var(--wrong-bg);
+    border-color: var(--wrong-border);
+    animation: pulse 1s infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
 
   /* ---------- Pytania ---------- */
   .question-block {
-    margin-bottom: 18px; padding: 16px; border: 1px solid var(--border);
-    border-radius: 6px; background-color: #fafafa; transition: background-color .2s, border-color .2s;
+    margin-bottom: 18px;
+    padding: 18px 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--surface-alt);
+    transition: background-color 0.2s, border-color 0.2s;
   }
-  .question-block.block-correct { border-color: var(--correct); background: var(--correct-bg); }
-  .question-block.block-wrong { border-color: var(--wrong); background: var(--wrong-bg); }
+  .question-block.block-correct {
+    border-color: var(--correct-border);
+    background: var(--correct-bg);
+  }
+  .question-block.block-wrong {
+    border-color: var(--wrong-border);
+    background: var(--wrong-bg);
+  }
 
-  .question-category {
-    font-size: 0.78em; color: var(--muted); text-transform: uppercase;
-    letter-spacing: 0.03em; margin-bottom: 6px;
+  .question-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
   }
-  .question-text { font-weight: bold; margin-bottom: 10px; overflow-wrap: break-word; }
+  .question-category {
+    font-size: 0.76em;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+  }
+  .q-type-badge {
+    font-size: 0.73em;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+  }
+  .q-type-badge.multi {
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-color: var(--accent-border);
+  }
+
+  .question-text {
+    font-weight: 600;
+    font-size: 1.02em;
+    margin-bottom: 12px;
+    color: var(--text);
+    overflow-wrap: break-word;
+  }
 
   .options-list { list-style: none; padding: 0; margin: 0; }
-  .options-list li { margin-bottom: 4px; }
+  .options-list li { margin-bottom: 6px; }
   .options-list label {
-    cursor: pointer; display: flex; align-items: flex-start; gap: 10px;
-    padding: 6px 8px; border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: var(--surface);
+    transition: background 0.12s, border-color 0.12s;
   }
-  .options-list label:hover { background: rgba(52, 152, 219, 0.07); }
-  .options-list input[type="checkbox"] {
-    margin-top: 4px; flex-shrink: 0; width: 17px; height: 17px; cursor: pointer;
+  .options-list label:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent-border);
   }
-  .options-list input[type="checkbox"]:disabled { cursor: default; }
+  .options-list input[type="checkbox"],
+  .options-list input[type="radio"] {
+    margin-top: 4px;
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    accent-color: var(--accent);
+  }
+  .options-list input:disabled { cursor: default; }
 
-  /* KLUCZOWA POPRAWKA: tekst opcji jako kurczliwy element flex, żeby długie
-     wzory (mjx-container) nie rozpychały wiersza poza kartę pytania */
-  .option-text { flex: 1 1 auto; min-width: 0; overflow-wrap: break-word; }
+  .option-text { flex: 1 1 auto; min-width: 0; overflow-wrap: break-word; color: var(--text); }
 
-  /* KLUCZOWA POPRAWKA: MathJax nie może być szerszy niż jego kontener */
   mjx-container { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
   mjx-container[display="true"] { margin: 0.3em 0 !important; }
 
   code.pseudo {
-    background: #eef2f6;
+    background: var(--border);
     padding: 1px 5px;
-    border-radius: 3px;
+    border-radius: 4px;
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
     font-size: 0.92em;
-    color: #1a1a2e;
   }
 
-  .correct-answer { color: var(--correct); font-weight: bold; }
-  .wrong-answer { color: var(--wrong); font-weight: bold; text-decoration: line-through; }
-  .missed-correct {
-    color: var(--missed); font-weight: bold; border: 1px dashed var(--missed);
-    border-radius: 4px; padding: 1px 4px;
+  .options-list label.correct-answer {
+    color: var(--correct);
+    font-weight: 600;
+    background: var(--correct-bg);
+    border-color: var(--correct-border);
+  }
+  .options-list label.correct-answer .option-text { color: var(--correct); }
+
+  .options-list label.wrong-answer {
+    color: var(--wrong);
+    font-weight: 600;
+    text-decoration: line-through;
+    background: var(--wrong-bg);
+    border-color: var(--wrong-border);
+  }
+  .options-list label.wrong-answer .option-text { color: var(--wrong); }
+
+  .options-list label.missed-correct {
+    color: var(--missed);
+    font-weight: 600;
+    background: var(--missed-bg);
+    border: 1px dashed var(--missed);
+  }
+  .options-list label.missed-correct .option-text { color: var(--missed); }
+
+  .question-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .inline-check-btn {
+    padding: 5px 12px;
+    font-size: 0.82em;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .inline-check-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .explanation-box {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: var(--exp-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    font-size: 0.91em;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+  .explanation-box .exp-title {
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+    font-size: 0.86em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
   }
 
   .batch-result {
-    margin: 14px 0; padding: 12px 14px; background: #eef6fc; border-left: 4px solid var(--accent);
-    border-radius: 4px; font-size: 1.05em;
+    margin: 16px 0;
+    padding: 14px 16px;
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    font-size: 1.04em;
+    color: var(--text);
   }
 
   /* ---------- Podsumowanie ---------- */
   .summary-box { text-align: center; padding: 10px 0 6px; }
-  .summary-score { font-size: 2em; font-weight: bold; margin: 10px 0 20px; }
-  .summary-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
+  .summary-score { font-size: 2.2em; font-weight: 800; margin: 10px 0 6px; letter-spacing: -0.02em; }
+  .summary-verdict { font-size: 0.96em; color: var(--muted); margin-bottom: 18px; }
+  .summary-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+
+  .category-breakdown {
+    margin: 20px auto 6px;
+    max-width: 680px;
+    text-align: left;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--surface-alt);
+  }
+  .category-breakdown h3 {
+    margin: 0;
+    padding: 10px 14px;
+    font-size: 0.88em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .cat-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 14px;
+    font-size: 0.9em;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-row:last-child { border-bottom: none; }
+  .cat-row-name { color: var(--text); font-weight: 500; }
+  .cat-row-stat { font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  .exam-review-wrapper {
+    margin-top: 26px;
+    text-align: left;
+    border-top: 2px solid var(--border);
+    padding-top: 18px;
+  }
+  .exam-review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .exam-review-header h3 { margin: 0; font-size: 1.08em; }
+  .filter-pills { display: flex; gap: 6px; }
+  .filter-pill {
+    padding: 5px 11px;
+    font-size: 0.82em;
+    font-weight: 600;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .filter-pill.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
 
   @media (max-width: 600px) {
-    body { padding: 10px; }
-    .container { padding: 16px; }
-    h1 { font-size: 1.3em; }
+    body { padding: 10px 8px 30px; }
+    .container { padding: 18px 14px 24px; border-radius: 10px; }
+    h1 { font-size: 1.32em; }
+    .question-block { padding: 14px; }
+    .header-row { flex-direction: column; align-items: stretch; }
+    .theme-toggle { align-self: flex-end; }
+    .hidden-mobile { display: none; }
   }
 </style>
 
@@ -189,7 +597,13 @@
 <body>
 
 <div class="container">
-  <h1>Algorytmy i Struktury Danych — Quiz</h1>
+  <div class="header-row">
+    <div style="width:76px;" class="hidden-mobile"></div>
+    <div class="header-titles">
+      <h1>Elementy Fizyki Współczesnej — Quiz</h1>
+    </div>
+    <button type="button" class="theme-toggle" id="theme-toggle-btn" title="Przełącz motyw jasny/ciemny">Ciemny</button>
+  </div>
   <p class="subtitle"><span id="db-count-badge"></span></p>
 
   <!-- ===================== MENU ===================== -->
@@ -202,22 +616,63 @@
       </div>
     </div>
 
+    <div class="tips-strip">
+      <span><strong>Format kolokwium:</strong> test zamknięty UPEL, 25 min</span>
+      <span>•</span>
+      <span><strong>Wyjaśnienia:</strong> pełne omówienie każdego pytania po sprawdzeniu</span>
+      <span>•</span>
+      <span><strong>Wyrównane odpowiedzi:</strong> brak podpowiedzi długością</span>
+    </div>
+
     <div class="mode-grid">
       <div class="mode-card">
-        <h2>Tryb Nauki</h2>
-        <p>Przechodzisz przez całą bazę pytań w turach po 20. Po każdej turze widzisz wynik i poprawne odpowiedzi, zanim przejdziesz dalej. Postęp zapisuje się automatycznie.</p>
+        <div class="mode-card-header">
+          <h2>Tryb Nauki</h2>
+          <span class="pill">Wyjaśnienia</span>
+        </div>
+        <p>Przechodzisz przez bazę pytań w turach z możliwością wyboru konkretnego działu. Po sprawdzeniu pytania lub całej strony od razu widzisz dokładne wyjaśnienie fizyczne.</p>
+
+        <div class="field-group">
+          <label for="study-category-select">Zakres materiału:</label>
+          <select id="study-category-select"></select>
+        </div>
+
         <div class="info-line" id="study-resume-info"></div>
         <button type="button" class="primary-btn" id="start-study-btn">Rozpocznij naukę</button>
       </div>
+
       <div class="mode-card">
-        <h2>Tryb Egzaminacyjny</h2>
-        <p>50 losowych pytań z całej bazy, 75 minut na rozwiązanie. Wynik i poprawne odpowiedzi zobaczysz dopiero po zakończeniu lub gdy czas się skończy.</p>
+        <div class="mode-card-header">
+          <h2>Symulacja UPEL</h2>
+          <span class="pill">25 minut</span>
+        </div>
+        <p>Losowy test zamknięty przekrojowo ze wszystkich 6 wykładów w limicie czasu prawdziwego kolokwium (25 minut). Po zakończeniu widzisz wynik, podział na działy i pełne wyjaśnienia.</p>
+
+        <div class="inline-row">
+          <div class="field-group">
+            <label for="exam-count-select">Liczba pytań:</label>
+            <select id="exam-count-select">
+              <option value="20">20 pytań</option>
+              <option value="25" selected>25 pytań (zalecane)</option>
+              <option value="30">30 pytań</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="exam-time-select">Limit czasu:</label>
+            <select id="exam-time-select">
+              <option value="25" selected>25 minut (UPEL)</option>
+              <option value="20">20 minut</option>
+              <option value="30">30 minut</option>
+            </select>
+          </div>
+        </div>
+
         <div class="info-line" id="exam-resume-info"></div>
-        <button type="button" class="primary-btn" id="start-exam-btn">Rozpocznij egzamin</button>
+        <button type="button" class="primary-btn" id="start-exam-btn">Rozpocznij kolokwium</button>
       </div>
     </div>
 
-    <div style="text-align:center; margin-top:10px;">
+    <div style="text-align:center; margin-top:8px;">
       <button type="button" class="link-btn" id="reset-progress-btn">Wyczyść cały zapisany postęp</button>
     </div>
   </div>
@@ -232,18 +687,21 @@
 
     <div id="study-quiz-container"></div>
     <div id="study-batch-result" class="batch-result hidden"></div>
-    <button type="button" class="primary-btn btn-block" id="study-submit-btn">Sprawdź te pytania</button>
+    <button type="button" class="primary-btn btn-block" id="study-submit-btn">Sprawdź wszystkie pytania na stronie</button>
     <button type="button" class="primary-btn btn-block hidden" id="study-next-btn"></button>
   </div>
 
-  <!-- ===================== EGZAMIN ===================== -->
+  <!-- ===================== EGZAMIN / KOLOKWIUM UPEL ===================== -->
   <div id="exam-screen" class="screen hidden">
     <div class="timer-bar">
       <button type="button" class="link-btn" id="exam-menu-btn">← Powrót do menu</button>
-      <div>Pozostały czas: <span class="timer-display" id="exam-timer">75:00</span></div>
+      <div class="timer-meta">
+        <span class="answered-counter" id="exam-answered-counter">Odpowiedziano: 0 / 25</span>
+        <div>Czas: <span class="timer-display" id="exam-timer">25:00</span></div>
+      </div>
     </div>
     <div id="exam-quiz-container"></div>
-    <button type="button" class="primary-btn btn-block" id="exam-submit-btn">Zakończ egzamin i sprawdź wynik</button>
+    <button type="button" class="primary-btn btn-block" id="exam-submit-btn">Zakończ test i zobacz wynik z wyjaśnieniami</button>
   </div>
 
   <!-- ===================== POWTÓRKA BŁĘDÓW ===================== -->
@@ -263,22 +721,53 @@
     <div class="summary-box">
       <h2 id="summary-title">Podsumowanie</h2>
       <div class="summary-score" id="summary-score">0 / 0</div>
+      <div class="summary-verdict" id="summary-verdict"></div>
+
+      <div id="summary-breakdown" class="category-breakdown hidden"></div>
+
       <div class="summary-actions">
         <button type="button" class="primary-btn hidden" id="summary-review-btn"></button>
+        <button type="button" class="secondary-btn hidden" id="summary-inspect-btn"></button>
         <button type="button" class="secondary-btn hidden" id="summary-restart-btn"></button>
         <button type="button" class="secondary-btn" id="summary-menu-btn">Powrót do menu</button>
+      </div>
+
+      <div id="exam-review-wrapper" class="exam-review-wrapper hidden">
+        <div class="exam-review-header">
+          <h3>Przegląd odpowiedzi i wyjaśnień</h3>
+          <div class="filter-pills">
+            <button type="button" class="filter-pill active" id="filter-all-btn">Wszystkie</button>
+            <button type="button" class="filter-pill" id="filter-wrong-btn">Tylko błędne</button>
+          </div>
+        </div>
+        <div id="exam-review-container"></div>
       </div>
     </div>
   </div>
 
 </div>
 
-  <!-- ===================== BAZA PYTAŃ ===================== -->
+<!-- ===================== BAZA PYTAŃ ===================== -->
 <script src="questions.js"></script>
 
 <script>
 /* =========================================================
-   MATHJAX — bezpieczne typesetowanie po każdej zmianie strony
+   MOTYW JASNY / CIEMNY
+   ========================================================= */
+const THEME_KEY = 'efw_quiz_theme_v1';
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  const btn = document.getElementById('theme-toggle-btn');
+  if (btn) btn.textContent = theme === 'dark' ? 'Jasny' : 'Ciemny';
+}
+(function initTheme() {
+  const saved = localStorage.getItem(THEME_KEY);
+  if (saved === 'dark' || saved === 'light') applyTheme(saved);
+  else applyTheme('light');
+})();
+
+/* =========================================================
+   MATHJAX — bezpieczne typesetowanie
    ========================================================= */
 const mathJaxReady = new Promise(resolve => {
   (function check() {
@@ -319,34 +808,105 @@ function formatTime(ms) {
 }
 
 function colorForPercent(pct) {
-  if (pct >= 80) return '#27ae60';
-  if (pct >= 50) return '#f39c12';
-  return '#c0392b';
+  if (pct >= 80) return 'var(--correct)';
+  if (pct >= 50) return 'var(--missed)';
+  return 'var(--wrong)';
 }
 
-// Pula pytań bez duplikatów treści — używana TYLKO do losowania w trybie
-// egzaminacyjnym, żeby to samo pytanie nie trafiło dwa razy do jednego testu.
-// Nie modyfikuje bazy danych ani trybu nauki (ten idzie po całej bazie 1:1).
-function getUniqueQuestionPool() {
-  const seen = new Set();
-  const pool = [];
-  questionDatabase.forEach((q, i) => {
-    if (!seen.has(q.text)) { seen.add(q.text); pool.push(i); }
+function formatTextHtml(str) {
+  return String(str || '').replace(/`([^`]+)`/g, '<code class="pseudo">$1</code>');
+}
+
+function isMultiSelect(q) {
+  return q.options.filter(o => o.isCorrect).length > 1;
+}
+
+function getAllCategories() {
+  const cats = [];
+  questionDatabase.forEach(q => {
+    if (!cats.includes(q.category)) cats.push(q.category);
   });
-  return pool;
+  return cats;
+}
+
+function getFilteredIndices(filterValue) {
+  if (!filterValue || filterValue === '__ALL__') {
+    return questionDatabase.map((_, i) => i);
+  }
+  if (filterValue === '__KOLOS__') {
+    return questionDatabase
+      .map((q, i) => ({ q, i }))
+      .filter(x => /kolokw/i.test(x.q.text) || /kolokw/i.test(x.q.explanation || ''))
+      .map(x => x.i);
+  }
+  return questionDatabase
+    .map((q, i) => ({ q, i }))
+    .filter(x => x.q.category === filterValue)
+    .map(x => x.i);
+}
+
+// Losowanie przekrojowe po wszystkich działach dla symulacji kolokwium UPEL
+function drawBalancedExamIndices(targetCount) {
+  const byCat = {};
+  const seen = new Set();
+  questionDatabase.forEach((q, idx) => {
+    if (seen.has(q.text)) return;
+    seen.add(q.text);
+    if (!byCat[q.category]) byCat[q.category] = [];
+    byCat[q.category].push(idx);
+  });
+
+  const cats = Object.keys(byCat);
+  const totalUnique = cats.reduce((s, c) => s + byCat[c].length, 0);
+  const count = Math.min(targetCount, totalUnique);
+
+  const selected = [];
+  const leftovers = [];
+
+  cats.forEach(c => {
+    const shuffled = shuffleArray(byCat[c]);
+    const quota = Math.max(1, Math.floor((shuffled.length / totalUnique) * count));
+    const take = Math.min(quota, shuffled.length);
+    selected.push(...shuffled.slice(0, take));
+    leftovers.push(...shuffled.slice(take));
+  });
+
+  if (selected.length > count) {
+    return shuffleArray(selected).slice(0, count);
+  }
+  if (selected.length < count) {
+    selected.push(...shuffleArray(leftovers).slice(0, count - selected.length));
+  }
+  return shuffleArray(selected);
 }
 
 /* =========================================================
    ZAPIS POSTĘPU (localStorage)
    ========================================================= */
-const STORAGE_KEY = 'aisd_quiz_progress_v1';
+const STORAGE_KEY = 'efw_quiz_progress_v1';
 
 function defaultState() {
   return {
-    study: { pageIndex: 0, totalScore: 0, wrongIndices: [], finished: false, shuffledIndices: null },
+    study: {
+      pageIndex: 0,
+      totalScore: 0,
+      wrongIndices: [],
+      finished: false,
+      shuffledIndices: null,
+      filter: '__ALL__',
+      catStats: {}
+    },
     exam: {
-      active: false, finished: false, questionIndices: [], answers: {},
-      startTs: null, endTs: null, wrongIndices: [], lastScore: null
+      active: false,
+      finished: false,
+      questionIndices: [],
+      answers: {},
+      startTs: null,
+      endTs: null,
+      wrongIndices: [],
+      lastScore: null,
+      questionCount: 25,
+      durationMin: 25
     }
   };
 }
@@ -390,100 +950,162 @@ function goToMenu() {
 }
 
 /* =========================================================
-   BUDOWANIE I OCENIANIE PYTAŃ (wspólne dla wszystkich trybów)
+   BUDOWANIE I OCENIANIE PYTAŃ
    ========================================================= */
-/**
- * Builds a DOM element for a single question, randomizing the display order of options.
- * * @param {number} qIndex - The index of the question in the global questionDatabase.
- * @param {number} displayNumber - The sequential number to display next to the question text.
- * @returns {HTMLDivElement} The constructed question block DOM element containing the text and randomized options.
- */
-function buildQuestionElement(qIndex, displayNumber) {
+function buildQuestionElement(qIndex, displayNumber, optionsConfig = {}) {
+  const { allowInlineCheck = false, inputGroupPrefix = 'q', fixedOptionOrder = null } = optionsConfig;
   const q = questionDatabase[qIndex];
+  const multi = isMultiSelect(q);
+
   const block = document.createElement('div');
   block.className = 'question-block';
   block.dataset.qindex = qIndex;
+  block.dataset.graded = 'false';
+
+  const metaRow = document.createElement('div');
+  metaRow.className = 'question-meta-row';
 
   const category = document.createElement('div');
   category.className = 'question-category';
   category.textContent = q.category;
 
+  const badge = document.createElement('span');
+  badge.className = 'q-type-badge' + (multi ? ' multi' : '');
+  badge.textContent = multi ? 'Wielokrotny wybór (wiele poprawnych)' : 'Jednokrotny wybór';
+
+  metaRow.appendChild(category);
+  metaRow.appendChild(badge);
+
   const questionText = document.createElement('div');
   questionText.className = 'question-text';
-  questionText.innerHTML = displayNumber + '. ' + q.text.replace(/`([^`]+)`/g, '<code class="pseudo">$1</code>');
+  questionText.innerHTML = displayNumber + '. ' + formatTextHtml(q.text);
 
   const optionsList = document.createElement('ul');
   optionsList.className = 'options-list';
 
-  // Map options to keep track of their original indices before shuffling
-  const optionsWithOriginalIndices = q.options.map((opt, index) => {
-    return { option: opt, originalIndex: index };
-  });
+  const optionsWithIndices = q.options.map((opt, index) => ({ option: opt, originalIndex: index }));
+  const orderedOptions = fixedOptionOrder
+    ? fixedOptionOrder.map(idx => optionsWithIndices[idx])
+    : shuffleArray(optionsWithIndices);
 
-  // Shuffle the mapped array to randomize option display order
-  const shuffledOptions = shuffleArray(optionsWithOriginalIndices);
-
-  shuffledOptions.forEach((item) => {
+  orderedOptions.forEach(item => {
     const opt = item.option;
     const optIndex = item.originalIndex;
 
     const li = document.createElement('li');
     const label = document.createElement('label');
-    
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.dataset.qindex = qIndex;
-    // Store the original index so grading and state restoration work correctly
-    checkbox.dataset.optindex = optIndex; 
+
+    const input = document.createElement('input');
+    input.type = multi ? 'checkbox' : 'radio';
+    if (!multi) input.name = inputGroupPrefix + '_' + qIndex;
+    input.dataset.qindex = qIndex;
+    input.dataset.optindex = optIndex;
 
     const span = document.createElement('span');
     span.className = 'option-text';
-    span.innerHTML = opt.text.replace(/`([^`]+)`/g, '<code class="pseudo">$1</code>');
+    span.innerHTML = formatTextHtml(opt.text);
 
-    label.appendChild(checkbox);
+    label.appendChild(input);
     label.appendChild(span);
     li.appendChild(label);
     optionsList.appendChild(li);
   });
 
-  block.appendChild(category);
+  block.appendChild(metaRow);
   block.appendChild(questionText);
   block.appendChild(optionsList);
-  
+
+  if (allowInlineCheck) {
+    const actions = document.createElement('div');
+    actions.className = 'question-actions';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'inline-check-btn';
+    btn.textContent = 'Sprawdź to pytanie';
+    btn.addEventListener('click', () => {
+      gradeSingleBlock(block, qIndex);
+      btn.remove();
+      typesetMath(block);
+    });
+    actions.appendChild(btn);
+    block.appendChild(actions);
+  }
+
   return block;
 }
 
-function renderQuestionsInto(container, qIndices, startNumber) {
+function appendExplanation(block, q) {
+  if (!q.explanation || block.querySelector('.explanation-box')) return;
+  const exp = document.createElement('div');
+  exp.className = 'explanation-box';
+  exp.innerHTML = '<div class="exp-title">Wyjaśnienie</div><div>' + formatTextHtml(q.explanation) + '</div>';
+  block.appendChild(exp);
+}
+
+function gradeSingleBlock(block, qIndex) {
+  if (block.dataset.graded === 'true') {
+    return block.classList.contains('block-correct');
+  }
+  const q = questionDatabase[qIndex];
+  const inputs = block.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+  let allCorrect = true;
+
+  inputs.forEach(inp => {
+    const optIndex = +inp.dataset.optindex;
+    const isChecked = inp.checked;
+    const isActuallyCorrect = q.options[optIndex].isCorrect;
+    const label = inp.parentElement;
+
+    if (isActuallyCorrect && isChecked) label.classList.add('correct-answer');
+    else if (isActuallyCorrect && !isChecked) label.classList.add('missed-correct');
+    else if (!isActuallyCorrect && isChecked) label.classList.add('wrong-answer');
+
+    if (isChecked !== isActuallyCorrect) allCorrect = false;
+    inp.disabled = true;
+  });
+
+  const inlineBtn = block.querySelector('.question-actions');
+  if (inlineBtn) inlineBtn.remove();
+
+  block.dataset.graded = 'true';
+  if (allCorrect) block.classList.add('block-correct');
+  else block.classList.add('block-wrong');
+
+  appendExplanation(block, q);
+  return allCorrect;
+}
+
+function renderQuestionsInto(container, qIndices, startNumber, optionsConfig = {}) {
   clearMathIfPossible(container);
   container.innerHTML = '';
-  qIndices.forEach((qIndex, i) => container.appendChild(buildQuestionElement(qIndex, startNumber + i)));
+  qIndices.forEach((qIndex, i) => {
+    container.appendChild(buildQuestionElement(qIndex, startNumber + i, optionsConfig));
+  });
   return typesetMath(container);
 }
 
 function gradeQuestionsInContainer(container, qIndices) {
   let score = 0;
   const wrong = [];
+  const catStats = {};
+
   qIndices.forEach(qIndex => {
     const q = questionDatabase[qIndex];
     const block = container.querySelector('.question-block[data-qindex="' + qIndex + '"]');
     if (!block) return;
-    const checkboxes = block.querySelectorAll('input[type="checkbox"]');
-    let allCorrect = true;
-    checkboxes.forEach(cb => {
-      const optIndex = +cb.dataset.optindex;
-      const isChecked = cb.checked;
-      const isActuallyCorrect = q.options[optIndex].isCorrect;
-      const label = cb.parentElement;
-      if (isActuallyCorrect && isChecked) label.classList.add('correct-answer');
-      else if (isActuallyCorrect && !isChecked) label.classList.add('missed-correct');
-      else if (!isActuallyCorrect && isChecked) label.classList.add('wrong-answer');
-      if (isChecked !== isActuallyCorrect) allCorrect = false;
-      cb.disabled = true;
-    });
-    if (allCorrect) { score++; block.classList.add('block-correct'); }
-    else { wrong.push(qIndex); block.classList.add('block-wrong'); }
+    const ok = gradeSingleBlock(block, qIndex);
+    if (!catStats[q.category]) catStats[q.category] = { correct: 0, total: 0 };
+    catStats[q.category].total++;
+    if (ok) {
+      score++;
+      catStats[q.category].correct++;
+    } else {
+      wrong.push(qIndex);
+    }
   });
-  return { score, total: qIndices.length, wrong };
+
+  typesetMath(container);
+  return { score, total: qIndices.length, wrong, catStats };
 }
 
 function applyStoredAnswers(container, answersMap) {
@@ -491,58 +1113,130 @@ function applyStoredAnswers(container, answersMap) {
     const block = container.querySelector('.question-block[data-qindex="' + (+key) + '"]');
     if (!block) return;
     (answersMap[key] || []).forEach(optIndex => {
-      const cb = block.querySelector('input[data-optindex="' + optIndex + '"]');
-      if (cb) cb.checked = true;
+      const inp = block.querySelector('input[data-optindex="' + optIndex + '"]');
+      if (inp) inp.checked = true;
     });
   });
+}
+
+function renderCategoryBreakdown(container, catStats) {
+  const keys = Object.keys(catStats || {}).sort();
+  if (keys.length <= 1) {
+    container.classList.add('hidden');
+    container.innerHTML = '';
+    return;
+  }
+  let html = '<h3>Wyniki według działów</h3>';
+  keys.forEach(cat => {
+    const st = catStats[cat];
+    const pct = st.total ? Math.round(st.correct / st.total * 100) : 0;
+    const col = colorForPercent(pct);
+    html +=
+      '<div class="cat-row">' +
+      '<span class="cat-row-name">' + cat + '</span>' +
+      '<span class="cat-row-stat" style="color:' + col + '">' + st.correct + ' / ' + st.total + ' (' + pct + '%)</span>' +
+      '</div>';
+  });
+  container.innerHTML = html;
+  container.classList.remove('hidden');
 }
 
 /* =========================================================
    MENU
    ========================================================= */
+function populateCategorySelect() {
+  const select = document.getElementById('study-category-select');
+  const prev = select.value || appState.study.filter || '__ALL__';
+  select.innerHTML = '';
+
+  const allOpt = document.createElement('option');
+  allOpt.value = '__ALL__';
+  allOpt.textContent = 'Wszystkie działy (' + questionDatabase.length + ' pytań)';
+  select.appendChild(allOpt);
+
+  const kolosIndices = getFilteredIndices('__KOLOS__');
+  if (kolosIndices.length > 0) {
+    const kOpt = document.createElement('option');
+    kOpt.value = '__KOLOS__';
+    kOpt.textContent = 'Pytania z poprzednich kolokwiów (' + kolosIndices.length + ' pytań)';
+    select.appendChild(kOpt);
+  }
+
+  getAllCategories().forEach(cat => {
+    const cnt = questionDatabase.filter(q => q.category === cat).length;
+    const opt = document.createElement('option');
+    opt.value = cat;
+    opt.textContent = cat + ' (' + cnt + ')';
+    select.appendChild(opt);
+  });
+
+  if (Array.from(select.options).some(o => o.value === prev)) {
+    select.value = prev;
+  }
+}
+
 function renderMenu() {
   const dbBadge = document.getElementById('db-count-badge');
-  if (questionDatabase.length === 0) {
-    dbBadge.textContent = 'Uwaga: baza pytań jest pusta — wklej swoje pytania do zmiennej questionDatabase w kodzie.';
-    dbBadge.style.color = '#c0392b';
-  } else {
-    dbBadge.textContent = 'Baza zawiera obecnie ' + questionDatabase.length + ' pytań.';
-    dbBadge.style.color = '';
+  if (!Array.isArray(questionDatabase) || questionDatabase.length === 0) {
+    dbBadge.textContent = 'Uwaga: baza pytań jest pusta.';
+    dbBadge.style.color = 'var(--wrong)';
+    return;
   }
+
+  const multiCount = questionDatabase.filter(isMultiSelect).length;
+  const singleCount = questionDatabase.length - multiCount;
+  dbBadge.textContent =
+    'Baza zawiera ' + questionDatabase.length + ' pytań (' +
+    singleCount + ' jednokrotnego i ' + multiCount + ' wielokrotnego wyboru) z pełnymi wyjaśnieniami.';
+  dbBadge.style.color = '';
+
+  populateCategorySelect();
+
+  const activeStudyLen = (appState.study.shuffledIndices && appState.study.shuffledIndices.length)
+    ? appState.study.shuffledIndices.length
+    : questionDatabase.length;
 
   document.getElementById('study-resume-info').textContent =
     (appState.study.pageIndex > 0 && !appState.study.finished)
-      ? 'Zapisany postęp: pytanie ' + (appState.study.pageIndex * STUDY_PAGE_SIZE + 1) + ' z ' + questionDatabase.length + '.'
+      ? 'Zapisany postęp: pytanie ' + (appState.study.pageIndex * STUDY_PAGE_SIZE + 1) + ' z ' + activeStudyLen + '.'
       : '';
 
   document.getElementById('exam-resume-info').textContent =
-    (appState.exam.active && !appState.exam.finished) ? 'Masz egzamin w trakcie rozwiązywania.'
-    : (appState.exam.lastScore ? 'Ostatni wynik: ' + appState.exam.lastScore.score + ' / ' + appState.exam.lastScore.total + '.' : '');
+    (appState.exam.active && !appState.exam.finished)
+      ? 'Masz test UPEL w trakcie rozwiązywania.'
+      : (appState.exam.lastScore
+        ? 'Ostatni wynik: ' + appState.exam.lastScore.score + ' / ' + appState.exam.lastScore.total +
+          ' (' + Math.round(appState.exam.lastScore.score / appState.exam.lastScore.total * 100) + '%).'
+        : '');
 
   const resumeBanner = document.getElementById('resume-banner');
   resumeBanner.classList.add('hidden');
 
   if (appState.exam.active && !appState.exam.finished) {
     resumeBanner.classList.remove('hidden');
-    document.getElementById('resume-text').textContent = 'Masz nieukończony egzamin w toku.';
+    document.getElementById('resume-text').textContent = 'Masz nieukończoną symulację kolokwium UPEL w toku.';
     document.getElementById('resume-continue-btn').onclick = () => startExamMode(false);
     document.getElementById('resume-discard-btn').onclick = () => {
-      appState.exam = defaultState().exam; saveState(); renderMenu();
+      appState.exam = defaultState().exam;
+      saveState();
+      renderMenu();
     };
   } else if (appState.study.pageIndex > 0 && !appState.study.finished) {
     resumeBanner.classList.remove('hidden');
     document.getElementById('resume-text').textContent =
-      'Masz zapisany postęp w nauce (pytanie ' + (appState.study.pageIndex * STUDY_PAGE_SIZE + 1) + ' z ' + questionDatabase.length + ').';
+      'Masz zapisany postęp w nauce (pytanie ' + (appState.study.pageIndex * STUDY_PAGE_SIZE + 1) + ' z ' + activeStudyLen + ').';
     document.getElementById('resume-continue-btn').onclick = () => startStudyMode(false);
     document.getElementById('resume-discard-btn').onclick = () => {
-      appState.study = defaultState().study; saveState(); renderMenu();
+      appState.study = defaultState().study;
+      saveState();
+      renderMenu();
     };
   }
 }
 
 function ensureDatabase() {
   if (!Array.isArray(questionDatabase) || questionDatabase.length === 0) {
-    alert('Najpierw wklej swoją bazę pytań do zmiennej questionDatabase w kodzie.');
+    alert('Baza pytań jest pusta.');
     return false;
   }
   return true;
@@ -553,24 +1247,29 @@ function ensureDatabase() {
    ========================================================= */
 const STUDY_PAGE_SIZE = 20;
 
-function studyTotalPages() { return Math.ceil(questionDatabase.length / STUDY_PAGE_SIZE); }
+function studyOrder() {
+  return (appState.study.shuffledIndices && appState.study.shuffledIndices.length)
+    ? appState.study.shuffledIndices
+    : questionDatabase.map((_, i) => i);
+}
+
+function studyTotalPages() { return Math.ceil(studyOrder().length / STUDY_PAGE_SIZE); }
 
 function currentStudyIndices() {
-  const order = appState.study.shuffledIndices || questionDatabase.map((_, i) => i);
+  const order = studyOrder();
   const start = appState.study.pageIndex * STUDY_PAGE_SIZE;
   const end = Math.min(start + STUDY_PAGE_SIZE, order.length);
-  const out = [];
-  for (let i = start; i < end; i++) out.push(order[i]);
-  return out;
+  return order.slice(start, end);
 }
 
 function startStudyMode(fresh) {
   if (!ensureDatabase()) return;
   if (fresh) {
+    const filterVal = document.getElementById('study-category-select').value || '__ALL__';
+    const pool = getFilteredIndices(filterVal);
     appState.study = defaultState().study;
-    appState.study.shuffledIndices = shuffleArray(
-      questionDatabase.map((_, i) => i)
-    );
+    appState.study.filter = filterVal;
+    appState.study.shuffledIndices = shuffleArray(pool);
   }
   saveState();
   showScreen('study-screen');
@@ -580,11 +1279,11 @@ function startStudyMode(fresh) {
 function renderStudyPage() {
   window.scrollTo(0, 0);
   const indices = currentStudyIndices();
+  const total = studyOrder().length;
   document.getElementById('study-batch-result').classList.add('hidden');
   document.getElementById('study-next-btn').classList.add('hidden');
   document.getElementById('study-submit-btn').classList.remove('hidden');
 
-  const total = questionDatabase.length;
   const firstDisplay = appState.study.pageIndex * STUDY_PAGE_SIZE + 1;
   const lastDisplay = Math.min((appState.study.pageIndex + 1) * STUDY_PAGE_SIZE, total);
   document.getElementById('study-progress-text').textContent =
@@ -593,7 +1292,12 @@ function renderStudyPage() {
   const pct = Math.round((appState.study.pageIndex * STUDY_PAGE_SIZE) / total * 100);
   document.getElementById('study-progress-fill').style.width = pct + '%';
 
-  renderQuestionsInto(document.getElementById('study-quiz-container'), indices, appState.study.pageIndex * STUDY_PAGE_SIZE + 1);
+  renderQuestionsInto(
+    document.getElementById('study-quiz-container'),
+    indices,
+    firstDisplay,
+    { allowInlineCheck: true, inputGroupPrefix: 'study' }
+  );
 }
 
 function submitStudyPage() {
@@ -602,8 +1306,16 @@ function submitStudyPage() {
   const result = gradeQuestionsInContainer(container, indices);
 
   appState.study.totalScore += result.score;
-  result.wrong.forEach(i => { if (!appState.study.wrongIndices.includes(i)) appState.study.wrongIndices.push(i); });
+  result.wrong.forEach(i => {
+    if (!appState.study.wrongIndices.includes(i)) appState.study.wrongIndices.push(i);
+  });
+  Object.keys(result.catStats).forEach(cat => {
+    if (!appState.study.catStats[cat]) appState.study.catStats[cat] = { correct: 0, total: 0 };
+    appState.study.catStats[cat].correct += result.catStats[cat].correct;
+    appState.study.catStats[cat].total += result.catStats[cat].total;
+  });
 
+  const total = studyOrder().length;
   const isLastPage = (appState.study.pageIndex + 1) >= studyTotalPages();
 
   document.getElementById('study-submit-btn').classList.add('hidden');
@@ -614,7 +1326,7 @@ function submitStudyPage() {
   resultBox.innerHTML = 'Wynik na tej stronie: <strong>' + result.score + ' / ' + result.total + '</strong> (' + pct + '%)';
 
   const nextBtn = document.getElementById('study-next-btn');
-  const remainingInNext = Math.min(STUDY_PAGE_SIZE, questionDatabase.length - (appState.study.pageIndex + 1) * STUDY_PAGE_SIZE);
+  const remainingInNext = Math.min(STUDY_PAGE_SIZE, total - (appState.study.pageIndex + 1) * STUDY_PAGE_SIZE);
   nextBtn.textContent = isLastPage ? 'Zobacz podsumowanie' : 'Następne ' + remainingInNext + ' pytań →';
   nextBtn.classList.remove('hidden');
   nextBtn.onclick = () => {
@@ -628,14 +1340,20 @@ function submitStudyPage() {
 
 function showStudySummary() {
   showScreen('summary-screen');
-  resetSummaryButtons();
-  const total = questionDatabase.length;
+  resetSummaryUI();
+  const total = studyOrder().length;
   const score = appState.study.totalScore;
   const pct = total ? Math.round(score / total * 100) : 0;
+
   document.getElementById('summary-title').textContent = 'Podsumowanie nauki';
   const scoreEl = document.getElementById('summary-score');
   scoreEl.textContent = score + ' / ' + total + ' (' + pct + '%)';
   scoreEl.style.color = colorForPercent(pct);
+  document.getElementById('summary-verdict').textContent =
+    pct >= 80 ? 'Świetne przygotowanie do kolokwium!'
+    : (pct >= 50 ? 'Dobry poziom — warto powtórzyć pytania z błędami.' : 'Przejrzyj wyjaśnienia i powtórz błędne pytania.');
+
+  renderCategoryBreakdown(document.getElementById('summary-breakdown'), appState.study.catStats);
 
   const wrongCount = appState.study.wrongIndices.length;
   const reviewBtn = document.getElementById('summary-review-btn');
@@ -651,27 +1369,42 @@ function showStudySummary() {
 }
 
 /* =========================================================
-   TRYB EGZAMINACYJNY
+   SYMULACJA KOLOKWIUM UPEL (25 MIN)
    ========================================================= */
-const EXAM_QUESTION_COUNT = 50;
-const EXAM_DURATION_MS = 75 * 60 * 1000;
 let examTimerHandle = null;
+let lastExamReviewData = null;
+
+function updateExamAnsweredCounter() {
+  const total = appState.exam.questionIndices.length;
+  const answered = Object.keys(appState.exam.answers || {}).filter(
+    k => (appState.exam.answers[k] || []).length > 0
+  ).length;
+  document.getElementById('exam-answered-counter').textContent =
+    'Odpowiedziano: ' + answered + ' / ' + total;
+}
 
 function startExamMode(fresh) {
   if (!ensureDatabase()) return;
   if (fresh || !appState.exam.active) {
-    const pool = getUniqueQuestionPool();
-    const count = Math.min(EXAM_QUESTION_COUNT, pool.length);
+    const qCount = parseInt(document.getElementById('exam-count-select').value, 10) || 25;
+    const durMin = parseInt(document.getElementById('exam-time-select').value, 10) || 25;
     const now = Date.now();
     appState.exam = {
-      active: true, finished: false,
-      questionIndices: shuffleArray(pool).slice(0, count),
-      answers: {}, startTs: now, endTs: now + EXAM_DURATION_MS,
-      wrongIndices: [], lastScore: null
+      active: true,
+      finished: false,
+      questionIndices: drawBalancedExamIndices(qCount),
+      answers: {},
+      startTs: now,
+      endTs: now + durMin * 60 * 1000,
+      wrongIndices: [],
+      lastScore: null,
+      questionCount: qCount,
+      durationMin: durMin
     };
     saveState();
   }
   showScreen('exam-screen');
+  updateExamAnsweredCounter();
 
   if (appState.exam.endTs - Date.now() <= 0) {
     renderExamQuestions().then(() => finishExam(true));
@@ -684,8 +1417,15 @@ function startExamMode(fresh) {
 function renderExamQuestions() {
   const container = document.getElementById('exam-quiz-container');
   document.getElementById('exam-submit-btn').classList.remove('hidden');
-  return renderQuestionsInto(container, appState.exam.questionIndices, 1)
-    .then(() => applyStoredAnswers(container, appState.exam.answers));
+  return renderQuestionsInto(
+    container,
+    appState.exam.questionIndices,
+    1,
+    { allowInlineCheck: false, inputGroupPrefix: 'exam' }
+  ).then(() => {
+    applyStoredAnswers(container, appState.exam.answers);
+    updateExamAnsweredCounter();
+  });
 }
 
 function startExamTimer() {
@@ -704,13 +1444,21 @@ function tickExamTimer() {
     return;
   }
   timerEl.textContent = formatTime(remaining);
-  timerEl.classList.toggle('timer-warning', remaining < 5 * 60 * 1000);
+  timerEl.classList.toggle('timer-warning', remaining < 3 * 60 * 1000);
 }
 
 function finishExam(timeUp) {
   if (examTimerHandle) clearInterval(examTimerHandle);
   const container = document.getElementById('exam-quiz-container');
   const result = gradeQuestionsInContainer(container, appState.exam.questionIndices);
+
+  // Zapisz kopię ocenionych pytań do podglądu na ekranie podsumowania
+  lastExamReviewData = {
+    indices: appState.exam.questionIndices.slice(),
+    answers: JSON.parse(JSON.stringify(appState.exam.answers || {})),
+    catStats: result.catStats
+  };
+
   appState.exam.finished = true;
   appState.exam.active = false;
   appState.exam.wrongIndices = result.wrong;
@@ -720,32 +1468,74 @@ function finishExam(timeUp) {
   showExamSummary(timeUp);
 }
 
+function renderExamReviewList(onlyWrong) {
+  const reviewContainer = document.getElementById('exam-review-container');
+  if (!lastExamReviewData) return;
+  const entries = lastExamReviewData.indices
+    .map((qIndex, pos) => ({ qIndex, num: pos + 1 }))
+    .filter(item => !onlyWrong || appState.exam.wrongIndices.includes(item.qIndex));
+
+  if (entries.length === 0) {
+    reviewContainer.innerHTML = '<p style="text-align:center;color:var(--correct);font-weight:600;">Bez błędów — 100% poprawnych odpowiedzi!</p>';
+    return;
+  }
+
+  clearMathIfPossible(reviewContainer);
+  reviewContainer.innerHTML = '';
+  entries.forEach(item => {
+    reviewContainer.appendChild(
+      buildQuestionElement(item.qIndex, item.num, { allowInlineCheck: false, inputGroupPrefix: 'inspect' })
+    );
+  });
+  applyStoredAnswers(reviewContainer, lastExamReviewData.answers);
+  gradeQuestionsInContainer(reviewContainer, entries.map(e => e.qIndex));
+}
+
 function showExamSummary(timeUp) {
   showScreen('summary-screen');
-  resetSummaryButtons();
+  resetSummaryUI();
   const score = appState.exam.lastScore.score;
   const total = appState.exam.lastScore.total;
   const pct = total ? Math.round(score / total * 100) : 0;
-  document.getElementById('summary-title').textContent = timeUp ? 'Czas się skończył — wynik egzaminu' : 'Podsumowanie egzaminu';
+
+  document.getElementById('summary-title').textContent =
+    timeUp ? 'Czas się skończył — wynik symulacji UPEL' : 'Wynik symulacji kolokwium UPEL';
   const scoreEl = document.getElementById('summary-score');
   scoreEl.textContent = score + ' / ' + total + ' (' + pct + '%)';
   scoreEl.style.color = colorForPercent(pct);
+
+  document.getElementById('summary-verdict').textContent =
+    pct >= 80 ? 'Zaliczone na bardzo dobrą ocenę!'
+    : (pct >= 50 ? 'Zaliczone! Sprawdź wyjaśnienia do błędnych pytań poniżej.' : 'Poniżej 50% — przeanalizuj wyjaśnienia i powtórz błędy.');
+
+  if (lastExamReviewData && lastExamReviewData.catStats) {
+    renderCategoryBreakdown(document.getElementById('summary-breakdown'), lastExamReviewData.catStats);
+  }
 
   const wrongCount = appState.exam.wrongIndices.length;
   const reviewBtn = document.getElementById('summary-review-btn');
   if (wrongCount > 0) {
     reviewBtn.classList.remove('hidden');
-    reviewBtn.textContent = 'Powtórz pytania z błędami (' + wrongCount + ')';
+    reviewBtn.textContent = 'Rozwiąż ponownie błędne (' + wrongCount + ')';
     reviewBtn.onclick = () => startReviewMode('exam');
   }
+
   const restartBtn = document.getElementById('summary-restart-btn');
   restartBtn.classList.remove('hidden');
-  restartBtn.textContent = 'Nowy egzamin';
+  restartBtn.textContent = 'Nowa symulacja UPEL';
   restartBtn.onclick = () => startExamMode(true);
+
+  if (lastExamReviewData) {
+    const wrapper = document.getElementById('exam-review-wrapper');
+    wrapper.classList.remove('hidden');
+    document.getElementById('filter-all-btn').classList.add('active');
+    document.getElementById('filter-wrong-btn').classList.remove('active');
+    renderExamReviewList(false);
+  }
 }
 
 /* =========================================================
-   POWTÓRKA BŁĘDÓW (wspólna dla nauki i egzaminu)
+   POWTÓRKA BŁĘDÓW (wspólna dla nauki i kolokwium)
    ========================================================= */
 let reviewState = { source: null, indices: [], pageIndex: 0, score: 0 };
 
@@ -774,7 +1564,12 @@ function renderReviewPage() {
     'Powtórka błędów — strona ' + (reviewState.pageIndex + 1) + ' z ' + reviewTotalPages() +
     ' (łącznie ' + reviewState.indices.length + ' pytań)';
 
-  renderQuestionsInto(document.getElementById('review-quiz-container'), indices, reviewState.pageIndex * STUDY_PAGE_SIZE + 1);
+  renderQuestionsInto(
+    document.getElementById('review-quiz-container'),
+    indices,
+    reviewState.pageIndex * STUDY_PAGE_SIZE + 1,
+    { allowInlineCheck: true, inputGroupPrefix: 'review' }
+  );
 }
 
 function submitReviewPage() {
@@ -813,7 +1608,7 @@ function submitReviewPage() {
 
 function showReviewSummary() {
   showScreen('summary-screen');
-  resetSummaryButtons();
+  resetSummaryUI();
   const total = reviewState.indices.length;
   const score = reviewState.score;
   const pct = total ? Math.round(score / total * 100) : 0;
@@ -821,6 +1616,8 @@ function showReviewSummary() {
   const scoreEl = document.getElementById('summary-score');
   scoreEl.textContent = score + ' / ' + total + ' (' + pct + '%)';
   scoreEl.style.color = colorForPercent(pct);
+  document.getElementById('summary-verdict').textContent =
+    pct === 100 ? 'Wszystkie błędne pytania opanowane!' : 'Dobra robota — pozostałe błędy możesz powtórzyć ponownie.';
 
   const remaining = reviewState.source === 'study' ? appState.study.wrongIndices.length : appState.exam.wrongIndices.length;
   const reviewBtn = document.getElementById('summary-review-btn');
@@ -831,32 +1628,46 @@ function showReviewSummary() {
   }
 }
 
-function resetSummaryButtons() {
+function resetSummaryUI() {
   document.getElementById('summary-review-btn').classList.add('hidden');
+  document.getElementById('summary-inspect-btn').classList.add('hidden');
   document.getElementById('summary-restart-btn').classList.add('hidden');
+  document.getElementById('summary-breakdown').classList.add('hidden');
+  document.getElementById('exam-review-wrapper').classList.add('hidden');
+  document.getElementById('summary-verdict').textContent = '';
 }
 
 /* =========================================================
    INICJALIZACJA
    ========================================================= */
 function attachEventListeners() {
+  document.getElementById('theme-toggle-btn').addEventListener('click', () => {
+    const curr = document.documentElement.getAttribute('data-theme') || 'light';
+    const next = curr === 'dark' ? 'light' : 'dark';
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+  });
+
   document.getElementById('start-study-btn').addEventListener('click', () => {
     if (!ensureDatabase()) return;
-    if (appState.study.pageIndex > 0 && !appState.study.finished) {
-      startStudyMode(!confirm('Masz zapisany postęp w nauce. Kontynuować od miejsca, w którym skończyłeś/aś?'));
+    const selectedFilter = document.getElementById('study-category-select').value;
+    if (appState.study.pageIndex > 0 && !appState.study.finished && appState.study.filter === selectedFilter) {
+      startStudyMode(!confirm('Masz zapisany postęp w tym zakresie. Kontynuować od miejsca, w którym skończyłeś/aś?'));
     } else startStudyMode(true);
   });
 
   document.getElementById('start-exam-btn').addEventListener('click', () => {
     if (!ensureDatabase()) return;
     if (appState.exam.active && !appState.exam.finished) {
-      startExamMode(!confirm('Masz egzamin w trakcie. Kontynuować?'));
+      startExamMode(!confirm('Masz symulację kolokwium w trakcie. Kontynuować?'));
     } else startExamMode(true);
   });
 
   document.getElementById('reset-progress-btn').addEventListener('click', () => {
-    if (confirm('Czy na pewno chcesz usunąć cały zapisany postęp (naukę i egzaminy)?')) {
-      appState = defaultState(); saveState(); renderMenu();
+    if (confirm('Czy na pewno chcesz usunąć cały zapisany postęp (naukę i symulacje)?')) {
+      appState = defaultState();
+      saveState();
+      renderMenu();
     }
   });
 
@@ -864,15 +1675,28 @@ function attachEventListeners() {
   document.getElementById('review-submit-btn').addEventListener('click', submitReviewPage);
 
   document.getElementById('exam-submit-btn').addEventListener('click', () => {
-    if (confirm('Czy na pewno chcesz zakończyć egzamin i zobaczyć wynik?')) finishExam(false);
+    if (confirm('Czy na pewno chcesz zakończyć test i zobaczyć wynik wraz z wyjaśnieniami?')) finishExam(false);
   });
 
   document.getElementById('exam-quiz-container').addEventListener('change', e => {
-    if (!e.target.matches('input[type="checkbox"]')) return;
+    if (!e.target.matches('input[type="checkbox"], input[type="radio"]')) return;
     const block = e.target.closest('.question-block');
     const qIndex = block.dataset.qindex;
-    appState.exam.answers[qIndex] = Array.from(block.querySelectorAll('input:checked')).map(cb => +cb.dataset.optindex);
+    appState.exam.answers[qIndex] = Array.from(block.querySelectorAll('input:checked')).map(inp => +inp.dataset.optindex);
     saveState();
+    updateExamAnsweredCounter();
+  });
+
+  document.getElementById('filter-all-btn').addEventListener('click', () => {
+    document.getElementById('filter-all-btn').classList.add('active');
+    document.getElementById('filter-wrong-btn').classList.remove('active');
+    renderExamReviewList(false);
+  });
+
+  document.getElementById('filter-wrong-btn').addEventListener('click', () => {
+    document.getElementById('filter-wrong-btn').classList.add('active');
+    document.getElementById('filter-all-btn').classList.remove('active');
+    renderExamReviewList(true);
   });
 
   document.getElementById('study-menu-btn').addEventListener('click', () => {
@@ -882,7 +1706,7 @@ function attachEventListeners() {
     if (confirm('Niezapisane odpowiedzi na tej stronie zostaną utracone. Wrócić do menu?')) goToMenu();
   });
   document.getElementById('exam-menu-btn').addEventListener('click', () => {
-    if (confirm('Wrócisz do menu, ale czas egzaminu nadal będzie upływał w tle — tak jak na prawdziwym egzaminie. Kontynuować?')) goToMenu();
+    if (confirm('Wrócisz do menu, ale czas kolokwium nadal będzie upływał w tle — tak jak na UPEL. Kontynuować?')) goToMenu();
   });
 
   document.getElementById('summary-menu-btn').addEventListener('click', goToMenu);
